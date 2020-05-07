@@ -1,0 +1,8 @@
+/www/output
+/www/tmp
+crash.log
+
+## Environment normalization:
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
