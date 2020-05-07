@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @item[:heading] || "openflightHPC" %></title>
+
+    <!-- Third party styles -->
+    <link
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+    >
+    <link
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous"
+    >
+
+    <!-- Our party styles -->
+    <link rel="stylesheet" href="/styles/openflight.css">
+
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
+  </head>
+  <body>
+
+    <%= render '/navbar.html' %>
+
+    <div class="container-fluid" id="main">
+      <div class="row content">
+        <div class="col-sm-2 sidenav" id="sidebar1">
+        </div>
+        <div class="col-sm-8 centernav mt-4" id="main">
+          <%= yield %>
+        </div>
+        <div class="col-sm-2 sidenav" id="sidebar2">
+        </div>
+      </div>
+    </div>
+    <footer class="footer border-top">
+      <div class="container">
+        <span class="text-muted" style="float: left">
+          Copyright 2020 openflightHPC
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
