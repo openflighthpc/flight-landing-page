@@ -1,0 +1,10 @@
+.card-footer--button {
+    padding-top: 0;
+    padding-right: 1.25rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.25rem;
+}
+
+.app-card .card-body p:last-child {
+    margin-bottom: 0;
+}

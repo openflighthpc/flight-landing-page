@@ -12,6 +12,7 @@ gem 'nanoc'
 
 group :nanoc do
   gem 'guard-nanoc'
+  gem 'kramdown'
 end
 
 group :development do
