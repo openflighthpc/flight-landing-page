@@ -9,8 +9,13 @@ preprocess do
     override.identifier = override[:__overridden_identifier__]
   end
 
+  # Add metadata to support special handling for installed apps.
+  items.select { |item| item.identifier.match?('/apps/**/*') }
+    .each { |item| item.update_attributes(kind: 'app') }
+
   # items.each do |i|
   #   ::STDERR.puts "=== i: #{(i).inspect rescue $!.message}"
+  #   ::STDERR.puts "  = i.attributes: #{(i.attributes).inspect rescue $!.message}"
   # end
 end
 
@@ -38,20 +43,6 @@ compile '/**/*.html.erb' do
   write target
 end
 
-compile '/apps/*' do
-  filter :kramdown
-  write nil
-end
-
-compile '/__environment__' do
-  filter :kramdown
-  write nil
-end
-
-# This is an example rule that matches Markdown (.md) files, and filters them
-# using the :kramdown filter. It is commented out by default, because kramdown
-# is not bundled with Nanoc or Ruby.
-#
 compile '/**/*.md' do
   filter :kramdown
   layout '/default.*'

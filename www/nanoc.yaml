@@ -7,8 +7,6 @@ prune:
   auto_prune: true
 
 data_sources:
-  - type: apps
-
   - type: filesystem
     encoding: utf-8
 
