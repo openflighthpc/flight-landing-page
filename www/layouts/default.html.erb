@@ -38,16 +38,13 @@
 
     <%= render '/navbar.html' %>
 
-    <div class="container-fluid" id="main">
+    <div class="container" id="main">
       <div class="row content mt-4">
-        <div class="col-sm-3 sidenav" id="sidenav_left">
-          <%= content_for(@item, :sidenav_left) %>
-        </div>
-        <div class="col-sm-6 centernav" id="main">
-          <%= yield %>
-        </div>
-        <div class="col-sm-3 sidenav" id="sidenav_right">
+        <aside class="sidenav">
           <%= content_for(@item, :sidenav_right) %>
+        </aside>
+        <div class="centernav">
+          <%= yield %>
         </div>
       </div>
     </div>

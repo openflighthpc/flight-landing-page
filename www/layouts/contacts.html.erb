@@ -1,12 +1,8 @@
 <% unless environment[:contacts].nil? || environment[:contacts].empty? %>
-  <dl class="properties-panel">
-    <dt>Contacts</dt>
-    <dd>
-    <ul class="w-100">
-      <% environment[:contacts].each do |contact| %>
-        <%= render '/contact.*', contact: contact %>
-      <% end %>
-    </ul>
-    </dd>
-  </dl>
+  <h2>Contacts</h2>
+  <ul class="w-100">
+    <% environment[:contacts].each do |contact| %>
+      <%= render '/contact.*', contact: contact %>
+    <% end %>
+  </ul>
 <% end %>
