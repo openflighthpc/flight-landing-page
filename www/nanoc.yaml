@@ -9,8 +9,6 @@ prune:
 data_sources:
   - type: apps
 
-  - type: environment
-
   - type: filesystem
     encoding: utf-8
 

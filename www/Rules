@@ -8,6 +8,10 @@ preprocess do
     end
     override.identifier = override[:__overridden_identifier__]
   end
+
+  # items.each do |i|
+  #   ::STDERR.puts "=== i: #{(i).inspect rescue $!.message}"
+  # end
 end
 
 compile '/**/*.html' do
@@ -48,16 +52,16 @@ end
 # using the :kramdown filter. It is commented out by default, because kramdown
 # is not bundled with Nanoc or Ruby.
 #
-#compile '/**/*.md' do
-#  filter :kramdown
-#  layout '/default.*'
-#
-#  if item.identifier =~ '**/index.*'
-#    write item.identifier.to_s
-#  else
-#    write item.identifier.without_ext + '/index.html'
-#  end
-#end
+compile '/**/*.md' do
+  filter :kramdown
+  layout '/default.*'
+
+  if item.identifier =~ '**/index.*'
+    write item.identifier.to_s
+  else
+    write item.identifier.without_ext + '/index.html'
+  end
+end
 
 compile '/**/*' do
   write item.identifier.to_s
