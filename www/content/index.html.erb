@@ -1,5 +1,6 @@
 ---
 title: Home
 ---
-<%= render '/environment.html.erb', env: environment %>
+<%= environment.compiled_content(snapshot: :last) %>
+
 <%= render '/installed_apps.html.erb' %>

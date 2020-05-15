@@ -1,8 +1,8 @@
 <div class="environment">
-  <% if env[:logo_url] %>
+  <% if @item[:logo_url] %>
     <div class="mb-2">
       <img
-        src="<%= env[:logo_url] %>"
+        src="<%= @item[:logo_url] %>"
         alt="Environment Logo"
         className="center"
         width="100%"
@@ -10,12 +10,12 @@
       </img>
     </div>
   <% end %>
-  <h3 class="text-center"><%= env[:name] %></h3>
-  <%= env.compiled_content %>
-  <% unless env[:contacts].nil? || env[:contacts].empty? %>
+  <h3 class="text-center"><%= @item[:name] %></h3>
+  <%= yield %>
+  <% unless @item[:contacts].nil? || @item[:contacts].empty? %>
     <h5>Contacts</h5>
     <ul>
-    <% env[:contacts].each do |contact| %>
+    <% @item[:contacts].each do |contact| %>
       <li class="d-flex justify-content-between">
         <span><%= contact[:name] %></span>
         <a

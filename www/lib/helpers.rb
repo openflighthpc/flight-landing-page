@@ -15,5 +15,19 @@ def installed_apps
 end
 
 def environment
-  @_environment ||= items.detect { |i| i[:kind] == 'environment' }
+  items['/environment.*']
+end
+
+def filters_from_extensions(item)
+  filters = item.identifier.exts.map do |ext| 
+    case ext
+    when 'erb'
+      :erb
+    when 'md'
+      :kramdown
+    else
+      nil
+    end
+  end
+  filters.compact.reverse
 end

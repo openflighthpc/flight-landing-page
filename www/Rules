@@ -19,6 +19,24 @@ preprocess do
   # end
 end
 
+compile '/environment.*' do
+  filters_from_extensions(item).each do |f|
+    filter f
+  end
+  layout '/environment.*'
+
+  write nil
+end
+
+compile '/apps/*' do
+  filters_from_extensions(item).each do |f|
+    filter f
+  end
+  layout '/installed_app.*'
+
+  write nil
+end
+
 compile '/**/*.html' do
   layout '/default.*'
 

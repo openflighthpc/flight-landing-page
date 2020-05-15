@@ -1,17 +1,17 @@
 <div class="card app-card">
   <div class="card-body">
     <h5 class="card-title">
-      <%= app[:title] %>
+      <%= @item[:title] %>
     </h5>
-    <% if app[:subtitle] %>
+    <% if @item[:subtitle] %>
       <h6 class="card-subtitle mb-2 text-muted">
-        <%= app[:subtitle] %>
+        <%= @item[:subtitle] %>
       </h6>
     <% end %>
-    <%= app.compiled_content %>
+    <%= yield %>
   </div>
   <div class="card-footer--button">
-    <a href="<%= app[:path] %>" class="card-link btn btn-primary">
+    <a href="<%= @item[:path] %>" class="card-link btn btn-primary">
       Go!
     </a>
   </div>
