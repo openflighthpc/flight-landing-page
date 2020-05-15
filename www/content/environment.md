@@ -3,25 +3,21 @@
 # YAML object.  The key/values defined here are used by the layouts when
 # rendering this content.
 
-# mandatory: This marks the kind of content.  The first defined environment
-# content will be displayed prominently on the landing page.
-kind: environment
-
 # optional: The URL for the environment's or organisation's logo.
 logo_url: images/png_trans_logo.png
 
 # optional: The name of the environment.
-name: Demo Cluster
+#name: Demo Cluster
 
 # optional: The name of the organisation that the environment belongs to.
-organisation_name: Demo organisation
+#organisation_name: Demo organisation
 
 # optional: A list of contacts for this environment.
-contacts:
- - name: A Contact
-   email: a.contact@example.com
- - name: A Nother Contact
-   email: a.nother.contact@example.com
+#contacts:
+# - name: A Contact
+#   email: a.contact@example.com
+# - name: A Nother Contact
+#   email: a.nother.contact@example.com
 ---
 
 <!-- This is markdown.  The content is rendered and displayed prominently on

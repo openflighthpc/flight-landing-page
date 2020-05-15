@@ -31,3 +31,11 @@ def filters_from_extensions(item)
   end
   filters.compact.reverse
 end
+
+def has_sidenav_content?
+  environment[:organisation_name] || has_contacts?
+end
+
+def has_contacts?
+  !environment[:contacts].nil? && !environment[:contacts].empty?
+end
