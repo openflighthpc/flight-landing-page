@@ -38,7 +38,7 @@ compile '/**/*.html.erb' do
   write target
 end
 
-compile '/__app__/*' do
+compile '/apps/*' do
   filter :kramdown
   write nil
 end
