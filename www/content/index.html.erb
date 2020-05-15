@@ -4,6 +4,13 @@ title: Home
 
 <% content_for :sidenav_right do %>
   <%= render '/contacts.*' %>
+
+  <% unless environment[:organisation_name].nil? %>
+    <h2>Organisation</h2>
+    <ul class="w-100">
+      <li><%= environment[:organisation_name] %></li>
+    </ul>
+  <% end %>
 <% end %>
 
 <%= environment.compiled_content(snapshot: :last) %>
