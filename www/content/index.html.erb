@@ -1,23 +1,5 @@
 ---
 title: Home
 ---
-<div>
-  <img
-    src="images/png_trans_logo.png"
-    alt="OpenflightHPC Logo"
-    className="center"
-    width="100%"
-    >
-  </img>
-</div>
-
 <%= render '/environment.html.erb', env: environment %>
-
-<% unless installed_apps.empty? %>
-  <h5>Available openflightHPC Applications</h5>
-  <div class="card-deck">
-    <% installed_apps.each do |app| %>
-      <%= render '/app_card.html.erb', app: app %>
-    <% end %>
-  </div>
-<% end %>
+<%= render '/installed_apps.html.erb' %>

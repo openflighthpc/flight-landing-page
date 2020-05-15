@@ -1,0 +1,9 @@
+<% unless installed_apps.empty? %>
+  <h2>Environment Web Tools</h2>
+  <a id="installed_apps"></a>
+  <div class="card-deck">
+    <% installed_apps.each do |app| %>
+      <%= render '/app_card.html.erb', app: app %>
+    <% end %>
+  </div>
+<% end %>
