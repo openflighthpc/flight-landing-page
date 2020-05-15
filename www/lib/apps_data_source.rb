@@ -39,7 +39,7 @@ class AppsDataSource < ::Nanoc::DataSource
     items = apps.map do |app|
       new_item(
         app[:description],
-        app.merge(__app__: true),
+        app.merge(kind: 'app'),
         Nanoc::Identifier.new("/__app__#{app[:path]}"),
       )
     end

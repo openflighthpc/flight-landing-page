@@ -7,9 +7,14 @@ prune:
   auto_prune: true
 
 data_sources:
-  - type: filesystem
-    encoding: utf-8
-
   - type: apps
 
   - type: environment
+
+  - type: filesystem
+    encoding: utf-8
+
+  - type: override_filesystem
+    encoding: utf-8
+    content_dir: overrides/content
+    layouts_dir: overrides/layouts

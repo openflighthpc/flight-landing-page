@@ -1,5 +1,15 @@
 #!/usr/bin/env ruby
 
+preprocess do
+  overrides = items.select { |item| item[:__override__] }
+  overrides.each do |override|
+    items.delete_if do |item|
+      item.identifier == override[:__overridden_identifier__]
+    end
+    override.identifier = override[:__overridden_identifier__]
+  end
+end
+
 compile '/**/*.html' do
   layout '/default.*'
 
@@ -14,11 +24,14 @@ compile '/**/*.html.erb' do
   filter :erb
   layout '/default.*'
 
-  if item.identifier =~ '**/index.*'
-    write item.identifier.without_exts + '.html'
-  else
-    write item.identifier.without_exts + '/index.html'
-  end
+  target =
+    if item.identifier =~ '**/index.*'
+      item.identifier.without_exts + '.html'
+    else
+      item.identifier.without_exts + '/index.html'
+    end
+
+  write target
 end
 
 compile '/__app__/*' do

@@ -28,11 +28,10 @@ class EnvironmentDataSource < ::Nanoc::DataSource
   def items
     item = new_item(
       environment[:description],
-      environment.merge(__environment__: true),
+      environment.merge(kind: 'environment'),
       Nanoc::Identifier.new('/__environment__')
     )
 
     [item]
   end
 end
-
