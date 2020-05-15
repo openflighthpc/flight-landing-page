@@ -1,18 +1,17 @@
 #!/usr/bin/env ruby
 
 preprocess do
-  overrides = items.select { |item| item[:__override__] }
-  overrides.each do |override|
-    items.delete_if do |item|
-      item.identifier == override[:__overridden_identifier__]
-    end
-    override.identifier = override[:__overridden_identifier__]
-  end
+  override(items)
+  override(layouts)
 
   # Add metadata to support special handling for installed apps.
   items.select { |item| item.identifier.match?('/apps/**/*') }
     .each { |item| item.update_attributes(kind: 'app') }
 
+  # layouts.each do |l|
+  #   ::STDERR.puts "=== l: #{(l).inspect rescue $!.message}"
+  #   ::STDERR.puts "  = l.attributes: #{(l.attributes).inspect rescue $!.message}"
+  # end
   # items.each do |i|
   #   ::STDERR.puts "=== i: #{(i).inspect rescue $!.message}"
   #   ::STDERR.puts "  = i.attributes: #{(i.attributes).inspect rescue $!.message}"

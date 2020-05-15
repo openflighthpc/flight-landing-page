@@ -39,3 +39,13 @@ end
 def has_contacts?
   !environment[:contacts].nil? && !environment[:contacts].empty?
 end
+
+def override(items_or_layouts)
+  overrides = items_or_layouts.select { |i| i[:__override__] }
+  overrides.each do |override|
+    items_or_layouts.delete_if do |i|
+      i.identifier == override[:__overridden_identifier__]
+    end
+    override.identifier = override[:__overridden_identifier__]
+  end
+end
