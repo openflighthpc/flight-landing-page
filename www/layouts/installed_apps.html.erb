@@ -1,7 +1,10 @@
 <% unless installed_apps.empty? %>
   <h2>Environment Web Tools</h2>
   <a id="installed_apps"></a>
-  <div class="card-deck">
+  <p>
+  Your environment has the following web tools installed and ready for use.
+  </p>
+  <div class="card-deck pb-3">
     <% installed_apps.each do |app| %>
       <%= app.compiled_content(snapshot: :last) %>
     <% end %>
