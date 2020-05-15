@@ -38,12 +38,14 @@ quickly and easily. The basic structure provided for users is as follows:
  - A batch job scheduler
  - Access to various libraries of software applications
 
-<button
-  class="btn btn-primary learn-more"
-  href="https://use.openflighthpc.org/en/latest/overview/whatisit.html"
->
-Learn more
-</button>
+<div class="clearfix">
+  <button
+    class="btn btn-primary learn-more float-right"
+    href="https://use.openflighthpc.org/en/latest/overview/whatisit.html"
+  >
+  Learn more
+  </button>
+</div>
 
 ## What is Flight User Suite?
 
@@ -53,9 +55,11 @@ research envrionment. The purpose of these tools is to get researchers started
 with HPC as quickly as possible without needing to worry about their
 environment, leaving them to do what they do best - research!
 
-<button
-  class="btn btn-primary learn-more"
-  href="https://use.openflighthpc.org/en/latest/installing-user-suite/install.html"
->
-Learn more
-</button>
+<div class="clearfix">
+  <button
+    class="btn btn-primary learn-more float-right"
+    href="https://use.openflighthpc.org/en/latest/installing-user-suite/install.html"
+  >
+  Learn more
+  </button>
+</div>
