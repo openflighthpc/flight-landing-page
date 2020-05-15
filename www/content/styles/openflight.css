@@ -25,6 +25,10 @@ body {
     font-size: larger;
 }
 
+li {
+    padding-top: 1rem;
+}
+
 footer {
     background-color: white;
     bottom: 0;
