@@ -11,15 +11,17 @@ kind: environment
 logo_url: images/png_trans_logo.png
 
 # optional: The name of the environment.
-#name: The environment name
+name: Demo Cluster
 
 # optional: The name of the organisation that the environment belongs to.
-#organisation_name: The organisation name
+organisation_name: Demo organisation
 
 # optional: A list of contacts for this environment.
-#contacts:
-# - name: A contact
-#   email: a.contact@example.com
+contacts:
+ - name: A Contact
+   email: a.contact@example.com
+ - name: A Nother Contact
+   email: a.nother.contact@example.com
 ---
 
 <!-- This is markdown.  The content is rendered and displayed prominently on

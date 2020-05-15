@@ -1,6 +1,11 @@
 ---
 title: Home
 ---
+
+<% content_for :sidenav_right do %>
+  <%= render '/contacts.*' %>
+<% end %>
+
 <%= environment.compiled_content(snapshot: :last) %>
 
 <%= render '/installed_apps.html.erb' %>
