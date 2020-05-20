@@ -1,5 +1,9 @@
 use_helper Nanoc::Helpers::Rendering
 
+def links
+  items['/links.yaml'][:links]
+end
+
 def installed_apps
   @_installed_apps ||= items
     .select { |i| i[:kind] == 'app' }
@@ -44,7 +48,7 @@ def has_contacts?
 end
 
 def has_links?
-  !environment[:links].nil? && !environment[:links].empty?
+  !links.nil? && !links.empty?
 end
 
 def override(items_or_layouts)

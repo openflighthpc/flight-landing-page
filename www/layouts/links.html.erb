@@ -1,7 +1,7 @@
 <% if has_links? %>
   <h2>Links</h2>
   <ul class="w-100">
-    <% environment[:links].each do |link| %>
+    <% links.each do |link| %>
       <%= render '/link.*', link: link %>
     <% end %>
   </ul>
