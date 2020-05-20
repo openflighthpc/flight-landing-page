@@ -72,19 +72,14 @@ img.logo {
   }
 }
 
-.fa-card-img-background {
-  position:relative;
-  &:before {
-    bottom: 0;
-    color: #2296d9;
-    color: var(--success);
-    font-family: FontAwesome;
-    font-size: 900%;
-    left: 0;
-    opacity: 0.2;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 25px;
-  }
+.fa-background:before {
+  color: #2296d9;
+  color: var(--success);
+  font-family: FontAwesome;
+  font-size: 900%;
+  left: 50%;
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
