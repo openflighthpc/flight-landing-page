@@ -1,6 +1,6 @@
 <div class="card app-card">
-  <span class="fa-card-img fa fa-4x fa-<%= @item[:fa_icon] || 'bars' %>"></span>
   <div class="card-body d-flex flex-column">
+  <span class="fa-card-img-background fa fa-<%= @item[:fa_icon] || 'bars' %>"></span>
     <h5 class="card-title">
       <%= @item[:title] %>
     </h5>
@@ -11,7 +11,7 @@
     <% end %>
     <%= yield %>
     <div class="mt-auto">
-      <a href="<%= @item[:path] %>" class="card-link btn btn-primary btn-block">
+      <a href="<%= @item[:path] %>" class="card-link btn btn-success btn-block">
         Go!
       </a>
     </div>
