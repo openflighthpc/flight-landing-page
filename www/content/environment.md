@@ -18,6 +18,20 @@ logo_url: images/png_trans_logo.png
 #   email: a.contact@example.com
 # - name: A Nother Contact
 #   email: a.nother.contact@example.com
+
+# optional: A list of links for this environment.
+links:
+ - text: Documentation
+   tooltip: OpenflightHPC documentation
+   href: https://openflighthpc.org/docs/
+   external: true
+ #- text: An external link
+ #  href: http://example.com
+ #  external: true
+ #- text: An internal link
+ #  href: /some/path
+ #  external: false
+
 ---
 
 <!-- This is markdown.  The content is rendered and displayed prominently on

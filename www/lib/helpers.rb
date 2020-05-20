@@ -33,11 +33,18 @@ def filters_from_extensions(item)
 end
 
 def has_sidenav_content?
-  environment[:organisation_name] || has_contacts?
+  environment[:name] ||
+    environment[:organisation_name] ||
+    has_contacts? ||
+    has_links?
 end
 
 def has_contacts?
   !environment[:contacts].nil? && !environment[:contacts].empty?
+end
+
+def has_links?
+  !environment[:links].nil? && !environment[:links].empty?
 end
 
 def override(items_or_layouts)
