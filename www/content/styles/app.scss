@@ -21,14 +21,6 @@ img.logo {
 }
 
 .sidenav {
-  border-right: 1px solid #ccc;
-  flex: 0 0 20%;
-  height: fit-content;
-  max-width: 20%;
-  padding: 20px 20px 20px 0;
-  position: relative;
-  width: 100%;
-
   h2 {
     text-transform: uppercase;
     font-size: 13px;
@@ -49,17 +41,6 @@ img.logo {
 }
 
 .centernav {
-  @if nanoc('has_sidenav_content?') {
-    flex: 0 0 80%;
-    max-width: 80%;
-  } @else {
-    margin-left: 16.66667%;
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%;
-  }
-  padding: 0 15px;
-  position: relative;
-  width: 100%;
 }
 
 .properties-panel {
