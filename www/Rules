@@ -48,16 +48,6 @@ compile '/links/*' do
   write nil
 end
 
-compile '/sidebar.*' do
-  filters_from_extensions(item).each do |f|
-    filter f
-  end
-  layout '/sidebar.*'
-  snapshot :pre_default
-
-  write nil
-end
-
 compile '/environment.*' do
   filters_from_extensions(item).each do |f|
     filter f
