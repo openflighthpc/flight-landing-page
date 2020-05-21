@@ -22,12 +22,16 @@ cd flight-landing-page
 bundle install --path=vendor
 ```
 
-Compile the landing page by running the following:
+The landing page can be compiled by running the following:
 
 ```
 cd flight-landing-page/www
 bundle exec nanoc compile
 ```
+
+The output will be in the directory `flight-landing-page/www/output`.  You
+will need to install and configure a web server to serve static files from
+that directory.
 
 ### Installing with Flight Runway
 
@@ -62,25 +66,62 @@ installed and the environment activated with the `flight start` command.
     [root@myhost ~]# yum install flight-landing-page
     ```
 
-Flight Landing Page is now available via the `flight` tool:
+ * Install a web server to serve the landing page.  You may wish to use
+   `flight-www`.
 
-```
-[root@myhost ~]# flight landing-page
-Usage: flight landing-page compile
-Compile the landing page
-```
+    ```
+    [root@myhost ~]# yum install flight-www
+    ```
 
 ## Configuration
 
-XXX TBC
+By default, Flight landing page installs a generic landing page suitable for
+any openflightHPC environment.
 
- - XXX Installing some web apps will add change content.  Recompilation
-   needed.
- - XXX Environment details.
- - XXX Content can be overridden.
- - XXX Layouts can be overridden.
+When openflightHPC web apps such as
+[`flight-console-webapp`](https://github.com/openflighthpc/flight-console-webapp)
+or
+[`flight-desktop-webapp`](https://github.com/openflighthpc/flight-desktop-webapp)
+are installed they will automatically be shown on the landing page.
 
-Making changes to the default configuration is optional.
+If more advanced configuration is required this can be accomplished by
+overriding any of default files by creating an identically named file in
+`flight-landing-page/www/overrides`.
+
+For example, the following would change the links shown in the sidebar:
+
+```
+cd flight-landing-page/www
+mkdir overrides/content/
+cp -a content/links.yaml overrides/content/
+$EDITOR overrides/content/links.yaml
+bundle exec nanoc compile
+```
+
+Whilst the following would change the environment details:
+
+```
+cd flight-landing-page/www
+mkdir overrides/content/
+cp -a content/environment.md overrides/content/
+$EDITOR overrides/content/environment.md
+bundle exec nanoc compile
+```
+
+Once any changes have been made, make sure to compile the site by running:
+
+```
+cd flight-landing-page/www
+bundle exec nanoc compile
+```
+
+Files worth mentioning are:
+
+ - www/content/links.yaml
+ - www/content/environment.md
+ - www/content/sidebar.md
+
+The default layouts can also be overridden in a similar manner.
 
 ## Operation
 
