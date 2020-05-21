@@ -46,14 +46,8 @@
 
     <div class="container" id="main">
       <div class="row content mt-4">
-        <% if has_sidenav_content? %>
-          <aside class="sidenav col-12 col-md-3 col-lg-2">
-            <div>
-              <%= content_for(@item, :sidenav_right) %>
-            </div>
-          </aside>
-        <% end %>
-        <div class="centernav col-12 col-md-9 col-lg-8 offset-md-<%= has_sidenav_content? ? 0 : 3 %> offset-lg-<%= has_sidenav_content? ? 0 : 2 %>">
+        <%= render '/sidebar.html.erb' %>
+        <div class="centernav col-12 col-md-9 col-lg-8 offset-md-0 offset-lg-0">
           <%= yield %>
         </div>
       </div>

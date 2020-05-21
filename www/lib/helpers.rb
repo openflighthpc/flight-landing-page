@@ -1,5 +1,9 @@
 use_helper Nanoc::Helpers::Rendering
 
+def sidebar
+  items['/sidebar.*']
+end
+
 def links
   items['/links.yaml'][:links]
 end

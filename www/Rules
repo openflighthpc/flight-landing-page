@@ -18,6 +18,15 @@ preprocess do
   # end
 end
 
+compile '/sidebar.*' do
+  filters_from_extensions(item).each do |f|
+    filter f
+  end
+  # layout '/sidebar.*'
+
+  write nil
+end
+
 compile '/environment.*' do
   filters_from_extensions(item).each do |f|
     filter f

@@ -1,0 +1,17 @@
+<% unless environment[:name].nil? %>
+  <h2>Environment</h2>
+  <ul class="w-100">
+    <li><%= environment[:name] %></li>
+  </ul>
+<% end %>
+
+<% unless environment[:organisation_name].nil? %>
+  <h2>Organisation</h2>
+  <ul class="w-100">
+    <li><%= environment[:organisation_name] %></li>
+  </ul>
+<% end %>
+
+<%= render '/contacts.*' %>
+
+<%= render '/links.*' %>
