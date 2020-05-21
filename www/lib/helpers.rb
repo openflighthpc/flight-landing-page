@@ -1,5 +1,12 @@
 use_helper Nanoc::Helpers::Rendering
 
+def raw_contacts
+  c = items['/contacts.yaml']
+  if !c.nil?
+    c[:contacts] || []
+  end
+end
+
 def contacts
   @_contacts ||= items
     .select { |i| i[:kind] == 'contact' }
