@@ -17,15 +17,15 @@ Flight Landing Page requires a recent version of Ruby and `bundler`.
 The following will install from source using `git`:
 
 ```
-git clone https://github.com/openflighthpc/openflight-landing-page.git
-cd openflight-landing-page
+git clone https://github.com/openflighthpc/flight-landing-page.git
+cd flight-landing-page
 bundle install --path=vendor
 ```
 
 Compile the landing page by running the following:
 
 ```
-cd openflight-landing-page/www
+cd flight-landing-page/www
 bundle exec nanoc compile
 ```
 
