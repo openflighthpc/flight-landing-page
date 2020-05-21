@@ -8,6 +8,18 @@ preprocess do
   items.select { |item| item.identifier.match?('/apps/**/*') }
     .each { |item| item.update_attributes(kind: 'app') }
 
+  # Create contact items from the environment metadata.
+  if !environment[:contacts].nil?
+    environment[:contacts].each_with_index do |contact, idx|
+      items.create('', contact.merge(kind: 'contact'), "/contacts/#{idx}")
+    end
+  end
+
+  # Create link items from the links metadata.
+  raw_links.each_with_index do |link, idx|
+    items.create('', link.merge(kind: 'link'), "/links/#{idx}")
+  end
+
   # layouts.each do |l|
   #   ::STDERR.puts "=== l: #{(l).inspect rescue $!.message}"
   #   ::STDERR.puts "  = l.attributes: #{(l.attributes).inspect rescue $!.message}"
@@ -18,11 +30,32 @@ preprocess do
   # end
 end
 
+compile '/contacts/*' do
+  filters_from_extensions(item).each do |f|
+    filter f
+  end
+  layout '/contact.*'
+  snapshot :pre_default
+
+  write nil
+end
+
+compile '/links/*' do
+  filters_from_extensions(item).each do |f|
+    filter f
+  end
+  layout '/link.*'
+  snapshot :pre_default
+
+  write nil
+end
+
 compile '/sidebar.*' do
   filters_from_extensions(item).each do |f|
     filter f
   end
-  # layout '/sidebar.*'
+  layout '/sidebar.*'
+  snapshot :pre_default
 
   write nil
 end
@@ -32,6 +65,7 @@ compile '/environment.*' do
     filter f
   end
   layout '/environment.*'
+  snapshot :pre_default
 
   write nil
 end
@@ -40,12 +74,14 @@ compile '/apps/*' do
   filters_from_extensions(item).each do |f|
     filter f
   end
-  layout '/installed_app.*'
+  layout '/app.*'
+  snapshot :pre_default
 
   write nil
 end
 
 compile '/**/*.html' do
+  snapshot :pre_default
   layout '/default.*'
 
   if item.identifier =~ '**/index.*'
@@ -57,6 +93,7 @@ end
 
 compile '/**/*.html.erb' do
   filter :erb
+  snapshot :pre_default
   layout '/default.*'
 
   target =
@@ -71,6 +108,7 @@ end
 
 compile '/**/*.md' do
   filter :kramdown
+  snapshot :pre_default
   layout '/default.*'
 
   if item.identifier =~ '**/index.*'

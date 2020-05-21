@@ -12,6 +12,20 @@
   </ul>
 <% end %>
 
-<%= render '/contacts.*' %>
+<% if !contacts.empty? %>
+  <h2>Contacts</h2>
+  <ul class="w-100">
+    <% contacts.each do |contact| %>
+      <%= contact.compiled_content(snapshot: :pre_default) %>
+    <% end %>
+  </ul>
+<% end %>
 
-<%= render '/links.*' %>
+<% if !links.empty? %>
+  <h2>Links</h2>
+  <ul class="w-100">
+    <% links.each do |link| %>
+      <%= link.compiled_content(snapshot: :pre_default) %>
+    <% end %>
+  </ul>
+<% end %>

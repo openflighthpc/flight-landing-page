@@ -1,13 +1,13 @@
 <li>
   <a
     class="mx-1 d-flex justify-content-between align-items-center"
-    href="<%= link[:href] %>"
-    <% if link[:tooltip] %>
-      title="<%= link[:tooltip] %>"
+    href="<%= @item[:href] %>"
+    <% if @item[:tooltip] %>
+      title="<%= @item[:tooltip] %>"
     <% end %>
     >
-    <span><%= link[:text] %></span>
-    <% if link[:external] %>
+    <span><%= @item[:text] %></span>
+    <% if @item[:external] %>
       <span class="fa fa-external-link"></span>
     <% end %>
   </a>

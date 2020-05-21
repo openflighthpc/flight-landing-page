@@ -1,16 +1,33 @@
 use_helper Nanoc::Helpers::Rendering
 
+def contacts
+  @_contacts ||= items
+    .select { |i| i[:kind] == 'contact' }
+end
+
+def raw_links
+  l = items['/links.yaml']
+  if !l.nil?
+    l[:links] || []
+  end
+end
+
+def links
+  @_links ||= items
+    .select { |i| i[:kind] == 'link' }
+end
+
 def sidebar
   items['/sidebar.*']
 end
 
-def links
-  items['/links.yaml'][:links]
+def webapps
+  items['/webapps.*']
 end
 
-def installed_apps
-  @_installed_apps ||= items
-    .select { |i| i[:kind] == 'app' }
+def apps
+  @_apps ||= items
+    .find_all('/apps/**/*')
     .sort { |a, b|
       if a[:order] && b[:order]
         [ a[:order], a.identifier ] <=> [ b[:order], b.identifier ]
@@ -43,16 +60,8 @@ end
 def has_sidenav_content?
   environment[:name] ||
     environment[:organisation_name] ||
-    has_contacts? ||
-    has_links?
-end
-
-def has_contacts?
-  !environment[:contacts].nil? && !environment[:contacts].empty?
-end
-
-def has_links?
-  !links.nil? && !links.empty?
+    !contacts.empty? ||
+    !links.empty?
 end
 
 def override(items_or_layouts)

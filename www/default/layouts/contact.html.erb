@@ -1,9 +1,9 @@
 <li class="d-flex justify-content-between">
-  <span><%= contact[:name] %></span>
+  <span><%= @item[:name] %></span>
   <a
     class="mx-1"
-    href="mailto:<%= contact[:email] %>"
-    title="<%= contact[:email] %>"
+    href="mailto:<%= @item[:email] %>"
+    title="<%= @item[:email] %>"
     >
     <span class="fa fa-envelope"></span>
   </a>

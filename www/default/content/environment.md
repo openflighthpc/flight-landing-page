@@ -4,7 +4,7 @@
 # rendering this content.
 
 # optional: The URL for the environment's or organisation's logo.
-logo_url: images/png_trans_logo.png
+logo_url: /images/png_trans_logo.png
 
 # optional: The name of the environment.
 #name: Demo Cluster
