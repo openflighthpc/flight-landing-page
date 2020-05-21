@@ -76,17 +76,19 @@ installed and the environment activated with the `flight start` command.
 ## Configuration
 
 By default, Flight landing page installs a generic landing page suitable for
-any openflightHPC environment.
-
-When openflightHPC web apps such as
+any openflightHPC environment.  This default content is automatically updated
+when openflightHPC web apps such as
 [`flight-console-webapp`](https://github.com/openflighthpc/flight-console-webapp)
 or
 [`flight-desktop-webapp`](https://github.com/openflighthpc/flight-desktop-webapp)
-are installed they will automatically be shown on the landing page.
+are installed.
 
 If more advanced configuration is required this can be accomplished by
-overriding any of default files by creating an identically named file in
-`flight-landing-page/www/overrides`.
+overriding any of default content or layout files.  The default content files
+are found in `www/default/content/` and the default layout files found in
+`www/default/layouts/`.  They can be overridden by creating an identically
+named file in `www/overridden/content/` or `www/overridden/layouts/`
+respectively.
 
 For example, the following would change the links shown in the sidebar:
 

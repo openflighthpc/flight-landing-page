@@ -9,8 +9,10 @@ prune:
 data_sources:
   - type: filesystem
     encoding: utf-8
+    content_dir: default/content
+    layouts_dir: default/layouts
 
   - type: override_filesystem
     encoding: utf-8
-    content_dir: overrides/content
-    layouts_dir: overrides/layouts
+    content_dir: overridden/content
+    layouts_dir: overridden/layouts
