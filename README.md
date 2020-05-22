@@ -76,16 +76,16 @@ installed and the environment activated with the `flight start` command.
 ## Configuration
 
 By default, Flight landing page installs a generic landing page suitable for
-any openflightHPC environment.  This default content is automatically updated
+any openflightHPC environment.  The default content is automatically updated
 when openflightHPC web apps such as
 [`flight-console-webapp`](https://github.com/openflighthpc/flight-console-webapp)
 or
 [`flight-desktop-webapp`](https://github.com/openflighthpc/flight-desktop-webapp)
 are installed.
 
-If more advanced configuration is required this can be accomplished by
-overriding any of default content or layout files.  The default content files
-are found in `www/default/content/` and the default layout files found in
+If more configuration is required this can be accomplished by overriding any
+of the default content or layout files.  The default content files are found
+in `www/default/content/` and the default layout files found in
 `www/default/layouts/`.  They can be overridden by creating an identically
 named file in `www/overridden/content/` or `www/overridden/layouts/`
 respectively.
@@ -95,9 +95,8 @@ For example, the following would change the links shown in the sidebar:
 ```
 cd flight-landing-page/www
 mkdir overrides/content/
-cp -a content/links.yaml overrides/content/
+cp -a default/content/links.yaml overrides/content/
 $EDITOR overrides/content/links.yaml
-bundle exec nanoc compile
 ```
 
 Whilst the following would change the environment details:
@@ -105,29 +104,43 @@ Whilst the following would change the environment details:
 ```
 cd flight-landing-page/www
 mkdir overrides/content/
-cp -a content/environment.md overrides/content/
+cp -a default/content/environment.md overrides/content/
 $EDITOR overrides/content/environment.md
-bundle exec nanoc compile
 ```
 
-Once any changes have been made, make sure to compile the site by running:
+The default layouts can also be overridden in a similar manner.
+
+Files worth mentioning are:
+
+ - `www/default/content/contacts.yaml`: the list of contacts to show in the
+   sidebar.
+ - `www/default/content/links.yaml`: the list of links to show in the
+   sidebar.
+ - `www/default/content/environment.md`: the environment details including
+   some metadata.
+
+Once any changes have been made, make sure to compile the site.  The command
+to do that depends on the installation method.
+
+*When installed with Flight Runway*
+
+```
+flight start
+flight landing-page compile
+```
+
+*When installed from source*
 
 ```
 cd flight-landing-page/www
 bundle exec nanoc compile
 ```
 
-Files worth mentioning are:
-
- - www/content/links.yaml
- - www/content/environment.md
- - www/content/sidebar.md
-
-The default layouts can also be overridden in a similar manner.
-
 ## Operation
 
-XXX TBC
+Once compiled (see above), the landing page is a set of static HTML files to
+be served by a suitably configured web server.  The `flight-www` RPM will
+install and configure a suitable web server.
 
 See the `help` command for further details and information about other commands.
 
