@@ -1,4 +1,5 @@
-/www/content/apps
+/www/default/content/apps
+/www/overridden/
 /www/output
 /www/tmp
 crash.log
