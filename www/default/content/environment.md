@@ -17,7 +17,7 @@ logo_url: /images/png_trans_logo.png
 the landing page.  -->
 
 This environment is powered by OpenflightHPC Compute and the Flight User
-Suite.  It can do many things
+Suite.
 
 ## What is OpenFlightHPC Compute?
 
@@ -32,12 +32,12 @@ quickly and easily. The basic structure provided for users is as follows:
  - Access to various libraries of software applications
 
 <div class="clearfix mb-4">
-  <button
+  <a
     class="btn btn-primary learn-more float-right"
     href="https://use.openflighthpc.org/en/latest/overview/whatisit.html"
   >
   Learn more
-  </button>
+  </a>
 </div>
 
 ## What is Flight User Suite?
@@ -49,10 +49,10 @@ with HPC as quickly as possible without needing to worry about their
 environment, leaving them to do what they do best - research!
 
 <div class="clearfix mb-4">
-  <button
+  <a
     class="btn btn-primary learn-more float-right"
     href="https://use.openflighthpc.org/en/latest/installing-user-suite/install.html"
   >
   Learn more
-  </button>
+  </a>
 </div>
