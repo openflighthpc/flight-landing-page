@@ -94,18 +94,18 @@ For example, the following would change the links shown in the sidebar:
 
 ```
 cd flight-landing-page/www
-mkdir overrides/content/
-cp -a default/content/links.yaml overrides/content/
-$EDITOR overrides/content/links.yaml
+mkdir overridden/content/
+cp -a default/content/links.yaml overridden/content/
+$EDITOR overridden/content/links.yaml
 ```
 
 Whilst the following would change the environment details:
 
 ```
 cd flight-landing-page/www
-mkdir overrides/content/
-cp -a default/content/environment.md overrides/content/
-$EDITOR overrides/content/environment.md
+mkdir overridden/content/
+cp -a default/content/environment.md overridden/content/
+$EDITOR overridden/content/environment.md
 ```
 
 The default layouts can also be overridden in a similar manner.
