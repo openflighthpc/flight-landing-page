@@ -1,7 +1,7 @@
-/www/default/content/apps
-/www/overridden/
-/www/output
-/www/tmp
+/landing-page/default/content/apps
+/landing-page/overridden/
+/landing-page/output
+/landing-page/tmp
 crash.log
 
 ## Environment normalization:
