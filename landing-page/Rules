@@ -4,10 +4,6 @@ preprocess do
   override(items)
   override(layouts)
 
-  # Add metadata to support special handling for installed apps.
-  items.select { |item| item.identifier.match?('/apps/**/*') }
-    .each { |item| item.update_attributes(kind: 'app') }
-
   # Create contact items from the contacts metadata.
   raw_contacts.each_with_index do |contact, idx|
     items.create('', contact.merge(kind: 'contact'), "/contacts/#{idx}")

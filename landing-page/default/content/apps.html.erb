@@ -1,11 +1,11 @@
-<% unless apps.empty? %>
+<% unless app_items.empty? %>
   <h2>Environment Web Tools</h2>
-  <a id="webapps"></a>
+  <a id="apps"></a>
   <p>
   Your environment has the following web tools installed and ready for use.
   </p>
   <div class="card-deck pb-3">
-    <% apps.each do |app| %>
+    <% app_items.each do |app| %>
       <%= app.compiled_content(snapshot: :pre_default) %>
     <% end %>
   </div>

@@ -28,11 +28,17 @@ def sidebar
   items['/sidebar.*']
 end
 
-def webapps
-  items['/webapps.*']
+# Return the item listing all installed apps.
+#
+# This is a single item which includes all of the installed apps.
+def apps_item
+  items['/apps.*']
 end
 
-def apps
+# Return an ordered list of items for the installed apps.
+#
+# Each item is for a single installed app.
+def app_items
   @_apps ||= items
     .find_all('/apps/**/*')
     .sort { |a, b|

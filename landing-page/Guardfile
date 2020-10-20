@@ -22,5 +22,5 @@ guard 'nanoc' do
   watch('Rules')
   watch(%r{^lib/.*$})
   watch(%r{^default/(content|layouts|apps)/.*$})
-  watch(%r{^overrides/(content|layouts)/.*$})
+  watch(%r{^overridden/(content|layouts|apps)/.*$})
 end
