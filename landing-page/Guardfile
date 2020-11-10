@@ -18,9 +18,10 @@
 # frozen_string_literal: true
 
 guard 'nanoc' do
-  watch('nanoc.yaml') # Change this to config.yaml if you use the old config file name
-  watch('Rules')
+  # watch('nanoc.yaml') # Change this to config.yaml if you use the old config file name
+  # watch('Rules')
+  directories(%w( lib types overridden ))
   watch(%r{^lib/.*$})
-  watch(%r{^default/(content|layouts|apps)/.*$})
+  watch(%r{^types/.*/(content|layouts|apps)/.*$})
   watch(%r{^overridden/(content|layouts|apps)/.*$})
 end
