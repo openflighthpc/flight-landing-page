@@ -1,13 +1,32 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-    <a
+    <% if branding('brandbar.logo') %>
+      <a
+        class="navbar-brand <%= branding('brandbar.logo.classNames') %>"
+        href="/">
+        <img
+          src="<%= branding('brandbar.logo.url') %>"
+          alt="<%= branding('brandbar.logo.alt') %>"
+          height="75">
+        </img>
+      </a>
+    <% else %>
+      <a
         class="navbar-brand"
         href="/">
         <img
-            src="/images/png_trans_logo-navbar.png"
-            alt="openflightHPC Logo"
-            height="75">
+          src="/images/png_trans_logo-navbar.png"
+          alt="openflightHPC Logo"
+          height="75">
         </img>
-    </a>
+      </a>
+    <% end %>
+    <% if text = branding('brandbar.text') %>
+      <div class="BrandingTextWrapper">
+        <span class="BrandingText">
+          <%= text %>
+        </span>
+      </div>
+    <% end %>
 
     <button
         class="navbar-toggler"

@@ -1,14 +1,14 @@
 <div class="environment">
-  <% if @item[:logo_url] %>
+  <% if branding('landingpage.dashboard.logo') %>
     <div class="mb-2">
       <img
-        src="<%= @item[:logo_url] %>"
-        alt="Environment Logo"
-        class="logo"
+        src="<%= branding('landingpage.dashboard.logo.url') %>"
+        alt="<%= branding('landingpage.dashboard.logo.alt') || 'Environment logo' %>"
+        class="logo <%= branding('landingpage.dashboard.logo.classNames') %>"
         >
       </img>
     </div>
   <% end %>
-  <h3 class="text-center"><%= @item[:name] %></h3>
+  <h3 class="text-center"><%= branding('environment.name') %></h3>
   <%= yield %>
 </div>

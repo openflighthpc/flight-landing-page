@@ -24,6 +24,11 @@ preprocess do
   # end
 end
 
+compile '/branding.*' do
+  filter :metadata_to_json, item: item
+  write ext: 'json'
+end
+
 compile '/contacts/*' do
   filters_from_extensions(item).each do |f|
     filter f
