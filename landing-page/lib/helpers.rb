@@ -1,5 +1,19 @@
 use_helper Nanoc::Helpers::Rendering
 
+def branding(dotted_key="")
+  raw_branding = items['/branding.yaml']
+  return if raw_branding.nil?
+
+  keys = dotted_key.split('.')
+  keys.reduce(raw_branding) do |accum, key|
+    if accum.respond_to?(:[])
+      accum[key.to_sym]
+    else
+      nil
+    end
+  end
+end
+
 def raw_contacts
   c = items['/contacts.yaml']
   if !c.nil?
@@ -71,8 +85,8 @@ def filters_from_extensions(item)
 end
 
 def has_sidenav_content?
-  environment[:name] ||
-    environment[:organisation_name] ||
+  branding('environment.name') ||
+    branding('organisation.name') ||
     !contacts.empty? ||
     !links.empty?
 end

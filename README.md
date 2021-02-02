@@ -115,13 +115,12 @@ The default layouts can also be overridden in a similar manner.
 
 Files worth mentioning are:
 
+ - `landing-page/default/content/branding.yaml`: optional branding details.
  - `landing-page/default/content/contacts.yaml`: the list of contacts to show
    in the sidebar.
  - `landing-page/default/content/links.yaml`: the list of links to show in the
    sidebar.
- - `landing-page/default/content/environment.md`: the environment details
-   including
-   some metadata.
+ - `landing-page/default/content/environment.md`: the environment details.
 
 Once any changes have been made, make sure to compile the site.  The command
 to do that depends on the installation method.

@@ -1,0 +1,46 @@
+# Optional branding for the landing page AND flight webapps.
+
+# environment:
+#   # Optional cluster (or environment) name.  Defaults to an empty string if
+#   # not provided.
+#   name: "BigV Cluster"
+
+# organisation:
+#   # Optional organisation name.  Defaults to an empty string if not provided.
+#   name: "The University of BigV"
+
+# brandbar:
+#   # Optional text for the brandbar, for both the landing page and the webapps.
+#   # Defaults to an empty string if not provided.
+#   text: "BigV Uni"
+
+#   # Optional logo for the brandbar, for both the landing page and the webapps.
+#   # Defaults to the OpenflightHPC logo if not provided.
+#   logo:
+#     url: "http://localhost:3001/bigv-uni.png"
+#     alt: "University of BigV logo"
+#     # Additional class names for the IMG tag.  Bootstrap classes can be used
+#     # here.
+#     classNames: ""
+
+# landingpage:
+#   dashboard:
+#     # Optional logo for the landing page environment page (aka dashboard).
+#     # Defaults to no logo if not provided.
+#     logo:
+#       url: "http://localhost:3001/bigv-uni.png"
+#       alt: "University of BigV logo"
+#       # Additional class names for the IMG tag.  Bootstrap classes can be used
+#       # here.
+#       classNames: "mb-4"
+
+# apps:
+#   dashboard:
+#     # Optional logo for the webapp dashboards.
+#     # Defaults to the OpenflightHPC logo if not provided.
+#     logo:
+#       url: "http://localhost:3001/bigv-uni.png"
+#       alt: "University of BigV logo"
+#       # Additional class names for the IMG tag.  Bootstrap classes can be used
+#       # here.
+#       classNames: "mb-4"

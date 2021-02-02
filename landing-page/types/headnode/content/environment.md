@@ -1,21 +1,3 @@
----
-# This section is the front matter.  It is optional but if present must be a
-# YAML object.  The key/values defined here are used by the layouts when
-# rendering this content.
-
-# optional: The URL for the environment's or organisation's logo.
-logo_url: /images/png_trans_logo.png
-
-# optional: The name of the environment.
-#name: Demo Cluster
-
-# optional: The name of the organisation that the environment belongs to.
-#organisation_name: Demo organisation
----
-
-<!-- This is markdown.  The content is rendered and displayed prominently on
-the landing page.  -->
-
 This environment is powered by OpenflightHPC Compute and the Flight User
 Suite.
 
