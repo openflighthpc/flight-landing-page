@@ -5,6 +5,17 @@
     padding-left: 1.25rem;
 }
 
+.app-card-deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  grid-gap: .5rem;
+}
+
+.app-card-deck .app-card {
+  margin: 0;
+  min-height: 250px;
+}
+
 .app-card .card-body p:last-child {
     margin-bottom: 0;
 }
@@ -70,6 +81,9 @@ img.logo {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.app-card .fa-background:before {
+  top: 45%;
 }
 .fa-background ~ * {
     z-index: 100;
