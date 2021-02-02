@@ -1,24 +1,32 @@
 # Optional branding for the landing page AND flight webapps.
 
 # environment:
-#   # Optional cluster (or environment) name.  Defaults to an empty string if
+#   # Optional cluster (aka environment) name.  Defaults to an empty string if
 #   # not provided.
-#   name: "BigV Cluster"
+#   name: ""
+#   # Optional cluster (aka environment) description.  Defaults to an empty
+#   # string if not provided.
+#   description: ""
+#   # Optional logo for the cluster (aka environment).  Defaults to no logo if
+#   # not provided.
+#   logo:
+#     url: ""
+#     classNames: ""
 
 # organisation:
 #   # Optional organisation name.  Defaults to an empty string if not provided.
-#   name: "The University of BigV"
+#   name: ""
 
 # brandbar:
 #   # Optional text for the brandbar, for both the landing page and the webapps.
 #   # Defaults to an empty string if not provided.
-#   text: "BigV Uni"
+#   text: ""
 
 #   # Optional logo for the brandbar, for both the landing page and the webapps.
 #   # Defaults to the OpenflightHPC logo if not provided.
 #   logo:
-#     url: "http://localhost:3001/bigv-uni.png"
-#     alt: "University of BigV logo"
+#     url: ""
+#     alt: ""
 #     # Additional class names for the IMG tag.  Bootstrap classes can be used
 #     # here.
 #     classNames: ""
@@ -28,19 +36,19 @@
 #     # Optional logo for the landing page environment page (aka dashboard).
 #     # Defaults to no logo if not provided.
 #     logo:
-#       url: "http://localhost:3001/bigv-uni.png"
-#       alt: "University of BigV logo"
+#       url: ""
+#       alt: ""
 #       # Additional class names for the IMG tag.  Bootstrap classes can be used
 #       # here.
-#       classNames: "mb-4"
+#       classNames: ""
 
 # apps:
 #   dashboard:
 #     # Optional logo for the webapp dashboards.
 #     # Defaults to the OpenflightHPC logo if not provided.
 #     logo:
-#       url: "http://localhost:3001/bigv-uni.png"
-#       alt: "University of BigV logo"
+#       url: ""
+#       alt: ""
 #       # Additional class names for the IMG tag.  Bootstrap classes can be used
 #       # here.
-#       classNames: "mb-4"
+#       classNames: ""
