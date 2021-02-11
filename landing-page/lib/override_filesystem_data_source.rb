@@ -7,7 +7,7 @@ class OverrideFilesystemDataSource < ::Nanoc::DataSources::Filesystem
         __override__: true,
         __overridden_identifier__: i.identifier,
       )
-      i.identifier = "/__override__#{i.identifier}"
+      i.identifier = "/__override__#{override_name}_#{i.identifier}"
     end
   end
 
@@ -17,7 +17,13 @@ class OverrideFilesystemDataSource < ::Nanoc::DataSources::Filesystem
         __override__: true,
         __overridden_identifier__: i.identifier,
       )
-      i.identifier = "/__override__#{i.identifier}"
+      i.identifier = "/__override__#{override_name}_#{i.identifier}"
     end
+  end
+
+  private
+
+  def override_name
+    @config[:override_name]
   end
 end
