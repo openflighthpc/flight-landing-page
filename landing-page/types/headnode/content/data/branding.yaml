@@ -1,22 +1,5 @@
 # Optional branding for the landing page AND flight webapps.
 
-# environment:
-#   # Optional cluster (aka environment) name.  Defaults to an empty string if
-#   # not provided.
-#   name: ""
-#   # Optional cluster (aka environment) description.  Defaults to an empty
-#   # string if not provided.
-#   description: ""
-#   # Optional logo for the cluster (aka environment).  Defaults to no logo if
-#   # not provided.
-#   logo:
-#     url: ""
-#     classNames: ""
-
-# organisation:
-#   # Optional organisation name.  Defaults to an empty string if not provided.
-#   name: ""
-
 # brandbar:
 #   # Optional text for the brandbar, for both the landing page and the webapps.
 #   # Defaults to an empty string if not provided.
