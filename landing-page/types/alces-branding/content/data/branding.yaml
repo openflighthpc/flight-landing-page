@@ -1,0 +1,37 @@
+# Optional branding for the landing page AND flight webapps.
+
+brandbar:
+  # Optional text for the brandbar, for both the landing page and the webapps.
+  # Defaults to an empty string if not provided.
+  text: "sub-brand"
+
+  # Optional logo for the brandbar, for both the landing page and the webapps.
+  # Defaults to the OpenflightHPC logo if not provided.
+  logo:
+    url: "https://alces-flight.com/assets/image/logo.png"
+    alt: ""
+    # Additional class names for the IMG tag.  Bootstrap classes can be used
+    # here.
+    classNames: ""
+
+landingpage:
+  dashboard:
+    # Optional logo for the landing page environment page (aka dashboard).
+    # Defaults to no logo if not provided.
+    logo:
+      url: "https://alces-flight.com/assets/image/Info_CaseStudies.png"
+      alt: ""
+      # Additional class names for the IMG tag.  Bootstrap classes can be used
+      # here.
+      classNames: ""
+
+apps:
+  dashboard:
+    # Optional logo for the webapp dashboards.
+    # Defaults to the OpenflightHPC logo if not provided.
+    logo:
+      url: "https://alces-flight.com/assets/image/Info_CaseStudies.png"
+      alt: ""
+      # Additional class names for the IMG tag.  Bootstrap classes can be used
+      # here.
+      classNames: ""

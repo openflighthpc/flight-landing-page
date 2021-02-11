@@ -1,0 +1,120 @@
+body {
+    background-color: rgb(255,255,255) !important;
+}
+
+/* -----------------------------------------------
+ * Navbar and brandbar branding
+ * ----------------------------------------------- */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border: none !important;
+    height: 75px;
+    padding-bottom: 4px;
+    padding-left: 16px;
+    padding-top: 4px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-brand {
+    padding-left: 0 !important;
+}
+
+.branding-brandbar-wrapper {
+}
+
+.branding-brandbar-text-wrapper {
+    bottom: -16px;
+    display: inline-block;
+    left: -48px;
+    position: relative;
+}
+.branding-brandbar-text {
+    color: white;
+    font-weight: bold;
+}
+
+.branding-brandbar-logo {
+    height: 50px;
+    /* max-width: 100%; */
+}
+
+/* -----------------------------------------------
+ * Sticky header and non-sticky footer
+ * ----------------------------------------------- */
+.App, .landing-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#main {
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: auto;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+
+#main .content {
+    margin-top: calc( 1.5rem + 75px ) !important;
+}
+.sidenav > :first-child {
+    top: 99px !important;
+}
+footer.footer {
+    /* position: static; */
+    /* color: white; */
+    font-size: 14px;
+    background-color: black;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0 !important;
+    height: auto;
+    line-height: 1.5;
+}
+footer.footer.border-top {
+    border-top: 0 !important;
+}
+footer.footer .text-muted {
+    color: white !important;
+}
+footer.footer .container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+/* -----------------------------------------------
+ * Landing page dashboard branding
+ * ----------------------------------------------- */
+.branding-landingpage-dashboard-logo-wrapper {
+}
+
+img.branding-landingpage-dashboard-logo {
+}
+
+/* -----------------------------------------------
+ * Apps dashboard branding
+ * ----------------------------------------------- */
+.branding-apps-dashboard-logo-wrapper {
+}
+
+img.branding-apps-dashboard-logo {
+    display: block;
+    max-height: 150px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}

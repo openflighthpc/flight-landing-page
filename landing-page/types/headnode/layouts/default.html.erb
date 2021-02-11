@@ -42,23 +42,27 @@
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
   </head>
   <body>
+    <div class="landing-page">
 
-    <%= render '/navbar.html.erb' %>
+      <%= render '/navbar.html.erb' %>
 
-    <div class="container" id="main">
-      <div class="row content mt-4">
-        <%= render '/sidebar.html.erb' %>
-        <div class="centernav col-12 col-md-9 col-lg-8 offset-md-0 offset-lg-0">
-          <%= yield %>
+      <div class="container" id="main">
+        <div class="content mt-4">
+          <div class="page row">
+            <%= render '/sidebar.html.erb' %>
+            <div class="centernav col-12 col-md-9 col-lg-8 offset-md-0 offset-lg-0">
+              <%= yield %>
+            </div>
+          </div>
         </div>
       </div>
+      <footer class="footer border-top">
+        <div class="container">
+          <span class="text-muted" style="float: left">
+            Copyright 2020 openflightHPC
+          </span>
+        </div>
+      </footer>
     </div>
-    <footer class="footer border-top">
-      <div class="container">
-        <span class="text-muted" style="float: left">
-          Copyright 2020 openflightHPC
-        </span>
-      </div>
-    </footer>
   </body>
 </html>
