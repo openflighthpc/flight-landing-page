@@ -19,7 +19,6 @@
     >
 
     <!-- Our party styles -->
-    <link rel="stylesheet" href="/styles/openflight.css">
     <link rel="stylesheet" href="/styles/app.css">
     <link rel="stylesheet" href="/styles/branding.css">
 
@@ -47,16 +46,16 @@
       <%= render '/navbar.html.erb' %>
 
       <div class="container" id="main">
-        <div class="content mt-4">
+        <div class="content">
           <div class="page row">
             <%= render '/sidebar.html.erb' %>
-            <div class="centernav col-12 col-md-9 col-lg-8 offset-md-0 offset-lg-0">
+            <div class="centernav col-12 col-md-9 col-lg-8 offset-md-0 offset-lg-0 mt-4">
               <%= yield %>
             </div>
           </div>
         </div>
       </div>
-      <footer class="footer border-top">
+      <footer class="footer">
         <div class="container">
           <span class="text-muted" style="float: left">
             Copyright 2020 openflightHPC

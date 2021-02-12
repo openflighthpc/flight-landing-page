@@ -9,6 +9,8 @@
       </img>
     </div>
   <% end %>
-  <h3 class="text-center"><%= environment('environment.name') %></h3>
+  <% if environment('environment.name') %>
+    <h3 class="text-center"><%= environment('environment.name') %></h3>
+  <% end %>
   <%= yield %>
 </div>
