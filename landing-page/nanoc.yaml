@@ -14,5 +14,12 @@ data_sources:
 
   - type: override_filesystem
     encoding: utf-8
+    content_dir: branding/content
+    layouts_dir: branding/layouts
+    override_name: 'branding'
+
+  - type: override_filesystem
+    encoding: utf-8
     content_dir: overridden/content
     layouts_dir: overridden/layouts
+    override_name: 'bespoke'

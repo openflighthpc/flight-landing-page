@@ -4,7 +4,7 @@
   <p>
   Your environment has the following web tools installed and ready for use.
   </p>
-  <div class="card-deck app-card-deck pb-3">
+  <div class="card-deck app-card-deck">
     <% app_items.each do |app| %>
       <%= app.compiled_content(snapshot: :pre_default) %>
     <% end %>

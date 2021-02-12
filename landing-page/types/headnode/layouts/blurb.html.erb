@@ -1,0 +1,16 @@
+<div class="blurb">
+  <% if branding('landingpage.dashboard.logo') %>
+    <div class="mb-2 branding-landingpage-dashboard-logo-wrapper">
+      <img
+        src="<%= branding('landingpage.dashboard.logo.url') %>"
+        alt="<%= branding('landingpage.dashboard.logo.alt') || 'Environment logo' %>"
+        class="logo <%= branding('landingpage.dashboard.logo.classNames') %> branding-landingpage-dashboard-logo"
+        >
+      </img>
+    </div>
+  <% end %>
+  <% if environment('environment.name') %>
+    <h3 class="text-center"><%= environment('environment.name') %></h3>
+  <% end %>
+  <%= yield %>
+</div>

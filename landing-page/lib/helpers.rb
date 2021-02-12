@@ -1,7 +1,7 @@
 use_helper Nanoc::Helpers::Rendering
 
-def branding(dotted_key="")
-  raw_branding = items['/branding.yaml']
+def data_lookup(data_item_name, dotted_key="")
+  raw_branding = items["/data/#{data_item_name}.yaml"]
   return if raw_branding.nil?
 
   keys = dotted_key.split('.')
@@ -14,8 +14,16 @@ def branding(dotted_key="")
   end
 end
 
+def branding(dotted_key="")
+  data_lookup('branding', dotted_key)
+end
+
+def environment(dotted_key="")
+  data_lookup('environment', dotted_key)
+end
+
 def raw_contacts
-  c = items['/contacts.yaml']
+  c = items['/data/contacts.yaml']
   if !c.nil?
     c[:contacts] || []
   end
@@ -27,7 +35,7 @@ def contacts
 end
 
 def raw_links
-  l = items['/links.yaml']
+  l = items['/data/links.yaml']
   if !l.nil?
     l[:links] || []
   end
@@ -66,8 +74,8 @@ def app_items
     }
 end
 
-def environment
-  items['/environment.*']
+def blurb
+  items['/blurb.*']
 end
 
 def filters_from_extensions(item)
@@ -85,8 +93,8 @@ def filters_from_extensions(item)
 end
 
 def has_sidenav_content?
-  branding('environment.name') ||
-    branding('organisation.name') ||
+  environment('environment.name') ||
+    environment('organisation.name') ||
     !contacts.empty? ||
     !links.empty?
 end

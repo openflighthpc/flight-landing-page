@@ -75,7 +75,7 @@ been installed and the environment activated with the `flight start` command.
 
 This configuration section assumes that Flight Landing Page has been installed
 with Flight Runway.  If it has been installed from source, the paths given
-below will depend on where it was installed to.
+below will depend on where it was installed.
 
 By default, Flight landing page installs a generic landing page suitable for
 any openflightHPC environment.  The default content is automatically updated
@@ -97,30 +97,74 @@ For example, the following would change the links shown in the sidebar:
 
 ```
 cd /opt/flight/opt/www/landing-page
-mkdir overridden/content/
-cp -a default/content/links.yaml overridden/content/
-$EDITOR overridden/content/links.yaml
+mkdir -p overridden/content/data
+cp -a default/content/data/links.yaml overridden/content/data/
+$EDITOR overridden/content/data/links.yaml
 ```
 
-Whilst the following would change the environment details:
+Whilst the following would change the text show on the landing page:
 
 ```
 cd /opt/flight/opt/www/landing-page
 mkdir overridden/content/
-cp -a default/content/environment.md overridden/content/
-$EDITOR overridden/content/environment.md
+cp -a default/content/blurb.md overridden/content/
+$EDITOR overridden/content/blurb.md
 ```
 
 The default layouts can also be overridden in a similar manner.
 
 Files worth mentioning are:
 
- - `landing-page/default/content/branding.yaml`: optional branding details.
- - `landing-page/default/content/contacts.yaml`: the list of contacts to show
+ - `landing-page/default/content/data/contacts.yaml`: the list of contacts to show
    in the sidebar.
- - `landing-page/default/content/links.yaml`: the list of links to show in the
+ - `landing-page/default/content/data/links.yaml`: the list of links to show in the
    sidebar.
- - `landing-page/default/content/environment.md`: the environment details.
+ - `landing-page/default/content/data/environment.yaml`: details about the
+   environment.
+
+Once any changes have been made, make sure to compile the site.  The command
+to do that depends on the installation method.
+
+*When installed with Flight Runway*
+
+```
+flight start
+flight landing-page compile
+```
+
+*When installed from source*
+
+```
+cd flight-landing-page/landing-page
+bundle exec nanoc compile
+```
+
+## Branding
+
+By default, Flight Landing page is branded for an OpenflightHPC environment.
+Alternative branding can be used by installing a branding package such as
+`alces-flight-landing-page-branding`.  It is also possible to create a custom
+branding for Flight Landing page.
+
+The branding files installed by an RPM are located in
+`/opt/flight/opt/www/landing-page/branding/`.  They will override the
+corresponding file located under `/opt/flight/opt/www/landing-page/default/`.
+
+For custom branding, it is better to use the `overridden` directory.  To
+replace the `styles/branding.css` file you would do the following.
+
+```
+cd /opt/flight/opt/www/landing-page
+mkdir -p overridden/content/styles
+cp -a default/content/styles/branding.css overridden/content/styles/
+$EDITOR overridden/content/styles/branding.css
+```
+
+Other branding related files worth mentioning are:
+
+ - `landing-page/default/content/images/favicon*.png`.
+ - `landing-page/default/content/images/png_trans_logo.png`.
+ - `landing-page/default/content/images/png_trans_logo-navbar.png`.
 
 Once any changes have been made, make sure to compile the site.  The command
 to do that depends on the installation method.

@@ -1,16 +1,16 @@
 <aside class="sidenav col-12 col-md-3 col-lg-2">
   <div>
-    <% unless branding('environment.name').nil? %>
+    <% unless environment('environment.name').nil? %>
       <h2>Environment</h2>
       <ul class="w-100">
-        <li><%= branding('environment.name') %></li>
+        <li><%= environment('environment.name') %></li>
       </ul>
     <% end %>
 
-    <% unless branding('organisation.name').nil? %>
+    <% unless environment('organisation.name').nil? %>
       <h2>Organisation</h2>
       <ul class="w-100">
-        <li><%= branding('organisation.name') %></li>
+        <li><%= environment('organisation.name') %></li>
       </ul>
     <% end %>
 
