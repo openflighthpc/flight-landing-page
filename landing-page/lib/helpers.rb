@@ -1,4 +1,5 @@
 use_helper Nanoc::Helpers::Rendering
+use_helper Nanoc::Helpers::LinkTo
 
 def data_lookup(data_item_name, dotted_key="")
   raw_branding = items["/data/#{data_item_name}.yaml"]
