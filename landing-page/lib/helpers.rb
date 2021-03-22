@@ -25,7 +25,9 @@ end
 
 def raw_contacts
   c = items['/data/contacts.yaml']
-  if !c.nil?
+  if c.nil?
+    []
+  else
     c[:contacts] || []
   end
 end
@@ -37,7 +39,9 @@ end
 
 def raw_links
   l = items['/data/links.yaml']
-  if !l.nil?
+  if l.nil?
+    []
+  else
     l[:links] || []
   end
 end
