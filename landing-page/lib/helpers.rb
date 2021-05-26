@@ -79,6 +79,23 @@ def app_items
     }
 end
 
+def config_packs_item
+  items['/config-packs.*']
+end
+
+def config_pack_items
+  @__config_packs ||= items.find_all('/config-packs/**/*')
+                           .sort do |a, b|
+    if a[:order] && b[:order]
+      [ a[:order], a.identifier ] <=> [ b[:order], b.identifier ]
+    elsif a[:order].nil? && b[:order].nil?
+      a.identifier <=> b.identifier
+    else
+      a[:order] ? -1 : 1
+    end
+  end
+end
+
 def blurb
   items['/blurb.*']
 end

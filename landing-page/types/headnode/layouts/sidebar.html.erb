@@ -42,5 +42,16 @@
         <% end %>
       </ul>
     <% end %>
+
+    <% if !app_items.empty? %>
+      <h2>Tool Packs</h2>
+      <ul class="w-100">
+        <% config_pack_items.each do |app| %>
+          <li>
+            <%= link_to(app[:short_title] || app[:title], app[:path]) %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
 </aside>
