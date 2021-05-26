@@ -48,9 +48,19 @@
               <li class="nav-item">
                   <a
                       class="nav-link nav-menu-button"
-                      href="#apps"
+                      href="/apps"
                   >
                       Web Suite
+                  </a>
+              </li>
+            <% end %>
+            <% unless config_pack_items.empty? %>
+              <li class="nav-item">
+                  <a
+                      class="nav-link nav-menu-button"
+                      href="/config-packs"
+                  >
+                      Tool Packs
                   </a>
               </li>
             <% end %>

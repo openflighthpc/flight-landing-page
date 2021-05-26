@@ -1,0 +1,12 @@
+<% unless config_pack_items.empty? %>
+  <h2>Tool Packs</h2>
+  <a id="config-packs"></a>
+  <p>
+  Your environment has the following tool packs installed and ready for use.
+  </p>
+  <div class="card-deck config-pack-card-deck">
+    <% config_pack_items.each do |config| %>
+      <%= config.compiled_content(snapshot: :pre_default) %>
+    <% end %>
+  </div>
+<% end %>
