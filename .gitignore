@@ -1,4 +1,5 @@
-/landing-page/default/content/apps
+/landing-page/types/headnode/content/apps/*
+/landing-page/types/headnode/content/config-packs/*
 /landing-page/overridden/
 /landing-page/branding
 /landing-page/output
