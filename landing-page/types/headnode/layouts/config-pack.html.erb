@@ -14,16 +14,21 @@
       <h6 class='card-subtitle mb-2 text-muted'>
         Downloads
       </h6>
-      <% @item[:configs].each do |parts| %>
-        <%
-          parts = Array[parts] unless parts.is_a?(Array)
-          text = parts.first
-          package_name = File.basename(@item.identifier, '.*')
-          link_name = (parts.length > 1 ? parts[1] : text)
-          link = File.join('downloads', 'config-packs', package_name, link_name)
-        %>
-      <a href="<%= link %>" class="link-primary" download><%= text %></a><br>
-      <% end %>
+      <% if @item[:downloads].nil? %>
+        <p><em>Nothing to see here...</em></p>
+      <% else
+            @item[:downloads].each do |parts|
+              parts = Array[parts] unless parts.is_a?(Array)
+              text = parts.first
+              package_name = File.basename(@item.identifier, '.*')
+              link_name = (parts.length > 1 ? parts[1] : text)
+              # XXX: Consider making the /downloads prefix configurable
+              link = File.join('/downloads', 'config-packs', package_name, link_name)
+      %>
+        <a href="<%= link %>" class="link-primary" download><%= text %></a><br>
+      <%    end
+         end
+      %>
     </div>
   </div>
 </div>
