@@ -7,6 +7,7 @@ downloads:
   - file_name: README.md
   - file_name: example.tar.gz
     display_name: Tarball
+    fa_icon: file-archive-o
 ---
 This is an example config pack that you can copy to create your own.
 Please refer to the following for the metadata specification:<br>
