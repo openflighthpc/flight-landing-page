@@ -24,6 +24,8 @@ preprocess do
   # end
 end
 
+ignore '/**/*.disabled'
+
 compile '/data/*.yaml' do
   filter :metadata_to_json, item: item
   write ext: 'json'
