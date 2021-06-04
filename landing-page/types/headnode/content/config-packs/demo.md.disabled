@@ -1,0 +1,22 @@
+---
+disabled: false # The .disabled file extension takes precedence
+title: Example Config
+short_title: Example
+subtitle: An example config pack
+downloads:
+  - README.md
+  - [Tarball, example.tar.gz]
+---
+This is an example config pack that you can copy to create your own.
+Please refer to the following for the metadata specification:<br>
+`/opt/flight/opt/www/landing-page/default/content/config-packs/demo.md.disabled`
+
+The listed `downloads` need to be stored in:<br>
+`/opt/flight/usr/share/www/downloads/config-packs/<PACK NAME>/`
+
+In this case, the paths will be:<br>
+`/opt/flight/usr/share/www/downloads/config-packs/example/README.md`
+`/opt/flight/usr/share/www/downloads/config-packs/example/example.tar.gz`
+
+You may hide this config pack by removing the symlink:<br>
+`rm /opt/flight/opt/www/landing-page/default/content/config-packs/demo.md`
