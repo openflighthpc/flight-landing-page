@@ -68,6 +68,7 @@ end
 def app_items
   @_apps ||= items
     .find_all('/apps/**/*')
+    .reject { |i| /\.disabled\Z/.match?(i.identifier) || i[:disabled] }
     .sort { |a, b|
       if a[:order] && b[:order]
         [ a[:order], a.identifier ] <=> [ b[:order], b.identifier ]
@@ -85,6 +86,7 @@ end
 
 def config_pack_items
   @__config_packs ||= items.find_all('/config-packs/**/*')
+                           .reject { |i| /\.disabled\Z/.match?(i.identifier) || i[:disabled] }
                            .sort do |a, b|
     if a[:order] && b[:order]
       [ a[:order], a.identifier ] <=> [ b[:order], b.identifier ]
