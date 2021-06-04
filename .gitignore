@@ -1,5 +1,6 @@
 /landing-page/types/headnode/content/apps/*
 /landing-page/types/headnode/content/config-packs/*
+!/landing-page/types/headnode/content/config-packs/demo.md.disabled
 /landing-page/overridden/
 /landing-page/branding
 /landing-page/output
