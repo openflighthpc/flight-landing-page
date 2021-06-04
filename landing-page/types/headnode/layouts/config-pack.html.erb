@@ -19,12 +19,12 @@
         <div class="list-group">
           <%
             @item[:downloads].each do |parts|
-              parts = Array[parts] unless parts.is_a?(Array)
-              text = parts.first
+              file_name = parts[:file_name]
+              raise "Each downloads entry requires a 'file_name'" unless file_name
+              text = parts.fetch(:display_name, file_name)
               package_name = File.basename(@item.identifier, '.*')
-              link_name = (parts.length > 1 ? parts[1] : text)
               # XXX: Consider making the /downloads prefix configurable
-              link = File.join('/downloads', 'config-packs', package_name, link_name)
+              link = File.join('/downloads', 'config-packs', package_name, file_name)
           %>
             <span class="list-group-item list-group-item-action">
               <a href="<%= link %>" rel="noopener"><%= text %></a>

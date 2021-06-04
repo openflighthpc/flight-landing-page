@@ -4,8 +4,9 @@ title: Example Config
 short_title: Example
 subtitle: An example config pack
 downloads:
-  - README.md
-  - [Tarball, example.tar.gz]
+  - file_name: README.md
+  - file_name: example.tar.gz
+    display_name: Tarball
 ---
 This is an example config pack that you can copy to create your own.
 Please refer to the following for the metadata specification:<br>
@@ -20,3 +21,7 @@ In this case, the paths will be:<br>
 
 You may hide this config pack by removing the symlink:<br>
 `rm /opt/flight/opt/www/landing-page/default/content/config-packs/demo.md`
+
+NOTE: Disabling a config pack only prevents them from appearing on the
+landing page. They will still be accessible for download unless the
+files are also removed.
