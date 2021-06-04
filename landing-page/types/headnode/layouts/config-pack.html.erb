@@ -27,6 +27,7 @@
               link = File.join('/downloads', 'config-packs', package_name, file_name)
           %>
             <span class="list-group-item list-group-item-action">
+              <i class="fa fa-<%= parts.fetch(:fa_icon, 'file-o') %> mr-1"></i>
               <a href="<%= link %>" rel="noopener"><%= text %></a>
             </span>
           <% end %>
