@@ -44,7 +44,12 @@
         // Disable regular links when using HTTP
         document.querySelectorAll(".http-strike-disabled").forEach((ref) => {
           ref.href = "javascript:void(0)";
-          ref.innerHTML = "<s>" + ref.innerHTML + "</s>"
+          ref.innerHTML = "<s>" + ref.innerHTML + "</s>";
+        });
+
+        // Set the display style property when using HTTP
+        document.querySelectorAll('.http-display-block').forEach((ref) => {
+          ref.style.display = "block";
         });
       });
     }
