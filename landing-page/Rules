@@ -59,6 +59,16 @@ compile '/blurb.*' do
   write nil
 end
 
+compile '/enable-https.*' do
+  filters_from_extensions(item).each do |f|
+    filter f
+  end
+  layout '/enable-https.*'
+  snapshot :pre_default
+
+  write nil
+end
+
 compile '/apps/*' do
   filters_from_extensions(item).each do |f|
     filter f
