@@ -37,7 +37,13 @@
       <ul class="w-100">
         <% app_items.each do |app| %>
           <li>
-            <%= link_to(app[:short_title] || app[:title], app[:path], class: "http-strike-disabled") %>
+            <%=
+              link_to(
+                app[:short_title] || app[:title],
+                app[:path],
+                class: "http-strike-disable http-add-title"
+              )
+            %>
           </li>
         <% end %>
       </ul>

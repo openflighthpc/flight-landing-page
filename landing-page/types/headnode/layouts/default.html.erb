@@ -35,19 +35,31 @@
     </script>
   <script>
     if(window.location.protocol == "http:") {
+      // The site is being accessed over HTTP.  Make it obvious that the web
+      // suite won't work and display content to explain how to enable HTTPS.
       window.addEventListener('load', (_) => {
-        // Disable bootstrap cards when using HTTP
-        document.querySelectorAll(".http-bootstrap-disabled").forEach((ref) => {
-          ref.classList.add("disabled");
+        // Disable links to Flight Web Suite when accessed over HTTP.
+        document.querySelectorAll(".http-add-title").forEach((ref) => {
+          ref.classList.remove("http-add-title");
+          ref.title = "Flight Web Suite requires HTTPS to be enabled"
         });
 
-        // Disable regular links when using HTTP
-        document.querySelectorAll(".http-strike-disabled").forEach((ref) => {
+        document.querySelectorAll(".http-opacify").forEach((ref) => {
+          ref.classList.remove("http-opacify");
+          ref.classList.add("http-opacified");
+        });
+
+        document.querySelectorAll(".http-bootstrap-disable").forEach((ref) => {
+          ref.classList.remove("http-bootstrap-disable");
+          ref.classList.add("disabled", "http-bootstrap-disabled");
+        });
+
+        document.querySelectorAll(".http-strike-disable").forEach((ref) => {
           ref.href = "javascript:void(0)";
-          ref.innerHTML = "<s>" + ref.innerHTML + "</s>";
+          ref.classList.remove("http-strike-disable");
+          ref.classList.add("http-strike-disabled", "text-muted");
         });
 
-        // Set the display style property when using HTTP
         document.querySelectorAll('.http-display-block').forEach((ref) => {
           ref.style.display = "block";
         });
