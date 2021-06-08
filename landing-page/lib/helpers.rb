@@ -83,6 +83,10 @@ def blurb
   items['/blurb.*']
 end
 
+def enable_https
+  items['/enable-https.*']
+end
+
 def filters_from_extensions(item)
   filters = item.identifier.exts.map do |ext| 
     case ext

@@ -80,3 +80,20 @@
 .fa-background ~ * {
     z-index: 100;
 }
+
+// Styles to disable web suite over HTTP.
+.http-strike-disabled,
+.http-strike-disabled:hover {
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+.http-bootstrap-disabled { }
+.http-opacified {
+  opacity: 0.5;
+}
+.code-block {
+    background: #343a40; /* bg-dark */
+    color: #f8f9fa; /* text-light */
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
