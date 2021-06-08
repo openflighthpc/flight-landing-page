@@ -64,9 +64,8 @@ compile '/enable-https.*' do
     filter f
   end
   layout '/enable-https.*'
-  snapshot :pre_default
-
-  write nil
+  layout '/default.*'
+  write @item.identifier.without_ext + '/index.html'
 end
 
 compile '/apps/*' do

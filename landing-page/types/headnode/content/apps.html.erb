@@ -1,9 +1,22 @@
 <% unless app_items.empty? %>
   <h2>Web Suite Tools</h2>
   <a id="apps"></a>
-  <p>
+  <p class="d-none https-d-block">
   Your environment has the following web tools installed and ready for use.
   </p>
+  <p class="d-none http-d-block">
+  The Flight Web Suite is not currently available as HTTPS has not been
+  enabled for your environment.  To learn more about HTTPS and how to enable
+  it click the <em>Learn more</em> button below.
+  </p>
+  <div class="clearfix mb-4">
+    <a
+      class="btn btn-primary learn-more float-right"
+      href="/dev/enable-https"
+    >
+      Learn more
+    </a>
+  </div>
   <div class="card-deck app-card-deck">
     <% app_items.each do |app| %>
       <%= app.compiled_content(snapshot: :pre_default) %>

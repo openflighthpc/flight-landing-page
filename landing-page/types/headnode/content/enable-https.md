@@ -1,11 +1,3 @@
----
-title: How to Enable HTTPs
-pretext: >
-  If you are reading this than HTTPs has likely been disabled. The majority of
-  the OpenFlightHPC tools and applications will not function correctly.
-
-  Please complete the following steps to start the HTTPs service:
----
 ### Generate an SSL certificate
 
 SSL certificates are generated with `flight www cert-gen`.
@@ -23,9 +15,9 @@ Alternatively a `SelfSigned` certificate can be generated with:
 flight www cert-gen --cert-type self-signed --domain $(hostname -d)
 ```
 
-### Enable and Start HTTPs
+### Enable and Start HTTPS
 
-You are now ready to start the `HTTPs` server with:
+You are now ready to start the `HTTPS` server with:
 
 ```
 flight www enable-https

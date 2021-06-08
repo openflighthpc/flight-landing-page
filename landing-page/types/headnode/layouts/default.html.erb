@@ -60,8 +60,19 @@
           ref.classList.add("http-strike-disabled", "text-muted");
         });
 
-        document.querySelectorAll('.http-display-block').forEach((ref) => {
-          ref.style.display = "block";
+        document.querySelectorAll('.http-d-block').forEach((ref) => {
+          ref.classList.remove("http-d-block");
+          ref.classList.add("d-block");
+        });
+      });
+    };
+    if(window.location.protocol == "https:") {
+      // The site is being accessed over HTTPS.  Make it obvious that the web
+      // suite will work.
+      window.addEventListener('load', (_) => {
+        document.querySelectorAll('.https-d-block').forEach((ref) => {
+          ref.classList.remove("https-d-block");
+          ref.classList.add("d-block");
         });
       });
     }
