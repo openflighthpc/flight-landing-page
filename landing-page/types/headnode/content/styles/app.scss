@@ -11,12 +11,20 @@
   grid-gap: .5rem;
 }
 
-.app-card-deck .app-card {
+.config-pack-card-deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
+  grid-gap: .5rem;
+}
+
+.app-card-deck .app-card,
+.config-pack-card-deck .config-pack-card {
   margin: 0;
   min-height: 250px;
 }
 
-.app-card .card-body p:last-child {
+.app-card .card-body p:last-child,
+.config-pack-card {
     margin-bottom: 0;
 }
 
