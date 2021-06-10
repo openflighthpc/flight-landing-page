@@ -24,6 +24,8 @@ preprocess do
   # end
 end
 
+ignore '/**/*.disabled'
+
 compile '/data/*.yaml' do
   filter :metadata_to_json, item: item
   write ext: 'json'
@@ -64,6 +66,16 @@ compile '/apps/*' do
     filter f
   end
   layout '/app.*'
+  snapshot :pre_default
+
+  write nil
+end
+
+compile '/config-packs/*' do
+  filters_from_extensions(item).each do |f|
+    filter f
+  end
+  layout '/config-pack.*'
   snapshot :pre_default
 
   write nil

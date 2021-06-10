@@ -39,29 +39,25 @@
       // suite won't work and display content to explain how to enable HTTPS.
       window.addEventListener('load', (_) => {
         // Disable links to Flight Web Suite when accessed over HTTP.
-        document.querySelectorAll(".http-add-title").forEach((ref) => {
-          ref.classList.remove("http-add-title");
-          ref.title = "Flight Web Suite requires HTTPS to be enabled"
+        document.querySelectorAll("[data-http-add-title]").forEach((ref) => {
+          title = ref.dataset["httpAddTitle"] || "HTTPS needs to be enabled";
+          ref.title = title;
         });
 
-        document.querySelectorAll(".http-opacify").forEach((ref) => {
-          ref.classList.remove("http-opacify");
+        document.querySelectorAll("[data-http-opacify]").forEach((ref) => {
           ref.classList.add("http-opacified");
         });
 
-        document.querySelectorAll(".http-bootstrap-disable").forEach((ref) => {
-          ref.classList.remove("http-bootstrap-disable");
+        document.querySelectorAll("[data-http-bootstrap-disable]").forEach((ref) => {
           ref.classList.add("disabled", "http-bootstrap-disabled");
         });
 
-        document.querySelectorAll(".http-strike-disable").forEach((ref) => {
+        document.querySelectorAll("[data-http-strike-disable]").forEach((ref) => {
           ref.href = "javascript:void(0)";
-          ref.classList.remove("http-strike-disable");
           ref.classList.add("http-strike-disabled", "text-muted");
         });
 
-        document.querySelectorAll('.http-d-block').forEach((ref) => {
-          ref.classList.remove("http-d-block");
+        document.querySelectorAll('[data-http-d-block]').forEach((ref) => {
           ref.classList.add("d-block");
         });
       });
@@ -70,8 +66,7 @@
       // The site is being accessed over HTTPS.  Make it obvious that the web
       // suite will work.
       window.addEventListener('load', (_) => {
-        document.querySelectorAll('.https-d-block').forEach((ref) => {
-          ref.classList.remove("https-d-block");
+        document.querySelectorAll('[data-https-d-block]').forEach((ref) => {
           ref.classList.add("d-block");
         });
       });

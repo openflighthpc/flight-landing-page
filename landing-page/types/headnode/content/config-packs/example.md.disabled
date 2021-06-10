@@ -1,0 +1,30 @@
+---
+title: Example Config
+short_title: Example
+subtitle: An example config pack
+downloads:
+  - file_name: README.md
+  - file_name: example.tar.gz
+    display_name: Tarball
+    fa_icon: file-archive-o
+---
+This is an example config pack that you can copy to create your own.
+Please refer to the following for the metadata specification:<br>
+`/opt/flight/opt/www/landing-page/default/content/config-packs/example.md.disabled`
+
+The listed `downloads` need to be stored in:<br>
+`/opt/flight/usr/share/www/downloads/config-packs/<PACK_NAME>/`
+
+The `PACK_NAME` is the metadata file name without the file extension.
+
+In this case, the paths will be:<br>
+`/opt/flight/usr/share/www/downloads/config-packs/example/README.md`
+`/opt/flight/usr/share/www/downloads/config-packs/example/example.tar.gz`
+
+You may hide this config pack by removing the symlink:<br>
+`rm /opt/flight/opt/www/landing-page/default/content/config-packs/example.md`
+
+NOTE: Disabling a config pack will remove it from the landing page.  However,
+the files stored at
+`/opt/flight/usr/share/www/downloads/config-packs/<PACK_NAME>/` will remain
+accessible for download until they are removed.
