@@ -24,6 +24,7 @@ In this case, the paths will be:<br>
 You may hide this config pack by removing the symlink:<br>
 `rm /opt/flight/opt/www/landing-page/default/content/config-packs/example.md`
 
-NOTE: Disabling a config pack only prevents them from appearing on the
-landing page. They will still be accessible for download unless the
-files are also removed.
+NOTE: Disabling a config pack will remove it from the landing page.  However,
+the files stored at
+`/opt/flight/usr/share/www/downloads/config-packs/<PACK_NAME>/` will remain
+accessible for download until they are removed.
