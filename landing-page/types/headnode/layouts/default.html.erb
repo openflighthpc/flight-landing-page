@@ -39,9 +39,9 @@
       // suite won't work and display content to explain how to enable HTTPS.
       window.addEventListener('load', (_) => {
         // Disable links to Flight Web Suite when accessed over HTTP.
-        document.querySelectorAll(".http-add-title").forEach((ref) => {
-          ref.classList.remove("http-add-title");
-          ref.title = "Flight Web Suite requires HTTPS to be enabled"
+        document.querySelectorAll("[data-http-add-title]").forEach((ref) => {
+          title = ref.dataset["httpAddTitle"] || "HTTPS needs to be enabled";
+          ref.title = title;
         });
 
         document.querySelectorAll(".http-opacify").forEach((ref) => {

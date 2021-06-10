@@ -41,7 +41,8 @@
               link_to(
                 app[:short_title] || app[:title],
                 app[:path],
-                class: "http-strike-disable http-add-title"
+                class: "http-strike-disable",
+                "data-http-add-title" => "Flight Web Suite requires HTTPS to be enabled",
               )
             %>
           </li>
