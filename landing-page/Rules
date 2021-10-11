@@ -26,6 +26,11 @@ end
 
 ignore '/**/*.disabled'
 
+compile '/data/*.json.erb' do
+  filter :erb
+  write ext: 'json'
+end
+
 compile '/data/*.yaml' do
   filter :metadata_to_json, item: item
   write ext: 'json'
@@ -62,6 +67,10 @@ compile '/blurb.*' do
 end
 
 compile '/apps/*' do
+  if /\.disabled\Z/.match?(item.identifier)
+    write nil
+    next
+  end
   filters_from_extensions(item).each do |f|
     filter f
   end
@@ -71,13 +80,35 @@ compile '/apps/*' do
   write nil
 end
 
+compile '/apps/*', rep: :data do
+  if /\.disabled\Z/.match?(item.identifier)
+    write nil
+    next
+  end
+  filter :metadata_to_json, item: item, include_content: true
+  write nil
+end
+
 compile '/config-packs/*' do
+  if /\.disabled\Z/.match?(item.identifier)
+    write nil
+    next
+  end
   filters_from_extensions(item).each do |f|
     filter f
   end
   layout '/config-pack.*'
   snapshot :pre_default
 
+  write nil
+end
+
+compile '/config-packs/*', rep: :data do
+  if /\.disabled\Z/.match?(item.identifier)
+    write nil
+    next
+  end
+  filter :metadata_to_json, item: item, include_content: true
   write nil
 end
 

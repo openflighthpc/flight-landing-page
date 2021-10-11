@@ -6,7 +6,11 @@ class MetadataToJson < Nanoc::Filter
 
   def run(content, params = {})
     item = params[:item]
-    hash_except(NANOC_KEYS + OVERRIDE_KEYS, item.attributes).to_json
+    metadata = hash_except(NANOC_KEYS + OVERRIDE_KEYS, item.attributes)
+    if params[:include_content]
+      metadata["content"] ||= content
+    end
+    metadata.to_json
   end
 
   private
