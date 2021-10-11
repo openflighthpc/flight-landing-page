@@ -1,9 +1,12 @@
 # Optional branding for the landing page AND flight webapps.
 
 # brandbar:
-#   # Optional text for the brandbar, for both the landing page and the webapps.
-#   # Defaults to an empty string if not provided.
-#   text: ""
+#   # Optional text for the brandbar link back to the main landing page, for
+#   # both the landing page and the webapps.
+#   #
+#   # If not given, the environment name, organisation name or "Home" will be
+#   # used instead.
+#   home_link_text: ""
 
 #   # Optional logo for the brandbar, for both the landing page and the webapps.
 #   # Defaults to the OpenflightHPC logo if not provided.

@@ -22,13 +22,6 @@
         </img>
       </a>
     <% end %>
-    <% if text = branding('brandbar.text') %>
-      <div class="branding-brandbar-text-wrapper">
-        <span class="branding-brandbar-text">
-          <%= text %>
-        </span>
-      </div>
-    <% end %>
 
     <button
         class="navbar-toggler"
@@ -44,6 +37,20 @@
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a
+                    class="nav-link nav-menu-button"
+                    href="/"
+                >
+                <%=
+                    branding('brandbar.home_link_text') ||
+                      environment('environment.name') ||
+                      environment('organisation.name') ||
+                      'Home'
+                %>
+                </a>
+            </li>
+
             <% unless app_items.empty? %>
               <li class="nav-item">
                   <a

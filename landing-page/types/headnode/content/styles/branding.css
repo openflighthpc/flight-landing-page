@@ -44,6 +44,16 @@ body {
     font-size: larger;
 }
 
+/*------------------------------------------------
+ * Product bar branding
+ * ----------------------------------------------- */
+
+.productbar .nav-item,
+.productbar .nav-item .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 /* -----------------------------------------------
  * Non-sticky header and sticky footer
  * ----------------------------------------------- */
