@@ -85,7 +85,7 @@ compile '/apps/*', rep: :data do
     write nil
     next
   end
-  filter :metadata_to_json, item: item, include_content: true
+  filter :metadata_to_json, item: item
   write nil
 end
 
@@ -108,7 +108,7 @@ compile '/config-packs/*', rep: :data do
     write nil
     next
   end
-  filter :metadata_to_json, item: item, include_content: true
+  filter :metadata_to_json, item: item
   write nil
 end
 
