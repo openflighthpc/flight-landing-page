@@ -31,33 +31,6 @@
 .content {
 }
 
-.sidenav {
-  >:first-child {
-    position: sticky;
-    top: 24px;
-    will-change: transform;
-    z-index: 10;
-  }
-
-  h2 {
-    text-transform: uppercase;
-    font-size: 13px;
-    color: #333;
-    letter-spacing: 1px;
-    line-height: 20px;
-  }
-
-  ul {
-    list-style-type: none;
-    padding-left: 0.5rem;
-    margin: 0 0 1rem 0;
-
-    li {
-      padding-top: 0;
-    }
-  }
-}
-
 .centernav {
 }
 

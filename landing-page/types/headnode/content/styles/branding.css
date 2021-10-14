@@ -54,6 +54,35 @@ body {
     padding-bottom: 0;
 }
 
+/*------------------------------------------------
+ * Sidenav branding
+ * ----------------------------------------------- */
+
+.sidenav >:first-child {
+    position: sticky;
+    top: 24px;
+    will-change: transform;
+    z-index: 10;
+}
+
+.sidenav h2 {
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #333;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding-left: 0.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.sidenav ul li {
+    padding-top: 0;
+}
+
 /* -----------------------------------------------
  * Non-sticky header and sticky footer
  * ----------------------------------------------- */
