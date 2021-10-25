@@ -14,6 +14,8 @@ preprocess do
     items.create('', link.merge(kind: 'link'), "/links/#{idx}")
   end
 
+  items.create("<%= render '/sidebar.html.erb' %>", {}, "/sidebar.html.erb")
+
   # layouts.each do |l|
   #   ::STDERR.puts "=== l: #{(l).inspect rescue $!.message}"
   #   ::STDERR.puts "  = l.attributes: #{(l.attributes).inspect rescue $!.message}"
@@ -25,6 +27,11 @@ preprocess do
 end
 
 ignore '/**/*.disabled'
+
+compile '/data/*.json.erb' do
+  filter :erb
+  write ext: 'json'
+end
 
 compile '/data/*.yaml' do
   filter :metadata_to_json, item: item
@@ -62,6 +69,10 @@ compile '/blurb.*' do
 end
 
 compile '/apps/*' do
+  if /\.disabled\Z/.match?(item.identifier)
+    write nil
+    next
+  end
   filters_from_extensions(item).each do |f|
     filter f
   end
@@ -71,13 +82,40 @@ compile '/apps/*' do
   write nil
 end
 
+compile '/apps/*', rep: :data do
+  if /\.disabled\Z/.match?(item.identifier)
+    write nil
+    next
+  end
+  filter :metadata_to_json, item: item
+  write nil
+end
+
 compile '/config-packs/*' do
+  if /\.disabled\Z/.match?(item.identifier)
+    write nil
+    next
+  end
   filters_from_extensions(item).each do |f|
     filter f
   end
   layout '/config-pack.*'
   snapshot :pre_default
 
+  write nil
+end
+
+compile '/config-packs/*', rep: :data do
+  if /\.disabled\Z/.match?(item.identifier)
+    write nil
+    next
+  end
+  filter :metadata_to_json, item: item
+  write nil
+end
+
+compile '/sidebar.html' do
+  layout '/sidebar.*'
   write nil
 end
 
