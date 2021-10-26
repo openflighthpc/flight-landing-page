@@ -10,16 +10,35 @@ installed applications.
 
 ## Installation
 
-### From source
+### Installing with the OpenFlight package repos
 
-Flight Landing Page requires a recent version of Ruby and `bundler`.
+Flight Landing Page is available as part of the *Flight Web Suite*.  This is
+the easiest method for installing Flight Landing Page and all its
+dependencies.  It is documented in [the OpenFlight
+Documentation](https://use.openflighthpc.org/installing-web-suite/install.html#installing-flight-web-suite).
 
-The following will install from source using `git`:
+
+### Manual Installation
+
+#### Prerequisites
+
+Flight Landing Page is developed and tested with Ruby version `2.7.1` and
+`bundler` `2.1.4`.  Other versions may work but currently are not officially
+supported.
+
+#### Install Flight Landing Page
+
+The following will install from source using `git`.  The `master` branch is
+the current development version and may not be appropriate for a production
+installation. Instead a tagged version should be checked out.
 
 ```
-git clone https://github.com/openflighthpc/flight-landing-page.git
+git clone https://github.com/alces-flight/flight-landing-page.git
 cd flight-landing-page
-bundle install --path=vendor
+git checkout <tag>
+bundle config set --local with default
+bundle config set --local without development
+bundle install
 ```
 
 Once installed, the landing page can be compiled by running the following:
@@ -32,44 +51,6 @@ bundle exec nanoc compile
 The output will be in the directory `flight-landing-page/landing-page/output`.
 You will need to install and configure a web server to serve static files from
 that directory.
-
-### Installing with Flight Runway
-
-Flight Runway provides a Ruby environment and command-line helpers for
-running openflightHPC tools.  Flight Landing Page integrates with Flight
-Runway to provide an easy way to install and run the tool.
-
-Flight Landing Page is packaged as part of the `flight-www` RPM.  Installing
-`flight-www` will automatically install Flight Landing Page and configure it
-for use.
-
-To install Flight Runway, see the [Flight Runway installation
-docs](https://github.com/openflighthpc/flight-runway#installation).
-
-These instructions assume that `flight-runway` has been installed from the
-openflightHPC yum repository and that either [system-wide
-integration](https://github.com/openflighthpc/flight-runway#system-wide-integration)
-has been enabled or the
-[`flight-starter`](https://github.com/openflighthpc/flight-starter) tool has
-been installed and the environment activated with the `flight start` command.
-
- * Enable the Alces Flight RPM repository:
-
-    ```
-    yum install https://repo.openflighthpc.org/openflight/centos/7/x86_64/openflighthpc-release-2-1.noarch.rpm
-    ```
-
- * Rebuild your `yum` cache:
-
-    ```
-    yum makecache
-    ```
-
- * Install the `flight-www` RPM:
-
-    ```
-    [root@myhost ~]# yum install flight-www
-    ```
 
 ## Configuration
 
