@@ -141,6 +141,8 @@ cp -a default/content/styles/branding.css overridden/content/styles/
 $EDITOR overridden/content/styles/branding.css
 ```
 
+See [Themes](docs/themes.md) for more info.
+
 Other branding related files worth mentioning are:
 
  - `landing-page/default/content/images/favicon*.png`.
