@@ -2,7 +2,7 @@
     <% if branding('brandbar.logo') %>
       <a
         class="navbar-brand"
-        href="/">
+        href="<%= config[:link_prefix] %>/">
         <img
           class="<%= branding('brandbar.logo.classNames') %> branding-brandbar-logo"
           src="<%= branding('brandbar.logo.url') %>"
@@ -13,7 +13,7 @@
     <% else %>
       <a
         class="navbar-brand"
-        href="/">
+        href="<%= config[:link_prefix] %>/">
         <img
           class="<%= branding('brandbar.logo.classNames') %> branding-brandbar-logo"
           src="/images/png_trans_logo-navbar.png"
@@ -40,7 +40,7 @@
             <li class="nav-item">
                 <a
                     class="nav-link nav-menu-button"
-                    href="/"
+                    href="<%= config[:link_prefix] %>/"
                 >
                 <%=
                     branding('brandbar.home_link_text') ||
@@ -55,7 +55,7 @@
               <li class="nav-item">
                   <a
                       class="nav-link nav-menu-button"
-                      href="/apps"
+                      href="<%= config[:link_prefix] %>/apps"
                   >
                       Web Suite
                   </a>
@@ -65,7 +65,7 @@
               <li class="nav-item">
                   <a
                       class="nav-link nav-menu-button"
-                      href="/config-packs"
+                      href="<%= config[:link_prefix] %>/config-packs"
                   >
                       Config Packs
                   </a>

@@ -23,3 +23,8 @@ data_sources:
     content_dir: overridden/content
     layouts_dir: overridden/layouts
     override_name: 'bespoke'
+
+
+# Prefix for "internal" links.  Links to other landing page pages and web
+# suite apps.
+link_prefix: ""

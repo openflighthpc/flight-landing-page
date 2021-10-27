@@ -19,8 +19,8 @@
     >
 
     <!-- Our party styles -->
-    <link rel="stylesheet" href="/styles/app.css">
-    <link rel="stylesheet" href="/styles/branding.css">
+    <link rel="stylesheet" href="<%= config[:link_prefix] %>/styles/app.css">
+    <link rel="stylesheet" href="<%= config[:link_prefix] %>/styles/branding.css">
 
     <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -73,8 +73,8 @@
     }
   </script>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= config[:link_prefix] %>/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= config[:link_prefix] %>/images/favicon-16x16.png">
 
     <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
