@@ -1,4 +1,12 @@
 {
+  "apps_link" : {
+    "path": "<%= config[:link_prefix] %>/apps",
+    "text": "Web Suite"
+  },
+  "config_packs_link" : {
+    "path": "<%= config[:link_prefix] %>/config-packs",
+    "text": "Config Packs"
+  },
   "apps" : 
     [<% app_items.each_with_index do |item, idx| %>
     <%= idx == 0 ? ' ' : ',' %> <%= item.reps.fetch(:data).compiled_content %>
