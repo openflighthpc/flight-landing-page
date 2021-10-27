@@ -1,6 +1,6 @@
 # Themes
 
-Themes are located in the [types/](landing-page/types) directory. Two examples are included in this repo: `red-theme` and `green-theme`.
+Themes are located in the [types/](/landing-page/types) directory. Two examples are included in this repo: `red-theme` and `green-theme`.
 Each of the directories contains a directory tree leading to a single file, resembling the following:
 ```
 
@@ -11,23 +11,8 @@ Each of the directories contains a directory tree leading to a single file, rese
                 └── branding.css
 
 ```
-and recompiling the Landing Page with:
 
-_Flight Runway_
-
-```
-flight start
-flight landing-page compile
-```
-
-_Source_
-
-```
-cd /opt/flight/opt/www/landing-page
-bundle exec nanoc compile
-```
-
-will result in the Landing Page being compiled with the theme you created a symbolic link to.
+The `branding.css` file contains the stylesheet that can be edited at the site admin's discretion to match their desired custom branding.
 
 ## Example themes
 
@@ -57,4 +42,20 @@ mkdir -p overridden/content/styles
 ln -s types/alternative-theme/content/styles/branding.css overridden/content/styles/branding.css`
 ```
 
-This creates a symbolic link link in the `overridden/content/styles` directory pointing to the newly created `branding.css` file in the `alternative-theme` directory. To switch themes, simply delete and recreate the symbolic link for the desired theme.
+This creates a symbolic link in the `overridden/content/styles` directory pointing to the newly created `branding.css` file in the `alternative-theme` directory. To switch themes, simply delete and recreate the symbolic link for the desired theme.
+
+After creating the symbolic link, the Landing Page must be recompiled:
+
+_via Flight Runway_
+
+```
+flight start
+flight landing-page compile
+```
+
+_from source_
+
+```
+cd /opt/flight/opt/www/landing-page
+bundle exec nanoc compile
+```
