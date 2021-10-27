@@ -1,0 +1,156 @@
+/*------------------------------------------------
+ * Generic branding
+ * ----------------------------------------------- */
+body {
+    background-color: #de5252;
+}
+.sidenav {
+    margin-top: 1.5rem;
+}
+
+/*------------------------------------------------
+ * Navbar and brandbar branding
+ * ----------------------------------------------- */
+
+/* Useful classes */
+.navbar { 
+    background-color: #ff9e9e !important;
+}
+.navbar .navbar-nav .nav-link { 
+}
+.navbar-brand { }
+.branding-brandbar-wrapper { }
+.branding-brandbar-text-wrapper { }
+.branding-brandbar-text { }
+.branding-brandbar-logo img { }
+
+.navbar {
+    border-bottom: 1px solid #dee2e6;
+}
+.navbar-light .navbar-nav .nav-menu-text:hover {
+    color: rgba(0,0,0,.5);
+}
+.navbar-brand {
+    padding-left: 4rem;
+}
+.navbar-right {
+    padding-right: 4rem;
+}
+.navbar li {
+    padding-top: 1rem;
+}
+.nav-menu-text {
+    font-size: larger;
+}
+.nav-menu-button {
+    font-weight: bold;
+    font-size: larger;
+}
+
+/*------------------------------------------------
+ * Product bar branding
+ * ----------------------------------------------- */
+
+.productbar {
+    background-color: var(--secondary);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.productbar .navbar-nav {
+    min-height: 30px;
+}
+.productbar .nav-item,
+.productbar .nav-item .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+    /* color: #dcdee0; */
+}
+.productbar .nav-item.active,
+.productbar .nav-item .nav-link.active {
+    /* color: #fff; */
+}
+
+/*------------------------------------------------
+ * Sidenav branding
+ * ----------------------------------------------- */
+
+.sidenav {
+    background-color: rgba(0,0,0,.5);
+}
+
+.sidenav >:first-child {
+    position: sticky;
+    top: 24px;
+    will-change: transform;
+    z-index: 10;
+}
+
+.sidenav h2 {
+    text-transform: uppercase;
+    font-size: 13px;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding-left: 0.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.sidenav ul li {
+    padding-top: 0;
+}
+
+/* -----------------------------------------------
+ * Non-sticky header and sticky footer
+ * ----------------------------------------------- */
+#main {
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+footer {
+    background-color: #ff9e9e;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    border-top: 1px solid #dee2e6 !important;
+}
+
+/* -----------------------------------------------
+ * Logo
+ * ----------------------------------------------- */
+img.logo {
+    display: block;
+    max-height: 150px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------------------------------
+ * Landing page dashboard branding
+ * ----------------------------------------------- */
+.branding-landingpage-dashboard-logo-wrapper { }
+img.branding-landingpage-dashboard-logo { }
+
+/* -----------------------------------------------
+ * App branding
+ * ----------------------------------------------- */
+
+.App .sidenav {
+    padding-left: 3rem;
+}
+
+/* -----------------------------------------------
+ * Apps dashboard branding
+ * ----------------------------------------------- */
+.branding-apps-dashboard-logo-wrapper { }
+img.branding-apps-dashboard-logo { }
+
