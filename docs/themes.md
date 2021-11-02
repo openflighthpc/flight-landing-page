@@ -39,7 +39,7 @@ To apply a theme, it is recommended to use the `overridden` directory. For examp
 ```
 cd /opt/flight/opt/www/landing-page
 mkdir -p overridden/content/styles
-ln -s types/alternative-theme/content/styles/branding.css overridden/content/styles/branding.css`
+ln -s /opt/flight/opt/www/landing-page/types/alternative-theme/content/styles/branding.css overridden/content/styles/branding.css`
 ```
 
 This creates a symbolic link in the `overridden/content/styles` directory pointing to the newly created `branding.css` file in the `alternative-theme` directory. To switch themes, simply delete and recreate the symbolic link for the desired theme.
