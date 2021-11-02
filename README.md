@@ -164,6 +164,48 @@ cd flight-landing-page/landing-page
 bundle exec nanoc compile
 ```
 
+## Config packs
+
+Config packs are a mechanism allowing the cluster administrator to provide
+packs of files for download from the landing page.  This is similar to an FTP
+site but easier for many users to navigate.
+
+An example use case for a config pack would be one containing a VPN
+configuration, keys and instructions allowing a user to connect to the cluster
+from home.
+
+An example config pack is included with Flight Landing Page, although it
+is disabled upon installation. Its location is:
+
+_via Flight Runway_
+```
+/opt/flight/opt/www/landing-page/default/content/config-packs/example.md.disabled
+```
+
+_via source_
+```
+flight-landing-page/landing-page/default/content/config-packs/example.md.disabled
+```
+
+The YAML structure present at the top of the example config pack contains some
+basic title keys that are displayed on the landing page (the text following the
+YAML structure is also displayed there). The `downloads` key in the YAML
+structure specifies the files that are included in the config pack.
+
+When a config pack has been created/modified, the landing page must be recompiled.
+
+### Downloadable files
+
+As described in `example.md.disabled`, files listed in the config pack need to
+be stored in `/opt/flight/usr/share/www/downloaded/config-packs/<PACK_NAME>/`
+where `<PACK_NAME>` is the config pack file without the file extension.
+
+The `file_name` key in the config pack accepts two extra keys: `display_name`
+and `fa_icon`. `display_name` is the name that the file will be given on the
+landing page; `fa_icon` allows you to set a valid Font Awesome (v4.7.0) icon
+to be displayed next to the filename (the `file-o` icon is chosen if one
+isn't specified in the config pack).
+
 ## Operation
 
 Once compiled (see above), the landing page is a set of static HTML files to

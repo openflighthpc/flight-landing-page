@@ -21,8 +21,15 @@ In this case, the paths will be:<br>
 `/opt/flight/usr/share/www/downloads/config-packs/example/README.md`
 `/opt/flight/usr/share/www/downloads/config-packs/example/example.tar.gz`
 
-You may hide this config pack by removing the symlink:<br>
-`rm /opt/flight/opt/www/landing-page/default/content/config-packs/example.md`
+You may enable this config pack by creating a symlink and recompiling the landing page:<br>
+```
+ln -s /opt/flight/opt/www/landing-page/default/content/config-packs/example.md.disabled
+      /opt/flight/opt/www/landing-page/default/content/config-packs/example.md
+```
+
+```
+flight landing-page compile
+```
 
 NOTE: Disabling a config pack will remove it from the landing page.  However,
 the files stored at
