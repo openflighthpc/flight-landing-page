@@ -61,11 +61,11 @@ More extensive changes can be made by changing the CSS.  This is done by
 creating a `branding.css` file.
 
 This repository contains two example themes
-[red-theme](landing-page/types/red-theme/content/styles/branding.css) and
-[green-theme](landing-page/types/green-theme/content/styles/branding.css).
+[red-theme](/landing-page/types/red-theme/content/styles/branding.css) and
+[green-theme](/landing-page/types/green-theme/content/styles/branding.css).
 Which you may wish to use as a starting point for your own branding; or you
 could compare the differences between them and the [default
-branding](landing-page/types/headnode/content/styles/branding.css).
+branding](/landing-page/types/headnode/content/styles/branding.css).
 
 The example themes are each split into sections indicating which parts of the
 Landing Page they will affect. For example, the key to change the background
