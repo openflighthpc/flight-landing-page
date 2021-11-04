@@ -18,7 +18,19 @@ body {
 }
 .navbar .navbar-nav .nav-link { 
 }
-.navbar-brand { }
+.navbar-brand {
+    /* Have the sub brand header position relative this element */
+    position: relative;
+}
+/* Add a sub brand header just after the brandbar logo */
+.navbar-brand::after {
+    content: "Green theme";
+    position: absolute;
+    top: 70px;
+    left: 160px;
+    font-size: smaller;
+    font-weight: bold;
+}
 .branding-brandbar-wrapper { }
 .branding-brandbar-text-wrapper { }
 .branding-brandbar-text { }
