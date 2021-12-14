@@ -1,5 +1,12 @@
 # Optional branding for the landing page AND flight webapps.
 
+copyright:
+  # Year and name to use for copyright disclaimer
+  #
+  # If not given, the current year and 'openflightHPC' are used instead.
+  year: 2021
+  text: openflightHPC
+
 brandbar:
   # Optional text for the brandbar, for both the landing page and the webapps.
   # Defaults to an empty string if not provided.

@@ -97,7 +97,11 @@
       <footer class="footer">
         <div class="container">
           <span class="text-muted" style="float: left">
-            Copyright 2020 openflightHPC
+            <% if branding('copyright') %>
+              Copyright <%= branding('copyright.year') %> <%= branding('copyright.text') %>
+            <% else %>
+              Copyright <%= Date.today.year %> openflightHPC
+            <% end %>
           </span>
         </div>
       </footer>
