@@ -35,7 +35,51 @@ body {
 
 .navbar .navbar-nav .nav-link {
     color: white !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-right-width: 1px;
+    border-right-style: dotted;
+    border-right-color: rgb(88, 103, 117);
+    padding: 8px 24px 8px 24px;
 }
+
+.navbar .navbar-nav #account-menu {
+    text-transform: none;
+}
+
+.App .navbar-nav.mr-auto {
+    margin-left: auto;
+    margin-right: 0 !important;
+}
+
+.App .navbar .navbar-nav .nav-item:last-child .nav-link {
+    border-right-style: dotted;
+}
+
+.App .navbar-nav .nav-item:first-child .nav-link {
+    font-size: 0;
+}
+
+.App .navbar-nav .nav-item:first-child .nav-link::before {
+    content: 'Home';
+    font-size: 12px;;
+}
+
+.navbar .navbar-nav .nav-item:last-child .nav-link {
+    border-right-style: none;
+}
+
+.App .card-deck .card[class*="DesktopCard_DesktopUnverified"] {
+    display: none;
+}
+
+/* temporarily hide flight executor */
+/*
+.app-card-deck div.app-card:last-child, .sidenav ul li:last-child {
+    display: none;
+}
+*/
 
 .branding-brandbar-wrapper { }
 
