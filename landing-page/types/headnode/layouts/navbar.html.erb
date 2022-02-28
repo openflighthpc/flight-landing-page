@@ -50,7 +50,7 @@
                     href="<%= config[:link_prefix] %>/"
                 >
                 <%=
-                    branding('brandbar.home_link_text') ||
+                    branding('brandbar.home_link.text') ||
                       environment('environment.name') ||
                       environment('organisation.name') ||
                       'Home'
@@ -65,7 +65,7 @@
                       href="<%= config[:link_prefix] %>/apps"
                   >
                       <%=
-                        branding('brandbar.apps_link_text') ||
+                        branding('brandbar.apps_link.text') ||
                           'Web Suite'
                         %>
                   </a>

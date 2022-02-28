@@ -21,17 +21,22 @@
 #   # Defaults to an empty string if not provided.
 #   # text: "sub-brand"
 # 
-#   # Optional text for the brandbar link back to the main landing page, for
-#   # both the landing page and the webapps.
-#   #
-#   # If not given, the environment name, organisation name or "Home" will be
-#   # used instead.
-#   # home_link_text: ""
+#   # Optional configuration for the brandbar "home" link.
+#   home_link:
+#     # Text for the brandbar link back to the main landing page, for both the
+#     # landing page and the webapps.
+#     #
+#     # If not given, the environment name, organisation name or "Home" will be
+#     # used instead.
+#     text: ""
 # 
-#   # Optional text for the brandbar link to the websuite apps.
-#   #
-#   # If not given, "Web Suite" will be used instead.
-#   # apps_link_text: ""
+#   # Optional configuration for the brandbar apps/websuite link.
+#   apps_link:
+#     # Text for the brandbar link to the websuite apps for the both the landing
+#     # page and the webapps.
+#     #
+#     # If not given, "Web Suite" will be used instead.
+#     text: ""
 # 
 #   # Optional logo for the brandbar, for both the landing page and the webapps.
 #   # Defaults to the OpenflightHPC logo if not provided.
