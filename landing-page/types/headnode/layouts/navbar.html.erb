@@ -34,7 +34,7 @@
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarNavDropdown"
+        data-target="#navbarNavContainer"
         aria-controls="navbar SupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -42,8 +42,8 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarNavContainer">
+        <ul class="navbar-nav">
             <li class="nav-item">
                 <a
                     class="nav-link nav-menu-button"
@@ -65,7 +65,7 @@
                       href="<%= config[:link_prefix] %>/apps"
                   >
                       <%=
-                        branding('brandbar.websuite_link_text') ||
+                        branding('brandbar.apps_link_text') ||
                           'Web Suite'
                         %>
                   </a>

@@ -21,6 +21,9 @@ body {
 .branding-brandbar-text { }
 .branding-brandbar-logo img { }
 
+#navbarNavContainer .navbar-nav:first-child {
+    flex-grow: 1;
+}
 .navbar {
     border-bottom: 1px solid #dee2e6;
 }

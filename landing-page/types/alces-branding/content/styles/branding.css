@@ -33,6 +33,10 @@ body {
     font-size: larger;
 }
 
+.navbar.productbar *:first-child,
+#navbarNavContainer {
+    justify-content: end;
+}
 .navbar .navbar-nav .nav-link {
     color: white !important;
     font-size: 12px;
@@ -48,38 +52,13 @@ body {
     text-transform: none;
 }
 
-.navbar-nav.mr-auto {
-    margin-left: auto;
-    margin-right: 0 !important;
-}
-
 .App .navbar .navbar-nav .nav-item:last-child .nav-link {
     border-right-style: dotted;
-}
-
-.App .navbar-nav .nav-item:first-child .nav-link {
-    font-size: 0;
-}
-
-.App .navbar-nav .nav-item:first-child .nav-link::before {
-    content: 'Home';
-    font-size: 12px;;
 }
 
 .navbar .navbar-nav .nav-item:last-child .nav-link {
     border-right-style: none;
 }
-
-.App .card-deck .card[class*="DesktopCard_DesktopUnverified"] {
-    display: none;
-}
-
-/* temporarily hide flight executor */
-/*
-.app-card-deck div.app-card:last-child, .sidenav ul li:last-child {
-    display: none;
-}
-*/
 
 .branding-brandbar-wrapper { }
 
@@ -141,13 +120,23 @@ body {
     flex-basis: auto;
     padding-bottom: 1rem;
 }
-.navbar {
+
+.navbar:not([class~="productbar"]) {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.navbar.productbar {
+    position: fixed;
+    top: 0;
+    right: 160px;
+    bottom: 0;
+    left: 250px;
     z-index: 99;
+    background-color: rgb(25, 25, 25) !important;
 }
 
 #main .content {

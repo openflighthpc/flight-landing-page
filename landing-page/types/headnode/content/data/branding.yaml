@@ -31,7 +31,7 @@
 #   # Optional text for the brandbar link to the websuite apps.
 #   #
 #   # If not given, "Web Suite" will be used instead.
-#   # websuite_link_text: ""
+#   # apps_link_text: ""
 # 
 #   # Optional logo for the brandbar, for both the landing page and the webapps.
 #   # Defaults to the OpenflightHPC logo if not provided.
