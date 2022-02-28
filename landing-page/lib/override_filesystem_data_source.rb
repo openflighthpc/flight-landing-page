@@ -5,6 +5,7 @@ class OverrideFilesystemDataSource < ::Nanoc::DataSources::Filesystem
     super.each do |i|
       i.attributes.merge!(
         __override__: true,
+        __override_source__: override_name,
         __overridden_identifier__: i.identifier,
       )
       i.identifier = "/__override__#{override_name}_#{i.identifier}"
@@ -15,6 +16,7 @@ class OverrideFilesystemDataSource < ::Nanoc::DataSources::Filesystem
     super.each do |i|
       i.attributes.merge!(
         __override__: true,
+        __override_source__: override_name,
         __overridden_identifier__: i.identifier,
       )
       i.identifier = "/__override__#{override_name}_#{i.identifier}"
