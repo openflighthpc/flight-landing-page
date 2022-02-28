@@ -1,20 +1,20 @@
 <aside class="sidenav col-12 col-md-3 col-lg-2">
   <div>
-    <% unless environment('environment.name').nil? %>
+    <% if branding('sidebar.environment.show') && !environment('environment.name').nil? %>
       <h2>Environment</h2>
       <ul class="w-100">
         <li><%= environment('environment.name') %></li>
       </ul>
     <% end %>
 
-    <% unless environment('organisation.name').nil? %>
+    <% if branding('sidebar.organisation.show') && !environment('organisation.name').nil? %>
       <h2>Organisation</h2>
       <ul class="w-100">
         <li><%= environment('organisation.name') %></li>
       </ul>
     <% end %>
 
-    <% if !contacts.empty? %>
+    <% if branding('sidebar.contacts.show') && !contacts.empty? %>
       <h2>Contacts</h2>
       <ul class="w-100">
         <% contacts.each do |contact| %>
@@ -23,7 +23,7 @@
       </ul>
     <% end %>
 
-    <% if !links.empty? %>
+    <% if branding('sidebar.links.show') && !links.empty? %>
       <h2>Links</h2>
       <ul class="w-100">
         <% links.each do |link| %>
@@ -32,8 +32,8 @@
       </ul>
     <% end %>
 
-    <% if !app_items.empty? %>
-      <h2>Web Suite</h2>
+    <% if branding('sidebar.websuite.show') && !app_items.empty? %>
+      <h2>Quick Access</h2>
       <ul class="w-100">
         <% app_items.each do |app| %>
           <li>

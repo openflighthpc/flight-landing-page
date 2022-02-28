@@ -1,16 +1,37 @@
 # Optional branding for the landing page AND flight webapps.
 
+# document:
+#   # Optional document title.
+#   #
+#   # The title set here is used if the page being displayed has not been
+#   # configured with a document title.
+#   #
+#   # If not given, it defaults to "openflightHPC".
+#   title: ""
+
 copyright:
   # Year and name to use for copyright disclaimer
   #
   # If not given, the current year and 'openflightHPC' are used instead.
-  year: 2021
-  text: openflightHPC
+  # year: 2022
+  text: Alces Flight Ltd
 
 brandbar:
   # Optional text for the brandbar, for both the landing page and the webapps.
   # Defaults to an empty string if not provided.
-  text: "sub-brand"
+  # text: "sub-brand"
+
+  # Optional text for the brandbar link back to the main landing page, for
+  # both the landing page and the webapps.
+  #
+  # If not given, the environment name, organisation name or "Home" will be
+  # used instead.
+  home_link_text: "Home"
+
+  # Optional text for the brandbar link to the websuite apps.
+  #
+  # If not given, "Web Suite" will be used instead.
+  websuite_link_text: "Apps"
 
   # Optional logo for the brandbar, for both the landing page and the webapps.
   # Defaults to the OpenflightHPC logo if not provided.
@@ -18,29 +39,46 @@ brandbar:
     # An absolute URL can be used to load remote images.  Or a relative URL
     # to load an image included in the landing page.
     # url: "https://alces-flight.com/assets/image/logo.png"
-    url: "/images/logo.png"
+    url: "/dev/images/logo.png"
     alt: ""
     # Additional class names for the IMG tag.  Bootstrap classes can be used
     # here.
     classNames: ""
+
+sidebar:
+  environment:
+    show: false
+  organisation:
+    show: false
+  contacts:
+    show: true
+  links:
+    show: true
+  websuite:
+    show: true
 
 landingpage:
   dashboard:
     # Optional logo for the landing page environment page (aka dashboard).
     # Defaults to no logo if not provided.
     logo:
-      url: "/images/dashboard-logo.png"
+      url: "/dev/images/dashboard-logo.png"
       alt: ""
       # Additional class names for the IMG tag.  Bootstrap classes can be used
       # here.
       classNames: ""
+
+    # Optional text below the landing page logo and environment name.
+    # Defaults to "OpenflightHPC and the Flight User Suite.
+    powered_by:
+      text: "Alces Flight."
 
 apps:
   dashboard:
     # Optional logo for the webapp dashboards.
     # Defaults to the OpenflightHPC logo if not provided.
     logo:
-      url: "/images/dashboard-logo.png"
+      url: "/dev/images/dashboard-logo.png"
       alt: ""
       # Additional class names for the IMG tag.  Bootstrap classes can be used
       # here.

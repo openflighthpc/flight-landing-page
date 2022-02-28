@@ -133,6 +133,12 @@ img.logo {
 .branding-landingpage-dashboard-logo-wrapper { }
 img.branding-landingpage-dashboard-logo { }
 
+.blurb .powered-by {
+    color: #999;
+    font-size: 18px;
+    text-align: center;
+}
+
 /* -----------------------------------------------
  * App branding
  * ----------------------------------------------- */

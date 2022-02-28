@@ -2,7 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><%= @item[:heading] || "openflightHPC" %></title>
+    <title><%=
+      @item[:heading] ||
+        branding("document.title") ||
+        ( environment("environment.name").nil? ? nil : "#{environment("environment.name")} Compute Environment" ) ||
+        "openflightHPC"
+    %>
+    </title>
 
     <!-- Third party styles -->
     <link
@@ -75,6 +81,7 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="<%= config[:link_prefix] %>/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<%= config[:link_prefix] %>/images/favicon-16x16.png">
+    <link rel="icon" type="image/png"               href="<%= config[:link_prefix] %>/images/favicon.png">
 
     <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
@@ -98,9 +105,9 @@
         <div class="container">
           <span class="text-muted" style="float: left">
             <% if branding('copyright') %>
-              Copyright <%= branding('copyright.year') %> <%= branding('copyright.text') %>
+              &copy; <%= branding('copyright.year') || Date.today.year %> <%= branding('copyright.text') %>
             <% else %>
-              Copyright <%= Date.today.year %> openflightHPC
+              &copy; <%= Date.today.year %> openflightHPC
             <% end %>
           </span>
         </div>

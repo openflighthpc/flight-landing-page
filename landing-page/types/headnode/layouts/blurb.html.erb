@@ -10,7 +10,13 @@
     </div>
   <% end %>
   <% if environment('environment.name') %>
-    <h3 class="text-center"><%= environment('environment.name') %></h3>
+    <h3 class="text-center">Welcome to the <%= environment('environment.name') %> compute environment.</h3>
+    <h4 class="powered-by">
+      Powered by <%=
+        branding('landingpage.dashboard.powered_by.text') ||
+          "OpenflightHPC and the Flight User Suite."
+        %>
+    </h4>
   <% end %>
   <%= yield %>
 </div>
