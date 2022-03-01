@@ -2,10 +2,11 @@
     <% if branding('brandbar.logo') %>
       <a
         class="navbar-brand"
-        href="<%= config[:link_prefix] %>/">
+        href="<%= prefix_url("/") %>"
+      >
         <img
           class="<%= branding('brandbar.logo.classNames') %> branding-brandbar-logo"
-          src="<%= branding('brandbar.logo.url') %>"
+          src="<%= prefix_url(branding('brandbar.logo.url')) %>"
           alt="<%= branding('brandbar.logo.alt') %>"
         >
         </img>
@@ -13,10 +14,11 @@
     <% else %>
       <a
         class="navbar-brand"
-        href="<%= config[:link_prefix] %>/">
+        href="<%= prefix_url("/") %>"
+      >
         <img
           class="<%= branding('brandbar.logo.classNames') %> branding-brandbar-logo"
-          src="/images/png_trans_logo-navbar.png"
+          src="<%= prefix_url("/images/png_trans_logo-navbar.png") %>"
           alt="openflightHPC Logo"
           height="75">
         </img>
@@ -47,7 +49,7 @@
             <li class="nav-item">
                 <a
                     class="nav-link nav-menu-button"
-                    href="<%= config[:link_prefix] %>/"
+                    href="<%= prefix_url("/") %>"
                 >
                 <%=
                     branding('brandbar.home_link.text') ||
@@ -62,7 +64,7 @@
               <li class="nav-item">
                   <a
                       class="nav-link nav-menu-button"
-                      href="<%= config[:link_prefix] %>/apps"
+                      href="<%= prefix_url("/apps") %>"
                   >
                       <%=
                         branding('brandbar.apps_link.text') ||
@@ -75,7 +77,7 @@
               <li class="nav-item">
                   <a
                       class="nav-link nav-menu-button"
-                      href="<%= config[:link_prefix] %>/config-packs"
+                      href="<%= prefix_url("/config-packs") %>"
                   >
                       Config Packs
                   </a>

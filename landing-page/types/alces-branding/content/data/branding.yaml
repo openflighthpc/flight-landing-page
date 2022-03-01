@@ -44,7 +44,7 @@ brandbar:
     # An absolute URL can be used to load remote images.  Or a relative URL
     # to load an image included in the landing page.
     # url: "https://alces-flight.com/assets/image/logo.png"
-    url: "/dev/images/logo.png"
+    url: "/images/logo.png"
     alt: ""
     # Additional class names for the IMG tag.  Bootstrap classes can be used
     # here.
@@ -67,7 +67,7 @@ landingpage:
     # Optional logo for the landing page environment page (aka dashboard).
     # Defaults to no logo if not provided.
     logo:
-      url: "/dev/images/dashboard-logo.png"
+      url: "/images/dashboard-logo.png"
       alt: ""
       # Additional class names for the IMG tag.  Bootstrap classes can be used
       # here.
@@ -83,7 +83,7 @@ apps:
     # Optional logo for the webapp dashboards.
     # Defaults to the OpenflightHPC logo if not provided.
     logo:
-      url: "/dev/images/dashboard-logo.png"
+      url: "/images/dashboard-logo.png"
       alt: ""
       # Additional class names for the IMG tag.  Bootstrap classes can be used
       # here.

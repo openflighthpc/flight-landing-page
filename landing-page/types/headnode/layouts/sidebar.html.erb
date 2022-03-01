@@ -40,7 +40,7 @@
             <%=
               link_to(
                 app[:short_title] || app[:title],
-                app[:path],
+                prefix_url(app[:path]),
                 "data-http-strike-disable" => "",
                 "data-http-add-title" => "Flight Web Suite requires HTTPS to be enabled",
               )

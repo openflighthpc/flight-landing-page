@@ -1,10 +1,14 @@
 {
+  "home_link" : {
+    "path": "<%= prefix_url("/") %>",
+    "text": "<%= branding('brandbar.home_link.text') %>"
+  },
   "apps_link" : {
-    "path": "<%= config[:link_prefix] %>/apps",
+    "path": "<%= prefix_url("/apps") %>",
     "text": "<%= branding('brandbar.apps_link.text') %>"
   },
   "config_packs_link" : {
-    "path": "<%= config[:link_prefix] %>/config-packs",
+    "path": "<%= prefix_url("/config-packs") %>",
     "text": "Config Packs"
   },
   "apps" : 

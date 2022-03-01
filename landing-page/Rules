@@ -33,8 +33,21 @@ compile '/data/*.json.erb' do
   write ext: 'json'
 end
 
+compile '/data/branding.yaml' do
+  filter :attributes_to_content, item: item
+  filter :prefix_url,
+    keys: [
+      "brandbar.logo.url",
+      "landingpage.dashboard.logo.url",
+      "apps.dashboard.logo.url",
+    ]
+  filter :metadata_to_json
+  write ext: 'json'
+end
+
 compile '/data/*.yaml' do
-  filter :metadata_to_json, item: item
+  filter :attributes_to_content, item: item
+  filter :metadata_to_json
   write ext: 'json'
 end
 
@@ -87,7 +100,9 @@ compile '/apps/*', rep: :data do
     write nil
     next
   end
-  filter :metadata_to_json, item: item
+  filter :attributes_to_content, item: item
+  filter :prefix_url, keys: ["path"]
+  filter :metadata_to_json
   write nil
 end
 
@@ -110,7 +125,8 @@ compile '/config-packs/*', rep: :data do
     write nil
     next
   end
-  filter :metadata_to_json, item: item
+  filter :attributes_to_content, item: item
+  filter :metadata_to_json
   write nil
 end
 
