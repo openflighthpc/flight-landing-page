@@ -6,7 +6,8 @@
 #   # The title set here is used if the page being displayed has not been
 #   # configured with a document title.
 #   #
-#   # If not given, it defaults to "openflightHPC".
+#   # If not given, an attempt to construct one based on the environemnt's
+#   # name is made and if that doesn't work we fallback to "openflightHPC".
 #   title: ""
 
 copyright:
