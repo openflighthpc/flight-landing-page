@@ -1,9 +1,43 @@
 # Optional branding for the landing page AND flight webapps.
 
+# document:
+#   # Optional document title.
+#   #
+#   # The title set here is used if the page being displayed has not been
+#   # configured with a document title.
+#   #
+#   # If not given, an attempt to construct one based on the environemnt's
+#   # name is made and if that doesn't work we fallback to "openflightHPC".
+#   title: ""
+
+copyright:
+  # Year and name to use for copyright disclaimer
+  #
+  # If not given, the current year and 'openflightHPC' are used instead.
+  # year: 2022
+  text: Alces Flight Ltd
+
 brandbar:
   # Optional text for the brandbar, for both the landing page and the webapps.
   # Defaults to an empty string if not provided.
-  text: "sub-brand"
+  # text: "sub-brand"
+
+  # Optional configuration for the brandbar "home" link.
+  home_link:
+    # Text for the brandbar link back to the main landing page, for both the
+    # landing page and the webapps.
+    #
+    # If not given, the environment name, organisation name or "Home" will be
+    # used instead.
+    text: "Home"
+
+  # Optional configuration for the brandbar apps/websuite link.
+  apps_link:
+    # Text for the brandbar link to the websuite apps for the both the landing
+    # page and the webapps.
+    #
+    # If not given, "Web Suite" will be used instead.
+    text: "Apps"
 
   # Optional logo for the brandbar, for both the landing page and the webapps.
   # Defaults to the OpenflightHPC logo if not provided.
@@ -17,6 +51,18 @@ brandbar:
     # here.
     classNames: ""
 
+sidebar:
+  environment:
+    show: false
+  organisation:
+    show: false
+  contacts:
+    show: true
+  links:
+    show: true
+  websuite:
+    show: true
+
 landingpage:
   dashboard:
     # Optional logo for the landing page environment page (aka dashboard).
@@ -27,6 +73,11 @@ landingpage:
       # Additional class names for the IMG tag.  Bootstrap classes can be used
       # here.
       classNames: ""
+
+    # Optional text below the landing page logo and environment name.
+    # Defaults to "OpenflightHPC and the Flight User Suite.
+    powered_by:
+      text: "Alces Flight."
 
 apps:
   dashboard:

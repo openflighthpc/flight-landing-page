@@ -1,12 +1,26 @@
 use_helper Nanoc::Helpers::Rendering
 use_helper Nanoc::Helpers::LinkTo
 
-def data_lookup(data_item_name, dotted_key="")
-  raw_branding = items["/data/#{data_item_name}.yaml"]
-  return if raw_branding.nil?
+def dotted_write(hash, dotted_key, value)
+  return unless hash.is_a?(Hash)
 
   keys = dotted_key.split('.')
-  keys.reduce(raw_branding) do |accum, key|
+
+  if keys.length == 1
+    hash[keys.first.to_sym] = value
+    return
+  end
+
+  keys.each do |key|
+    if hash.respond_to?(:[])
+      dotted_write(hash[key.to_sym], keys[1..-1].join('.'), value)
+    end
+  end
+end
+
+def dotted_lookup(haystack, dotted_key="")
+  keys = dotted_key.split('.')
+  keys.reduce(haystack) do |accum, key|
     if accum.respond_to?(:[])
       accum[key.to_sym]
     else
@@ -15,12 +29,26 @@ def data_lookup(data_item_name, dotted_key="")
   end
 end
 
+def data_lookup(data_item_name, dotted_key="")
+  raw_data = items["/data/#{data_item_name}.yaml"]
+  return if raw_data.nil?
+  dotted_lookup(raw_data, dotted_key)
+end
+
 def branding(dotted_key="")
   data_lookup('branding', dotted_key)
 end
 
 def environment(dotted_key="")
   data_lookup('environment', dotted_key)
+end
+
+def prefix_url(url)
+  if URI.parse(url).absolute?
+    url
+  else
+    File.join(config[:link_prefix], url).squeeze("/")
+  end
 end
 
 def raw_contacts

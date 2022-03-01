@@ -2,11 +2,10 @@ class MetadataToJson < Nanoc::Filter
   identifier :metadata_to_json
 
   NANOC_KEYS = [:filename, :content_filename, :meta_filename, :extension, :mtime].freeze
-  OVERRIDE_KEYS = [:__override__, :__overridden_identifier__].freeze
+  OVERRIDE_KEYS = [:__override__, :__override_source__, :__overridden_identifier__].freeze
 
-  def run(content, params = {})
-    item = params[:item]
-    hash_except(NANOC_KEYS + OVERRIDE_KEYS, item.attributes).to_json
+  def run(metadata_content, **kwargs)
+    hash_except(NANOC_KEYS + OVERRIDE_KEYS, metadata_content).to_json
   end
 
   private

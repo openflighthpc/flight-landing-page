@@ -1,9 +1,9 @@
 <% unless app_items.empty? %>
   <div class="mb-4">
-    <h2>Web Suite Tools</h2>
+    <h2>Web applications</h2>
     <a id="apps"></a>
     <p class="d-none" data-https-d-block>
-    Your environment has the following web tools installed and ready for use.
+    This environment provides access to the following web tools:
     </p>
     <div class="d-none" data-http-d-block>
       <p>
@@ -14,7 +14,7 @@
       <div class="clearfix mb-4">
         <a
           class="btn btn-primary learn-more float-right"
-          href="/enable-https"
+          href="<%= prefix_url("/enable-https") %>"
         >
           Learn more
         </a>

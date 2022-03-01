@@ -2,7 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><%= @item[:heading] || "openflightHPC" %></title>
+    <title><%=
+      @item[:heading] ||
+        branding("document.title") ||
+        ( environment("environment.name").nil? ? nil : "#{environment("environment.name")} Compute Environment" ) ||
+        "openflightHPC"
+    %>
+    </title>
 
     <!-- Third party styles -->
     <link
@@ -19,15 +25,19 @@
     >
 
     <!-- Our party styles -->
-    <link rel="stylesheet" href="<%= config[:link_prefix] %>/styles/app.css">
-    <link rel="stylesheet" href="<%= config[:link_prefix] %>/styles/branding.css">
+    <link rel="stylesheet" href="<%= prefix_url("/styles/app.css") %>">
+    <link rel="stylesheet" href="<%= prefix_url("/styles/branding.css") %>">
 
     <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous">
+    </script>
     <script
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
         integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
@@ -73,8 +83,9 @@
     }
   </script>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="<%= config[:link_prefix] %>/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%= config[:link_prefix] %>/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= prefix_url("/images/favicon-32x32.png") %>">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= prefix_url("/images/favicon-16x16.png") %>">
+  <link rel="icon" type="image/png"               href="<%= prefix_url("/images/favicon.png") %>">
 
     <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
@@ -97,7 +108,11 @@
       <footer class="footer">
         <div class="container">
           <span class="text-muted" style="float: left">
-            Copyright 2020 openflightHPC
+            <% if branding('copyright') %>
+              &copy; <%= branding('copyright.year') || Date.today.year %> <%= branding('copyright.text') %>
+            <% else %>
+              &copy; <%= Date.today.year %> openflightHPC
+            <% end %>
           </span>
         </div>
       </footer>

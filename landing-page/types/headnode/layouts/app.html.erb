@@ -15,7 +15,7 @@
     <% end %>
     <%= yield %>
     <div class="mt-auto">
-      <a href="<%= @item[:path] %>"
+      <a href="<%= prefix_url(@item[:path]) %>"
          class="card-link btn btn-success btn-block"
          data-http-bootstrap-disable
       >

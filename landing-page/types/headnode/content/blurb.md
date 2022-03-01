@@ -1,6 +1,3 @@
-This environment is powered by OpenflightHPC Compute and the Flight User
-Suite.
-
 ## What is OpenFlightHPC Compute?
 
 OpenFlight Compute is the software environment designed to help researchers
