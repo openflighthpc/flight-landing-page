@@ -62,6 +62,11 @@ sidebar:
   websuite:
     show: true
 
+# signInModal:
+#   # Optional text for the sign-in form modal. If not given, text appropriate
+#   # to OpenflightHPC will be used.
+#   text: ""
+
 # landingpage:
 #   dashboard:
 #     # Optional logo for the landing page environment page (aka dashboard).

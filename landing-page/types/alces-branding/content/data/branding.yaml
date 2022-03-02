@@ -63,6 +63,14 @@ sidebar:
   websuite:
     show: true
 
+signInModal:
+  # Optional text for the sign-in form modal. If not given, text appropriate
+  # to OpenflightHPC will be used.
+  text: |
+    Sign in to your Flight Direct account. You'll need your account username
+    and password. Contact your HPC administrator if you don't have these
+    details or need a reminder.
+
 landingpage:
   dashboard:
     # Optional logo for the landing page environment page (aka dashboard).
