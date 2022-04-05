@@ -7,6 +7,11 @@ body {
 .sidenav {
     margin-top: 1.5rem;
 }
+.sidenav .fa-solid {
+    padding-right: 2px;
+    font-size: 12px;
+    display: inline-block;
+}
 
 /*------------------------------------------------
  * Navbar and brandbar branding

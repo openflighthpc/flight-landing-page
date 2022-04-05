@@ -36,10 +36,12 @@
       <h2>Quick Access</h2>
       <ul class="w-100">
         <% app_items.each do |app| %>
+          <% icon = "<span class=\"fa-solid fa-fw fa-#{app[:fa_icon]}\"></span>" %>
+          <% title = "<span class=\"title\">#{app[:short_title] || app[:title]}></span>" %>
           <li>
             <%=
               link_to(
-                app[:short_title] || app[:title],
+                icon + title,
                 prefix_url(app[:path]),
                 "data-http-strike-disable" => "",
                 "data-http-add-title" => "Flight Web Suite requires HTTPS to be enabled",
