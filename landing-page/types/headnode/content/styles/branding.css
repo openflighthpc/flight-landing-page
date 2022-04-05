@@ -15,6 +15,8 @@ body {
 /* Useful classes */
 .navbar { }
 .navbar .navbar-nav .nav-link { }
+.navbar .dropdown-menu {}
+.navbar .dropdown-item {}
 .navbar-brand { }
 .branding-brandbar-wrapper { }
 .branding-brandbar-text-wrapper { }
@@ -29,6 +31,13 @@ body {
 }
 .navbar-light .navbar-nav .nav-menu-text:hover {
     color: rgba(0,0,0,.5);
+}
+.navbar .dropdown-toggle {
+    display:flex;
+    align-items: center;
+}
+.navbar .dropdown-item {
+    font-size: 16px;
 }
 .navbar-brand {
     padding-left: 4rem;
