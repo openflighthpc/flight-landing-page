@@ -38,6 +38,7 @@ body {
 }
 .navbar .dropdown-item {
     font-size: 16px;
+    font-weight: normal;
 }
 .navbar-brand {
     padding-left: 4rem;
