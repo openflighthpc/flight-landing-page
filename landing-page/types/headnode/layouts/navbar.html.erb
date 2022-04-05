@@ -88,7 +88,8 @@
                                   href="<%= app[:path] %>"
                                   class="dropdown-item nav-link nav-menu-button"
                               >
-                                  <%= app[:short_title] || app[:title] %>
+				  <span class="fa-solid fa-fw fa-<%= app[:fa_icon] %>"></span>
+				  <span class="title"><%= app[:short_title] || app[:title] %></span>
                               </a>
                           <% end %>
                       </div>
