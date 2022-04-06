@@ -18,6 +18,9 @@ body {
 .navbar .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.9);
 }
+.navbar .dropdown-item:hover span {
+    color: black;
+}
 .navbar a.nav.dropdown-item:hover {
     background-color: #586775;
 }
