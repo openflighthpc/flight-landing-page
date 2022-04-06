@@ -21,6 +21,11 @@ body {
 .navbar a.nav.dropdown-item:hover {
     background-color: #586775;
 }
+.navbar .dropdown-toggle {
+    color: white !important;
+    display: flex;
+    align-items: center;
+}
 
 .navbar-brand { }
 .navbar li {
