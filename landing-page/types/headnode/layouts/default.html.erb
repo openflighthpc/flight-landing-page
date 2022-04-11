@@ -27,6 +27,7 @@
     <!-- Our party styles -->
     <link rel="stylesheet" href="<%= prefix_url("/styles/app.css") %>">
     <link rel="stylesheet" href="<%= prefix_url("/styles/branding.css") %>">
+    <link rel="stylesheet" href="<%= prefix_url("/styles/login.css") %>">
 
     <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -42,6 +43,12 @@
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
         integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
         crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script
+	type="text/javascript"
+	src="<%= prefix_url("/js/login.js") %>">
     </script>
   <script>
     if(window.location.protocol == "http:") {
@@ -116,6 +123,21 @@
           </span>
         </div>
       </footer>
+      <script>
+        const FAM = FlightAccountMenu;
+        const e = React.createElement;
+        const menu = e(
+          FAM.AccountMenu,
+          {},
+          null
+        );
+        const context = e(
+          FAM.CurrentUserProvider,
+          {},
+          menu
+        );
+        ReactDOM.render(context, document.getElementById('flight-account-menu'));
+      </script>
     </div>
   </body>
 </html>
