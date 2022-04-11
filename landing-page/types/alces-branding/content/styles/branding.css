@@ -51,14 +51,16 @@ body {
 .navbar.productbar .navbar-nav-container {
     justify-content: end;
 }
+.navbar .navbar-nav .nav-item {
+    border-right-width: 1px;
+    border-right-style: dotted;
+    border-right-color: rgb(88, 103, 117);
+}
 .navbar .navbar-nav .nav-link {
     color: white !important;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: normal;
-    border-right-width: 1px;
-    border-right-style: dotted;
-    border-right-color: rgb(88, 103, 117);
     padding: 8px 24px 8px 24px;
 }
 .navbar .navbar-nav .dropdown-item.nav-link {
@@ -70,11 +72,11 @@ body {
     text-transform: none;
 }
 
-.App .navbar .navbar-nav .nav-item:last-child .nav-link {
+.App .navbar .navbar-nav .nav-item:last-child {
     border-right-style: dotted;
 }
 
-.navbar .navbar-nav .nav-item:last-child .nav-link {
+.navbar .navbar-nav .nav-item:last-child {
     border-right-style: none;
 }
 
