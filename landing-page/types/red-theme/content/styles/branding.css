@@ -7,6 +7,10 @@ body {
 .sidenav {
     margin-top: 1.5rem;
 }
+.sidenav .fa-solid {
+    padding-right: 2px;
+    display: inline-block;
+}
 
 /*------------------------------------------------
  * Navbar and brandbar branding
@@ -35,11 +39,25 @@ body {
 .branding-brandbar-text { }
 .branding-brandbar-logo img { }
 
+.navbar.brandbar .navbar-nav-container {
+    justify-content: space-between;
+}
 .navbar {
     border-bottom: 1px solid #ebf8e1;
 }
 .navbar-light .navbar-nav .nav-menu-text:hover {
     color: rgba(0,0,0,.5);
+}
+.navbar .dropdown-toggle {
+    display:flex;
+    align-items: center;
+}
+.navbar .dropdown-item {
+    font-size: 16px;
+    font-weight: normal;
+}
+.navbar .fa-solid {
+    display: inline-block;
 }
 .navbar-brand {
     padding-left: 4rem;
@@ -83,6 +101,13 @@ body {
 .productbar .nav-item.active,
 .productbar .nav-item .nav-link.active {
     /* color: #fff; */
+}
+
+.App .brandbar.brandbar-combined {
+    display: none;
+}
+.App .brandbar:not(.brandbar-combined),
+.App .productbar {
 }
 
 /*------------------------------------------------
@@ -154,6 +179,12 @@ img.logo {
 .branding-landingpage-dashboard-logo-wrapper { }
 img.branding-landingpage-dashboard-logo { }
 
+.blurb .powered-by {
+    color: #999;
+    font-size: 18px;
+    text-align: center;
+}
+
 /* -----------------------------------------------
  * App branding
  * ----------------------------------------------- */
@@ -168,3 +199,20 @@ img.branding-landingpage-dashboard-logo { }
 .branding-apps-dashboard-logo-wrapper { }
 img.branding-apps-dashboard-logo { }
 
+
+/* -----------------------------------------------
+ * Apps full screen and zen-mode styles
+ * ----------------------------------------------- */
+
+.App .fullscreen-content {
+    /* Subtract header, centernav margin, card header, card border, #main
+     * bottom margin, footer, extra to make things nicer. */
+    height: calc( 100vh - ( 102px + 41px ) - 24px - 2px - 56px - 16px - 60px - 0px );
+}
+
+html:fullscreen .fullscreen-content,
+body.zen-mode .fullscreen-content {
+    /* Subtract card header, card border, #main top and bottom margins.
+     * extra to make things nicer. */
+    height: calc( 100vh - 56px - 2px - 10px - 10px - 0px );
+}
