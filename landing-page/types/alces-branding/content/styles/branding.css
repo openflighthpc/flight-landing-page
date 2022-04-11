@@ -40,6 +40,12 @@ body {
     font-weight: bold;
     font-size: larger;
 }
+.navbar .dropdown .btn-group .nav-menu-button {
+    padding-right: 0;
+}
+.navbar .dropdown .btn-group .dropdown-toggle-split {
+    padding-right: 24px;
+}
 
 .navbar.brandbar .navbar-nav-container,
 .navbar.productbar .navbar-nav-container {
@@ -54,6 +60,10 @@ body {
     border-right-style: dotted;
     border-right-color: rgb(88, 103, 117);
     padding: 8px 24px 8px 24px;
+}
+.navbar .navbar-nav .dropdown-item.nav-link {
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .navbar .navbar-nav #account-menu {

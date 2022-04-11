@@ -57,6 +57,9 @@ body {
     font-weight: bold;
     font-size: larger;
 }
+.navbar .dropdown .btn-group .nav-menu-button {
+    padding-right: 0;
+}
 
 /*------------------------------------------------
  * Product bar branding
