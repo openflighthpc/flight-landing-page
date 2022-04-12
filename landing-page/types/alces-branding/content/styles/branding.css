@@ -21,10 +21,7 @@ body {
 .navbar .dropdown-item {
     color: white;
 }
-.navbar .dropdown-item:hover span {
-    color: black;
-}
-.navbar a.nav.dropdown-item:hover {
+.navbar a.dropdown-item:hover {
     background-color: #586775;
 }
 .navbar .dropdown-toggle {
