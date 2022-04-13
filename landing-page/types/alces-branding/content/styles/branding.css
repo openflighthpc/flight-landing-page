@@ -49,9 +49,6 @@ body {
 }
 
 .navbar.brandbar .navbar-nav-container,
-.navbar.productbar .navbar-nav-container {
-    justify-content: end;
-}
 .navbar .navbar-nav .nav-item {
     border-right-width: 1px;
     border-right-style: dotted;
@@ -94,11 +91,7 @@ body {
     height: 50px;
 }
 
-.App .brandbar.brandbar-combined {
-}
-.App .brandbar:not(.brandbar-combined),
-.App .productbar {
-    display: none;
+.App .brandbar {
 }
 
 /*------------------------------------------------

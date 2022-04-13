@@ -43,6 +43,10 @@ body {
 .navbar.brandbar .navbar-nav-container {
     justify-content: space-between;
 }
+
+.App .brandbar {
+}
+
 .navbar {
     border-bottom: 1px solid #3f4245;
 }
@@ -81,6 +85,7 @@ body {
 }
 
 /*------------------------------------------------
+<<<<<<< HEAD
  * Product bar branding
  * ----------------------------------------------- */
 
@@ -112,6 +117,8 @@ body {
 }
 
 /*------------------------------------------------
+=======
+>>>>>>> Rework styling for brand bar; remove styling for product bar
  * Sidenav branding
  * ----------------------------------------------- */
 
