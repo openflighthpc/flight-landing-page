@@ -48,7 +48,9 @@ body {
     padding-right: 24px;
 }
 
-.navbar.brandbar .navbar-nav-container,
+.navbar.brandbar .navbar-nav-container {
+    justify-content: end;
+}
 .navbar .navbar-nav .nav-item {
     border-right-width: 1px;
     border-right-style: dotted;
