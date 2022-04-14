@@ -48,8 +48,7 @@ body {
     padding-right: 24px;
 }
 
-.navbar.brandbar .navbar-nav-container,
-.navbar.productbar .navbar-nav-container {
+.navbar.brandbar .navbar-nav-container {
     justify-content: end;
 }
 .navbar .navbar-nav .nav-item {
@@ -94,11 +93,7 @@ body {
     height: 50px;
 }
 
-.App .brandbar.brandbar-combined {
-}
-.App .brandbar:not(.brandbar-combined),
-.App .productbar {
-    display: none;
+.App .brandbar {
 }
 
 /*------------------------------------------------

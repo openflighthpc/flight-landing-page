@@ -43,6 +43,10 @@ body {
 .navbar.brandbar .navbar-nav-container {
     justify-content: space-between;
 }
+
+.App .brandbar {
+}
+
 .navbar {
     border-bottom: 1px solid #3f4245;
 }
