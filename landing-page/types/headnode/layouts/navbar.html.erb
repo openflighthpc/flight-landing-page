@@ -61,16 +61,39 @@
             </li>
 
             <% unless app_items.empty? %>
-              <li class="nav-item">
-                  <a
-                      class="nav-link nav-menu-button"
-                      href="<%= prefix_url("/apps") %>"
-                  >
-                      <%=
-                        branding('brandbar.apps_link.text') ||
-                          'Web Suite'
-                        %>
-                  </a>
+              <li class="nav-item dropdown">
+                  <div class="btn-group">
+                      <a
+                          class="nav-link nav-menu-button"
+                          href="<%= prefix_url("/apps") %>"
+                      >
+                          <%=
+                            branding('brandbar.apps_link.text') ||
+                              'Web Suite'
+                            %>
+
+                      </a>
+                      <a
+                          type="button"
+                          class="dropdown-toggle dropdown-toggle-split"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                      >
+                          <span class="sr-only">Toggle Dropdown</span>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                          <% app_items.each do |app| %>
+                              <a
+                                  href="<%= app[:path] %>"
+                                  class="dropdown-item"
+                              >
+				  <span class="fa fa-solid fa-fw fa-<%= app[:fa_icon] %>"></span>
+				  <span class="title"><%= app[:short_title] || app[:title] %></span>
+                              </a>
+                          <% end %>
+                      </div>
+                  </div>
               </li>
             <% end %>
             <% unless config_pack_items.empty? %>

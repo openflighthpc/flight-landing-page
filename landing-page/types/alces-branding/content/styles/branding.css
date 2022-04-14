@@ -18,8 +18,17 @@ body {
 .navbar .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.9);
 }
-.navbar a.nav.dropdown-item:hover {
+.navbar .dropdown-item {
+    color: white;
+}
+.navbar a.dropdown-item:hover,
+.navbar a.dropdown-item:focus {
     background-color: #586775;
+}
+.navbar .dropdown-toggle {
+    color: white !important;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand { }
@@ -32,19 +41,27 @@ body {
     font-weight: bold;
     font-size: larger;
 }
+.navbar .dropdown .btn-group .nav-menu-button {
+    padding-right: 0;
+}
+.navbar .dropdown .btn-group .dropdown-toggle-split {
+    padding-right: 24px;
+}
 
 .navbar.brandbar .navbar-nav-container,
 .navbar.productbar .navbar-nav-container {
     justify-content: end;
+}
+.navbar .navbar-nav .nav-item {
+    border-right-width: 1px;
+    border-right-style: dotted;
+    border-right-color: rgb(88, 103, 117);
 }
 .navbar .navbar-nav .nav-link {
     color: white !important;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: normal;
-    border-right-width: 1px;
-    border-right-style: dotted;
-    border-right-color: rgb(88, 103, 117);
     padding: 8px 24px 8px 24px;
 }
 
@@ -52,11 +69,11 @@ body {
     text-transform: none;
 }
 
-.App .navbar .navbar-nav .nav-item:last-child .nav-link {
+.App .navbar .navbar-nav .nav-item:last-child {
     border-right-style: dotted;
 }
 
-.navbar .navbar-nav .nav-item:last-child .nav-link {
+.navbar .navbar-nav .nav-item:last-child {
     border-right-style: none;
 }
 
