@@ -85,7 +85,7 @@
                       <div class="dropdown-menu dropdown-menu-right">
                           <% app_items.each do |app| %>
                               <a
-                                  href="<%= app[:path] %>"
+                                  href="<%= prefix_url(app[:path]) %>"
                                   class="dropdown-item"
                               >
 				  <span class="fa fa-solid fa-fw fa-<%= app[:fa_icon] %>"></span>
