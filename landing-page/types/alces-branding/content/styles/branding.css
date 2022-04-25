@@ -21,8 +21,8 @@ body {
 .navbar .dropdown-item {
     color: white;
 }
-.navbar a.dropdown-item:hover,
-.navbar a.dropdown-item:focus {
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
     background-color: #586775;
 }
 .navbar .dropdown-toggle {
