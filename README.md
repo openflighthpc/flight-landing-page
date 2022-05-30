@@ -93,6 +93,8 @@ Files worth mentioning are:
    sidebar.
  - `landing-page/default/content/data/environment.yaml`: details about the
    environment.
+ - `landing-page/default/content/data/bookmarks.yaml`: bookmarks to be used by 
+   Flight File Manager.
 
 You can also change the text shown on the landing page.  This is detailed in
 the [branding documentation](docs/branding.md).
