@@ -43,6 +43,10 @@ def environment(dotted_key="")
   data_lookup('environment', dotted_key)
 end
 
+def bookmarks(dotted_key="")
+  data_lookup('bookmarks', dotted_key)
+end
+
 def prefix_url(url)
   if URI.parse(url).absolute?
     url

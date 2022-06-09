@@ -1,0 +1,16 @@
+# bookmarks:
+#   # List of bookmarks used by Flight File Manager
+#   -
+#     # Unique identifier for the bookmark.
+#     id: "users-documents"
+#
+#     # Absolute or relative (to the user's home directtory) path.
+#     # There is a known bug if this resolves to a file (instead of a
+#     # directory or nothing).
+#     path: "Documents"
+#
+#     # Text presented to the user.
+#     text: "Your Documents"
+#
+#     # Optional name of a Font Awesome icon.
+#     fa_icon: "file-text-o"

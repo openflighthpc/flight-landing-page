@@ -11,6 +11,7 @@
     "path": "<%= prefix_url("/config-packs") %>",
     "text": "Config Packs"
   },
+  "bookmarks": <%= bookmarks('bookmarks').to_json %>,
   "apps" : 
     [<% app_items.each_with_index do |item, idx| %>
     <%= idx == 0 ? ' ' : ',' %> <%= item.reps.fetch(:data).compiled_content %>
