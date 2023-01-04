@@ -1,6 +1,6 @@
-## What is Flight Direct?
+## What is Flight Solo?
 
-Flight Direct is the software environment designed to help researchers
+Flight Solo is the software environment designed to help researchers
 and scientists run their own high-performance compute research environment
 quickly and easily. The basic structure provided for users is as follows:
 
