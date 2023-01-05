@@ -1,14 +1,14 @@
 # Optional branding for the landing page AND flight webapps.
 
-# document:
-#   # Optional document title.
-#   #
-#   # The title set here is used if the page being displayed has not been
-#   # configured with a document title.
-#   #
-#   # If not given, an attempt to construct one based on the environemnt's
-#   # name is made and if that doesn't work we fallback to "openflightHPC".
-#   title: ""
+document:
+  # Optional document title.
+  #
+  # The title set here is used if the page being displayed has not been
+  # configured with a document title.
+  #
+  # If not given, an attempt to construct one based on the environemnt's
+  # name is made and if that doesn't work we fallback to "openflightHPC".
+  title: "Flight Solo"
 
 copyright:
   # Year and name to use for copyright disclaimer
@@ -67,7 +67,7 @@ signInModal:
   # Optional text for the sign-in form modal. If not given, text appropriate
   # to OpenflightHPC will be used.
   text: |
-    Sign in to your Flight Direct account. You'll need your account username
+    Sign in to your Flight Solo environment You'll need your account username
     and password. Contact your HPC administrator if you don't have these
     details or need a reminder.
 
