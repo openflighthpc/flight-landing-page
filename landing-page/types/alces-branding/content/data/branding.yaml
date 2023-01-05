@@ -1,13 +1,13 @@
 # Optional branding for the landing page AND flight webapps.
 
 document:
-#   # Optional document title.
-#   #
-#   # The title set here is used if the page being displayed has not been
-#   # configured with a document title.
-#   #
-#   # If not given, an attempt to construct one based on the environemnt's
-#   # name is made and if that doesn't work we fallback to "openflightHPC".
+  # Optional document title.
+  #
+  # The title set here is used if the page being displayed has not been
+  # configured with a document title.
+  #
+  # If not given, an attempt to construct one based on the environemnt's
+  # name is made and if that doesn't work we fallback to "openflightHPC".
   title: "Flight Solo"
 
 copyright:
