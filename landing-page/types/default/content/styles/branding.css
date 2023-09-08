@@ -3,6 +3,7 @@
  * ----------------------------------------------- */
 #main {
     background-image: linear-gradient(var(--sky-blue-grey), white);
+    color: #3d3d3d;
 }
 
 .sidenav {
@@ -17,6 +18,32 @@
 .centernav {
     background-color: white;
     min-height: 90vh;
+    padding-inline: 5vw;
+}
+
+.button {
+    background-color: var(--alces-blue);
+    border-radius: 2px;
+    padding: 0.5rem 1rem;
+    color: white !important;
+    width: fit-content;
+    transition: none !important;
+}
+
+.button:hover {
+    color: white !important;
+    background-color: var(--alces-blue);
+    filter: brightness(0.8);
+    transition: background-color 125ms;
+    text-decoration: none;
+}
+
+.button:visited {
+    color: white !important;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
 }
 
 /*------------------------------------------------
@@ -138,10 +165,40 @@ img.branding-landingpage-dashboard-logo { }
     color: var(--alces-blue);
 }
 
-.blurb .powered-by {
-    color: #999;
-    font-size: 18px;
+#tools-block {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     text-align: center;
+}
+
+#tools-container {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    justify-items: center;
+}
+
+.tool {
+    min-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tool img {
+    width: 10rem;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
+.tool p {
+    margin-bottom: 2rem;
+}
+
+.tool .button {
+    margin-inline: auto;
+    margin-bottom: 3rem;
 }
 
 /* -----------------------------------------------

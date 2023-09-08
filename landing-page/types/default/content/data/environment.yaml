@@ -1,7 +1,7 @@
-# environment:
-#   # Optional cluster (aka environment) name.  Defaults to an empty string if
-#   # not provided.
-#   name: ""
+environment:
+  # Optional cluster (aka environment) name.  Defaults to an empty string if
+  # not provided.
+  name: "Cherry"
 
 # organisation:
 #   # Optional organisation name.  Defaults to an empty string if not provided.

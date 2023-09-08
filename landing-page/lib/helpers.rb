@@ -130,8 +130,8 @@ def config_pack_items
   end
 end
 
-def blurb
-  items['/blurb.*']
+def tools_item
+  items['/tools.*']
 end
 
 def enable_https
