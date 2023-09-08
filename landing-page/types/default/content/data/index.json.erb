@@ -1,0 +1,24 @@
+{
+  "home_link" : {
+    "path": "<%= prefix_url("/") %>",
+    "text": "<%= branding('brandbar.home_link.text') %>"
+  },
+  "apps_link" : {
+    "path": "<%= prefix_url("/apps") %>",
+    "text": "<%= branding('brandbar.apps_link.text') %>"
+  },
+  "config_packs_link" : {
+    "path": "<%= prefix_url("/config-packs") %>",
+    "text": "Config Packs"
+  },
+  "bookmarks": <%= bookmarks('bookmarks').to_json %>,
+  "apps" : 
+    [<% app_items.each_with_index do |item, idx| %>
+    <%= idx == 0 ? ' ' : ',' %> <%= item.reps.fetch(:data).compiled_content %>
+    <% end %>],
+  "config_packs" :
+    [<% config_pack_items.each_with_index do |item, idx| %>
+    <%= idx == 0 ? ' ' : ',' %> <%= item.reps.fetch(:data).compiled_content %>
+    <% end %>],
+  "sidebar" : <%= (sidebar.compiled_content || '').inspect %>
+}

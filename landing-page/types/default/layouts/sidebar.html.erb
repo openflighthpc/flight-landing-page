@@ -1,0 +1,55 @@
+<aside class="sidenav col-12 col-md-3 col-lg-2">
+  <div>
+    <% if branding('sidebar.environment.show') && !environment('environment.name').nil? %>
+      <h2>Environment</h2>
+      <ul class="w-100">
+        <li><%= environment('environment.name') %></li>
+      </ul>
+    <% end %>
+
+    <% if branding('sidebar.organisation.show') && !environment('organisation.name').nil? %>
+      <h2>Organisation</h2>
+      <ul class="w-100">
+        <li><%= environment('organisation.name') %></li>
+      </ul>
+    <% end %>
+
+    <% if branding('sidebar.contacts.show') && !contacts.empty? %>
+      <h2>Contacts</h2>
+      <ul class="w-100">
+        <% contacts.each do |contact| %>
+          <%= contact.compiled_content(snapshot: :pre_default) %>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <% if branding('sidebar.links.show') && !links.empty? %>
+      <h2>Links</h2>
+      <ul class="w-100">
+        <% links.each do |link| %>
+          <%= link.compiled_content(snapshot: :pre_default) %>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <% if branding('sidebar.websuite.show') && !app_items.empty? %>
+      <h2>Quick Access</h2>
+      <ul class="w-100">
+        <% app_items.each do |app| %>
+          <% icon = "<span class=\"fa fa-solid fa-fw fa-#{app[:fa_icon]}\"></span>" %>
+          <% title = "<span class=\"title\">#{app[:short_title] || app[:title]}</span>" %>
+          <li>
+            <%=
+              link_to(
+                icon + title,
+                prefix_url(app[:path]),
+                "data-http-strike-disable" => "",
+                "data-http-add-title" => "Flight Web Suite requires HTTPS to be enabled",
+              )
+            %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</aside>

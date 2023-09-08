@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%=
+      @item[:heading] ||
+        branding("document.title") ||
+        ( environment("environment.name").nil? ? nil : "#{environment("environment.name")} Compute Environment" ) ||
+        "openflightHPC"
+    %>
+    </title>
+
+    <!-- Third party styles -->
+    <link
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+    >
+    <link
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous"
+    >
+
+    <!-- Our party styles -->
+    <link rel="stylesheet" href="<%= prefix_url("/styles/app.css") %>">
+    <link rel="stylesheet" href="<%= prefix_url("/styles/branding.css") %>">
+    <link rel="stylesheet" href="<%= prefix_url("/styles/login.css") %>">
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous">
+    </script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script
+	type="text/javascript"
+	src="<%= prefix_url("/js/login.js") %>">
+    </script>
+  <script>
+    if(window.location.protocol == "http:") {
+      // The site is being accessed over HTTP.  Make it obvious that the web
+      // suite won't work and display content to explain how to enable HTTPS.
+      window.addEventListener('load', (_) => {
+        // Disable links to Flight Web Suite when accessed over HTTP.
+        document.querySelectorAll("[data-http-add-title]").forEach((ref) => {
+          title = ref.dataset["httpAddTitle"] || "HTTPS needs to be enabled";
+          ref.title = title;
+        });
+
+        document.querySelectorAll("[data-http-opacify]").forEach((ref) => {
+          ref.classList.add("http-opacified");
+        });
+
+        document.querySelectorAll("[data-http-bootstrap-disable]").forEach((ref) => {
+          ref.classList.add("disabled", "http-bootstrap-disabled");
+        });
+
+        document.querySelectorAll("[data-http-strike-disable]").forEach((ref) => {
+          ref.href = "javascript:void(0)";
+          ref.classList.add("http-strike-disabled", "text-muted");
+        });
+
+        document.querySelectorAll('[data-http-d-block]').forEach((ref) => {
+          ref.classList.add("d-block");
+        });
+      });
+    };
+    if(window.location.protocol == "https:") {
+      // The site is being accessed over HTTPS.  Make it obvious that the web
+      // suite will work.
+      window.addEventListener('load', (_) => {
+        document.querySelectorAll('[data-https-d-block]').forEach((ref) => {
+          ref.classList.add("d-block");
+        });
+      });
+    }
+  </script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= prefix_url("/images/favicon-32x32.png") %>">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= prefix_url("/images/favicon-16x16.png") %>">
+  <link rel="icon" type="image/png"               href="<%= prefix_url("/images/favicon.png") %>">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
+  </head>
+  <body>
+    <div class="landing-page">
+
+      <%= render '/navbar.html.erb' %>
+
+      <div class="container" id="main">
+        <div class="content">
+          <div class="page row">
+            <%= render '/sidebar.html.erb' %>
+            <div class="centernav col-12 col-md-9 col-lg-8 offset-md-0 offset-lg-0 mt-4">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <span class="text-muted" style="float: left">
+            <% if branding('copyright') %>
+              &copy; <%= branding('copyright.year') || Date.today.year %> <%= branding('copyright.text') %>
+            <% else %>
+              &copy; <%= Date.today.year %> openflightHPC
+            <% end %>
+          </span>
+        </div>
+      </footer>
+      <script>
+        const FAM = FlightAccountMenu;
+        const e = React.createElement;
+        const menu = e(
+          FAM.AccountMenu,
+          {},
+          null
+        );
+        const context = e(
+          FAM.CurrentUserProvider,
+          {},
+          menu
+        );
+        ReactDOM.render(context, document.getElementById('flight-account-menu'));
+      </script>
+    </div>
+  </body>
+</html>
