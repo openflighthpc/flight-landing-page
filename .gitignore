@@ -11,3 +11,7 @@ crash.log
 /.bundle/
 /vendor/bundle
 /lib/bundler/man/
+
+## Rubymine:
+.idea/*
+
