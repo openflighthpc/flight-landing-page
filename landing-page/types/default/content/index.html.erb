@@ -1,13 +1,13 @@
 ---
 title: Home
 ---
-<h1>Welcome to
+<h1 class="text-center my-5">Welcome to
   <% if environment('environment.name') %>
-    the <span><%= environment('environment.name') %></span>
+    the <strong class="blue-text"><%= environment('environment.name') %></strong>
   <% else %>
     your
   <% end %>
-  compute environment
+  compute environment.
 </h1>
 <%= apps_item.compiled_content(snapshot: :pre_default) %>
 <%= blurb.compiled_content(snapshot: :pre_default) %>

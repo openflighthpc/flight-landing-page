@@ -1,15 +1,22 @@
 /*------------------------------------------------
  * Generic branding
  * ----------------------------------------------- */
-body {
-    background-color: #e4f5fd;
+#main {
+    background-image: linear-gradient(var(--sky-blue-grey), white);
 }
+
 .sidenav {
     margin-top: 1.5rem;
 }
+
 .sidenav .fa-solid {
     padding-right: 2px;
     display: inline-block;
+}
+
+.centernav {
+    background-color: white;
+    min-height: 90vh;
 }
 
 /*------------------------------------------------
@@ -100,22 +107,14 @@ body {
 }
 
 /* -----------------------------------------------
- * Non-sticky header and sticky footer
+ * Footer
  * ----------------------------------------------- */
-#main {
-    margin-bottom: 60px;
-    position: relative;
-    padding-bottom: 1rem;
-}
+
 footer {
-    background-color: white;
-    bottom: 0;
     height: 60px;
     line-height: 60px;
-    position: fixed;
     width: 100%;
     z-index: 100;
-    border-top: 1px solid #dee2e6 !important;
 }
 
 /* -----------------------------------------------
@@ -134,6 +133,10 @@ img.logo {
  * ----------------------------------------------- */
 .branding-landingpage-dashboard-logo-wrapper { }
 img.branding-landingpage-dashboard-logo { }
+
+.blue-text {
+    color: var(--alces-blue);
+}
 
 .blurb .powered-by {
     color: #999;
@@ -171,4 +174,9 @@ body.zen-mode .fullscreen-content {
     /* Subtract card header, card border, #main top and bottom margins.
      * extra to make things nicer. */
     height: calc( 100vh - 56px - 2px - 10px - 10px - 0px );
+}
+
+:root {
+    --alces-blue: #2693D7;
+    --sky-blue-grey: #DCEEF5;
 }
