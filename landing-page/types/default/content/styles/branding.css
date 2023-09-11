@@ -1,6 +1,11 @@
 /*------------------------------------------------
  * Generic branding
  * ----------------------------------------------- */
+
+body {
+    font-family: Lexend, Verdana, sans-serif;
+}
+
 #main {
     background-image: linear-gradient(var(--sky-blue-grey), white);
     color: #3d3d3d;
