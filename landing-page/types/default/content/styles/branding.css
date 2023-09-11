@@ -6,6 +6,11 @@ body {
     font-family: Lexend, Verdana, sans-serif;
 }
 
+.row {
+    margin: 0;
+    justify-content: center;
+}
+
 #main {
     background-image: linear-gradient(var(--sky-blue-grey), white);
     color: #3d3d3d;
@@ -180,7 +185,7 @@ img.branding-landingpage-dashboard-logo { }
     margin: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 5rem;
+    column-gap: 2vw;
     justify-items: center;
 }
 
