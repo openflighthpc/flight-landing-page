@@ -134,6 +134,10 @@ def tools_item
   items['/tools.*']
 end
 
+def docs_link_item
+  items['/docs-link.*']
+end
+
 def enable_https
   items['/enable-https.*']
 end
