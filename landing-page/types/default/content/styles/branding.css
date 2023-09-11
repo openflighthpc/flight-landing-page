@@ -32,7 +32,8 @@ body {
 }
 
 .button {
-    background-color: var(--alces-blue);
+    display: inline-block;
+    background-color: var(--dark-blue);
     border-radius: 2px;
     padding: 0.5rem 1rem;
     color: white !important;
@@ -42,7 +43,6 @@ body {
 
 .button:hover {
     color: white !important;
-    background-color: var(--alces-blue);
     filter: brightness(0.8);
     transition: background-color 125ms;
     text-decoration: none;
@@ -185,7 +185,7 @@ img.branding-landingpage-dashboard-logo { }
     margin: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 2vw;
+    column-gap: 5vw;
     justify-items: center;
 }
 
@@ -196,19 +196,14 @@ img.branding-landingpage-dashboard-logo { }
     justify-content: space-between;
 }
 
+.tool-row {
+    display: flex;
+    text-align: left;
+}
+
 .tool img {
-    width: 10rem;
-    margin-inline: auto;
-    margin-bottom: 1rem;
-}
-
-.tool p {
-    margin-bottom: 2rem;
-}
-
-.tool .button {
-    margin-inline: auto;
-    margin-bottom: 3rem;
+    width: 12rem;
+    margin-right: 2rem;
 }
 
 /* -----------------------------------------------
@@ -246,4 +241,5 @@ body.zen-mode .fullscreen-content {
 :root {
     --alces-blue: #2693D7;
     --sky-blue-grey: #DCEEF5;
+    --dark-blue: #2B3966;
 }
