@@ -33,7 +33,7 @@ body {
 
 .button {
     display: inline-block;
-    background-color: var(--dark-blue);
+    background-color: var(--alces-blue);
     border-radius: 2px;
     padding: 0.5rem 1rem;
     color: white !important;
@@ -245,5 +245,4 @@ body.zen-mode .fullscreen-content {
 :root {
     --alces-blue: #2693D7;
     --sky-blue-grey: #DCEEF5;
-    --dark-blue: #2B3966;
 }
