@@ -17,19 +17,13 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous"
     >
-    <link
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossorigin="anonymous"
-    >
+    <script src="https://kit.fontawesome.com/5d76af6daa.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Lexend:wght@300'>
 
     <!-- Our party styles -->
     <link rel="stylesheet" href="<%= prefix_url("/styles/app.css") %>">
     <link rel="stylesheet" href="<%= prefix_url("/styles/branding.css") %>">
     <link rel="stylesheet" href="<%= prefix_url("/styles/login.css") %>">
-
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Lexend:wght@300'>
 
     <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -113,16 +107,26 @@
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container">
-          <span class="text-muted" style="float: left">
-            <% if branding('copyright') %>
-              &copy; <%= branding('copyright.year') || Date.today.year %> <%= branding('copyright.text') %>
-            <% else %>
-              &copy; <%= Date.today.year %> openflightHPC
-            <% end %>
-          </span>
-        </div>
+      <footer>
+        <img
+          id="cloud-l"
+          class="cloud"
+          alt=""
+          src="images/parting_cloud_l.svg"
+        >
+        <img
+          id="footer-logo"
+          alt=""
+          src="images/openflighthpc_grey.svg"
+        >
+        <i class="fa fa-solid fa-book ml-4"></i>
+        <i class="fa fa-brands fa-github ml-3"></i>
+        <img
+          id="cloud-r"
+          class="cloud"
+          alt=""
+          src="images/parting_cloud_r.svg"
+        >
       </footer>
       <script>
         const FAM = FlightAccountMenu;
