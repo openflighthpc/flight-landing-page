@@ -22,6 +22,7 @@
         </span>
     <% end %>
   </div>
+
   <button
     class="navbar-toggler"
     type="button"
@@ -33,42 +34,19 @@
   >
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse navbar-nav-container" id="navbarNavContainer">
     <ul class="navbar-nav">
-      <% unless app_items.empty? %>
-        <li class="nav-item dropdown">
+      <% if app_items.empty? %>
+        <li class="nav-item">
           <div class="btn-group">
-            <a
-              class="nav-link nav-menu-button"
-              href="<%= prefix_url("/apps") %>"
-            >
-              <%=
-                branding('brandbar.apps_link.text') ||
-                  'Web Suite'
-              %>
-
-            </a>
-            <a
-              type="button"
-              class="dropdown-toggle dropdown-toggle-split"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Toggle Dropdown</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <% app_items.each do |app| %>
-                <a
-                  href="<%= prefix_url(app[:path]) %>"
-                  class="dropdown-item"
-                >
-                  <span class="fa fa-solid fa-fw fa-<%= app[:fa_icon] %>"></span>
-                  <span class="title"><%= app[:short_title] || app[:title] %></span>
-                </a>
-              <% end %>
-            </div>
+            <% app_items.each do |app| %>
+              <a
+                href="<%= prefix_url(app[:path]) %>"
+                class="nav-link nav-menu-button link"
+              >
+                <span class="title"><%= app[:short_title]&.upcase || app[:title]&.upcase %></span>
+              </a>
+            <% end %>
           </div>
         </li>
       <% end %>
@@ -86,6 +64,15 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <div id="flight-account-menu"></div>
+      </li>
+      <li class="nav-item">
+        <a href="https://alces-flight.com/" target="_blank">
+          <img
+            class="branding-brandbar-logo"
+            alt="Powered by Alces Flight"
+            src="<%= prefix_url("/images/poweredby_white.svg") %>"
+          >
+        </a>
       </li>
     </ul>
   </div>

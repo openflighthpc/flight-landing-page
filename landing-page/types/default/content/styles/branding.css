@@ -23,25 +23,31 @@ body {
     padding-inline: 5vw;
 }
 
+.link {
+    color: white !important;
+}
+
+.link:hover {
+    color: white !important;
+    filter: brightness(0.8);
+    text-decoration: none;
+}
+
+.link:visited {
+    color: white !important;
+}
+
 .button {
     display: inline-block;
     background-color: var(--alces-blue);
     border-radius: 2px;
     padding: 0.5rem 1.2rem;
-    color: white !important;
     width: fit-content;
     transition: none !important;
 }
 
 .button:hover {
-    color: white !important;
-    filter: brightness(0.8);
     transition: background-color 125ms;
-    text-decoration: none;
-}
-
-.button:visited {
-    color: white !important;
 }
 
 h1 {
@@ -53,6 +59,8 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+
+
 /*------------------------------------------------
  * Navbar and brandbar branding
  * ----------------------------------------------- */
@@ -60,8 +68,6 @@ h2 {
 /* Useful classes */
 .navbar { }
 .navbar .navbar-nav .nav-link { }
-.navbar .dropdown-menu {}
-.navbar .dropdown-item {}
 .navbar-brand { }
 .branding-brandbar-wrapper { }
 .branding-brandbar-text-wrapper { }
@@ -86,32 +92,14 @@ h2 {
     margin-right: 2rem;
 }
 
-.navbar-light .navbar-nav .nav-menu-text:hover {
-    color: rgba(0,0,0,.5);
-}
 .navbar .dropdown-toggle {
-    display:flex;
+    display: flex;
     align-items: center;
 }
-.navbar .dropdown-item {
-    font-size: 16px;
-    font-weight: normal;
-}
-.navbar .fa-solid {
-    display: inline-block;
-}
-.navbar li {
-    padding-top: 1rem;
-}
-.nav-menu-text {
-    font-size: larger;
-}
-.nav-menu-button {
-    font-weight: bold;
-    font-size: larger;
-}
-.navbar .dropdown .btn-group .nav-menu-button {
-    padding-right: 0;
+
+.navbar .btn-group .nav-menu-button {
+    padding-right: 2rem;
+    padding-top: 0.8rem;
 }
 
 .App .brandbar {
