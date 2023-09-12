@@ -72,11 +72,18 @@ h2 {
     justify-content: space-between;
 }
 .navbar {
-    border-bottom: 1px solid #dee2e6;
+    background-color: var(--header-grey);
+    color: white;
+    border-bottom: 0.45rem solid var(--alces-blue);
 }
 
 .branding-brandbar-logo {
-    height: 4rem;
+    height: 3.9rem;
+    padding: 0.3rem;
+}
+
+.branding-brandbar-text-wrapper {
+    margin-right: 2rem;
 }
 
 .navbar-light .navbar-nav .nav-menu-text:hover {
@@ -92,12 +99,6 @@ h2 {
 }
 .navbar .fa-solid {
     display: inline-block;
-}
-.navbar-brand {
-    padding-left: 4rem;
-}
-.navbar-right {
-    padding-right: 4rem;
 }
 .navbar li {
     padding-top: 1rem;
@@ -252,4 +253,5 @@ body.zen-mode .fullscreen-content {
 :root {
     --alces-blue: #2693D7;
     --sky-blue-grey: #DCEEF5;
+    --header-grey: #191919;
 }
