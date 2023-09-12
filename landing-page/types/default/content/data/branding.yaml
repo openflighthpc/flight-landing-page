@@ -50,18 +50,6 @@
 #     # here.
 #     classNames: ""
 
-sidebar:
-  environment:
-    show: true
-  organisation:
-    show: true
-  contacts:
-    show: true
-  links:
-    show: true
-  websuite:
-    show: true
-
 # signInModal:
 #   # Optional text for the sign-in form modal. If not given, text appropriate
 #   # to OpenflightHPC will be used.

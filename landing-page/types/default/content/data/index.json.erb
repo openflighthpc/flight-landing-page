@@ -19,6 +19,5 @@
   "config_packs" :
     [<% config_pack_items.each_with_index do |item, idx| %>
     <%= idx == 0 ? ' ' : ',' %> <%= item.reps.fetch(:data).compiled_content %>
-    <% end %>],
-  "sidebar" : <%= (sidebar.compiled_content || '').inspect %>
+    <% end %>]
 }
