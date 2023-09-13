@@ -52,13 +52,20 @@ body {
 
 h1 {
     margin-top: 6rem;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 }
 
 h2 {
     margin-bottom: 1.5rem;
 }
 
+.card {
+    border-color: var(--sky-blue-grey);
+}
+
+code {
+    color: rgba(123,112,199,255);
+}
 
 
 /*------------------------------------------------
@@ -89,7 +96,7 @@ h2 {
 }
 
 .branding-brandbar-text-wrapper {
-    margin-right: 2rem;
+    margin-right: 2.5rem;
 }
 
 .navbar .dropdown-toggle {
@@ -97,12 +104,28 @@ h2 {
     align-items: center;
 }
 
-.navbar .btn-group .nav-menu-button {
-    padding-right: 2rem;
-    padding-top: 0.8rem;
+.navbar .nav-item .nav-menu-button {
+    padding: 0.8rem 2rem 0.5rem 0;
+}
+
+.bordered-nav-item {
+    border-right: 1px solid #3E3E3E;
+    margin-right: 2rem;
 }
 
 .App .brandbar {
+}
+
+/* -----------------------------------------------
+ * Config packs
+ * ----------------------------------------------- */
+
+.config-pack-card {
+    text-align: left;
+}
+
+.config-pack-section {
+    margin-top: 4rem;
 }
 
 /* -----------------------------------------------
@@ -174,7 +197,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 #tools-block {
-    padding-top: 2rem;
+    margin-top: 8rem;
     margin-bottom: 10rem;
 }
 

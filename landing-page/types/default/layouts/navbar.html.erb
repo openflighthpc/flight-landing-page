@@ -36,8 +36,8 @@
   </button>
   <div class="collapse navbar-collapse navbar-nav-container" id="navbarNavContainer">
     <ul class="navbar-nav">
-      <% if app_items.empty? %>
-        <li class="nav-item">
+      <% unless app_items.empty? %>
+        <li class="nav-item <%= 'bordered-nav-item' unless config_pack_items.empty? %>">
           <div class="btn-group">
             <% app_items.each do |app| %>
               <a
@@ -53,10 +53,10 @@
       <% unless config_pack_items.empty? %>
         <li class="nav-item">
           <a
-            class="nav-link nav-menu-button"
+            class="nav-link nav-menu-button link"
             href="<%= prefix_url("/config-packs") %>"
           >
-            Config Packs
+            CONFIG PACKS
           </a>
         </li>
       <% end %>
