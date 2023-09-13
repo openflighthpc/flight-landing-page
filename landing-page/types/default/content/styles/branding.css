@@ -51,8 +51,7 @@ body {
 }
 
 h1 {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin: 8rem 0;
 }
 
 h2 {
@@ -191,8 +190,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 #tools-block {
-    margin-top: 8rem;
-    margin-bottom: 10rem;
+    margin: 8rem 0;
 }
 
 #tools-container {
@@ -221,7 +219,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 #docs-link-block {
-    margin-bottom: 5rem;
+    margin: 5rem 0;
 }
 
 /* -----------------------------------------------
