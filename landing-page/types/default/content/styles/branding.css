@@ -19,7 +19,7 @@ body {
 
 .centernav {
     background-color: white;
-    min-height: calc(100vh - (5.625rem + 4rem + 1px));
+    min-height: calc(100vh - (5.975rem + 5.2rem));
     padding-inline: 5vw;
 }
 
