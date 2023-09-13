@@ -117,18 +117,6 @@ code {
 }
 
 /* -----------------------------------------------
- * Config packs
- * ----------------------------------------------- */
-
-.config-pack-card {
-    text-align: left;
-}
-
-.config-pack-section {
-    margin-top: 4rem;
-}
-
-/* -----------------------------------------------
  * Footer
  * ----------------------------------------------- */
 
@@ -160,6 +148,7 @@ footer .fa {
     bottom: 0;
     height: auto;
     display: inline-block;
+    pointer-events: none;
 }
 
 #cloud-l {
@@ -196,6 +185,11 @@ img.branding-landingpage-dashboard-logo { }
     margin-bottom: 2rem;
 }
 
+.centered-tagline {
+    max-width: 40rem;
+    margin-inline: auto;
+}
+
 #tools-block {
     margin-top: 8rem;
     margin-bottom: 10rem;
@@ -227,9 +221,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 #docs-link-block {
-    margin-inline: auto;
     margin-bottom: 5rem;
-    max-width: 35rem;
 }
 
 /* -----------------------------------------------

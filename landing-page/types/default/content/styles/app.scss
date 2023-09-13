@@ -11,27 +11,48 @@
   grid-gap: .5rem;
 }
 
-.config-pack-card-deck {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
-  grid-gap: .5rem;
+.config-pack-card {
+  text-align: left;
+  min-width: 100%;
+  height: auto;
+  margin-bottom: 1rem !important;
+}
+
+.card-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .card-title {
+    margin: 0;
+  }
+}
+
+.config-pack-section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.config-pack-card-link {
+  color: var(--alces-blue);
+  transition: transform 0.25s;
+}
+
+.config-pack-card-link:hover {
+  text-decoration: none;
+}
+
+.config-pack-card-link[aria-expanded=true] {
+  transform: rotate(45deg);
 }
 
 .app-card-deck .app-card,
 .config-pack-card-deck .config-pack-card {
-  margin: 0;
-  min-height: 250px;
+
 }
 
 .app-card .card-body p:last-child,
 .config-pack-card {
-    margin-bottom: 0;
-}
-
-.content {
-}
-
-.centernav {
 }
 
 .properties-panel {
