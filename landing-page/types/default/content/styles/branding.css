@@ -3,7 +3,7 @@
  * ----------------------------------------------- */
 
 body {
-    font-family: Lexend, Verdana, sans-serif;
+    font-family: Lexend,-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 }
 
 .row {
@@ -13,7 +13,7 @@ body {
 
 #main {
     background-image: linear-gradient(var(--sky-blue-grey), white);
-    color: #3d3d3d;
+    color: var(--alces-grey);
     text-align: center;
 }
 
@@ -253,6 +253,7 @@ body.zen-mode .fullscreen-content {
 
 :root {
     --alces-blue: #2693D7;
+    --alces-grey: #4e5a66;
     --sky-blue-grey: #DCEEF5;
     --header-grey: #191919;
 }
