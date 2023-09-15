@@ -7,7 +7,7 @@
 
 .app-card-deck {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  grid-template-columns: 1fr 1fr;
   grid-gap: .5rem;
 }
 
@@ -48,6 +48,29 @@
 .app-card-deck .app-card,
 .config-pack-card-deck .config-pack-card {
 
+}
+
+.app-card .card-body {
+  display: grid;
+  grid-template-areas:
+    "icon title"
+    "icon subtitle";
+  text-align: left;
+  color: var(--alces-grey);
+}
+
+.app-icon {
+  grid-area: icon;
+}
+
+.app-card .card-title {
+  grid-area: title;
+  margin-top: auto;
+}
+
+.app-card .tagline {
+  grid-area: subtitle;
+  padding-right: 1rem;
 }
 
 .app-card .card-body p:last-child,

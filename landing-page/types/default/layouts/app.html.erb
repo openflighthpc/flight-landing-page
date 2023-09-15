@@ -3,24 +3,19 @@
   data-http-opacify
   data-http-add-title="Flight Web Suite requires HTTPS to be enabled"
 >
-  <div class="card-body d-flex flex-column">
-  <i class="fa-background fa fa-<%= @item[:fa_icon] || 'bars' %>"></i>
-    <h5 class="card-title">
+  <a class="card-body" href="<%= prefix_url(@item[:path]) %>">
+    <img
+      class="app-icon mr-3"
+      alt=""
+      src="<%= prefix_url('images/user_suite.svg') %>"
+    >
+    <h2 class="card-title">
       <%= @item[:title] %>
-    </h5>
+    </h2>
     <% if @item[:subtitle] %>
-      <h6 class="card-subtitle mb-2 text-muted">
+      <p class="tagline card-subtitle">
         <%= @item[:subtitle] %>
-      </h6>
+      </p>
     <% end %>
-    <%= yield %>
-    <div class="mt-auto">
-      <a href="<%= prefix_url(@item[:path]) %>"
-         class="card-link btn btn-success btn-block"
-         data-http-bootstrap-disable
-      >
-        Go!
-      </a>
-    </div>
-  </div>
+  </a>
 </div>

@@ -1,22 +1,21 @@
 <% unless app_items.empty? %>
   <div class="mb-4">
-    <h2>Web applications</h2>
     <a id="apps"></a>
     <p class="d-none" data-https-d-block>
     This environment provides access to the following web tools:
     </p>
     <div class="d-none" data-http-d-block>
-      <p>
+      <p class="tagline centered-tagline">
         The Flight Web Suite is not currently available as HTTPS has not been
         enabled for your environment. To learn more about HTTPS and how to enable
-        it click the <em>Learn more</em> button below.
+        it click the button below.
       </p>
-      <div class="clearfix mb-4">
+      <div class="clearfix mb-5">
         <a
-          class="btn btn-primary learn-more float-right"
+          class="button link learn-more"
           href="<%= prefix_url("/enable-https") %>"
         >
-          Learn more
+          LEARN MORE
         </a>
       </div>
     </div>

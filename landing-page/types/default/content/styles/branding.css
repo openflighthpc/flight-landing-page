@@ -213,7 +213,7 @@ img.branding-landingpage-dashboard-logo { }
     text-align: left;
 }
 
-.tool img {
+.tool img, .app-icon {
     width: 12rem;
     margin-right: 2rem;
 }
