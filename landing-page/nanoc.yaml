@@ -27,4 +27,4 @@ data_sources:
 
 # Prefix for "internal" links.  Links to other landing page pages and web
 # suite apps.
-link_prefix: ""
+link_prefix: "/dev"
