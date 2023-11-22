@@ -222,6 +222,16 @@ img.branding-landingpage-dashboard-logo { }
  * App branding
  * ----------------------------------------------- */
 
+.btn-toolbar {
+    min-height: 2rem;
+}
+
+.toolbar {
+    border: none;
+    border-radius: 0 !important;
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+}
 
 /* -----------------------------------------------
  * Apps dashboard branding
@@ -235,9 +245,8 @@ img.branding-apps-dashboard-logo { }
  * ----------------------------------------------- */
 
 .App .fullscreen-content {
-    /* Subtract header, centernav margin, card header, card border, #main
-     * bottom margin, footer, extra to make things nicer. */
-    height: calc( 100vh - ( 102px + 41px ) - 24px - 2px - 56px - 16px - 60px - 0px );
+    /* Subtract header and terminal toolbar to make things nicer. */
+    height: calc(100vh - (5.475rem + 2.5rem));
 }
 
 html:fullscreen .fullscreen-content,
