@@ -70,6 +70,10 @@ code {
     color: rgba(123,112,199,255);
 }
 
+.bg-black {
+    background-color: black;
+}
+
 
 /*------------------------------------------------
  * Navbar and brandbar branding
