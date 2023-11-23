@@ -23,6 +23,10 @@ body {
     padding-inline: 5vw;
 }
 
+.centernav.fullscreen {
+    padding-inline: 0;
+}
+
 .link, .nav-link {
     color: white !important;
 }
