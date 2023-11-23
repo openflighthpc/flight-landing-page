@@ -235,6 +235,8 @@ img.branding-landingpage-dashboard-logo { }
     border-radius: 0 !important;
     padding-top: 0;
     padding-bottom: 0.5rem;
+    background-color: var(--alces-blue);
+    text-align: start;
 }
 
 /* -----------------------------------------------
