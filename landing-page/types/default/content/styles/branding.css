@@ -27,17 +27,18 @@ body {
     padding-inline: 0;
 }
 
-.link, .nav-link {
+.link, .nav-link, .btn-toolbar .btn {
     color: white !important;
 }
 
-.link:hover, .nav-link:hover {
+.link:hover, .nav-link:hover, .btn-toolbar .btn:hover {
     color: white !important;
     filter: brightness(0.8);
     text-decoration: none;
+    cursor: pointer;
 }
 
-.link:visited, .nav-link:visited {
+.link:visited, .nav-link:visited, .btn-toolbar .btn:visited {
     color: white !important;
 }
 
@@ -230,10 +231,6 @@ img.branding-landingpage-dashboard-logo { }
  * App branding
  * ----------------------------------------------- */
 
-.btn-toolbar {
-    min-height: 2rem;
-}
-
 .toolbar {
     border: none;
     border-radius: 0 !important;
@@ -241,6 +238,19 @@ img.branding-landingpage-dashboard-logo { }
     padding-bottom: 0.5rem;
     background-color: var(--alces-blue);
     text-align: start;
+}
+
+.btn-toolbar {
+    min-height: 2rem;
+    font-size: 1.5rem;
+}
+
+.btn-toolbar, .btn-toolbar .btn-group {
+    align-items: center;
+}
+
+.btn-toolbar .btn:focus {
+    box-shadow: none;
 }
 
 /* -----------------------------------------------
