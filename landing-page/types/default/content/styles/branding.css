@@ -92,6 +92,7 @@ code {
 .navbar.brandbar .navbar-nav-container {
     justify-content: space-between;
 }
+
 .navbar {
     background-color: var(--header-grey);
     color: white;
@@ -122,6 +123,10 @@ code {
 }
 
 .App .brandbar {
+}
+
+.App .brandbar .navbar-nav-container {
+    margin-left: 2.5rem;
 }
 
 /* -----------------------------------------------
