@@ -19,7 +19,7 @@ body {
 
 .centernav {
     background-color: white;
-    min-height: calc(100vh - (5.975rem + 5.2rem));
+    min-height: calc(100vh - 8.81rem);
     padding-inline: 5vw;
 }
 
@@ -235,7 +235,7 @@ img.branding-landingpage-dashboard-logo { }
     border: none;
     border-radius: 0 !important;
     padding-top: 0;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.45rem;
     background-color: var(--alces-blue);
     text-align: start;
 }
@@ -266,7 +266,7 @@ img.branding-apps-dashboard-logo { }
 
 .App .fullscreen-content {
     /* Subtract header and terminal toolbar to make things nicer. */
-    height: calc(100vh - (5.475rem + 2.5rem));
+    height: calc(100vh - 8.81rem);
 }
 
 html:fullscreen .fullscreen-content,
