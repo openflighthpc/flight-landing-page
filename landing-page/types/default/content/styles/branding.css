@@ -270,15 +270,14 @@ img.branding-apps-dashboard-logo { }
  * ----------------------------------------------- */
 
 .App .fullscreen-content {
-    /* Subtract header and terminal toolbar to make things nicer. */
+    /* Subtract header and toolbar height */
     height: calc(100vh - 8.81rem);
 }
 
 html:fullscreen .fullscreen-content,
 body.zen-mode .fullscreen-content {
-    /* Subtract card header, card border, #main top and bottom margins.
-     * extra to make things nicer. */
-    height: calc( 100vh - 56px - 2px - 10px - 10px - 0px );
+    /* Subtract toolbar height */
+    height: calc( 100vh - 3.3rem );
 }
 
 :root {
