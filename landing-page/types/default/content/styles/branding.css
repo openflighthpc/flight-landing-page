@@ -113,6 +113,16 @@ code {
     align-items: center;
 }
 
+.navbar .dropdown-menu {
+    background-color: var(--header-grey);
+    color: white;
+    border-radius: 0;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: var(--alces-grey);
+}
+
 .navbar .nav-item .nav-menu-button {
     padding: 0.8rem 2rem 0.5rem 0;
 }
