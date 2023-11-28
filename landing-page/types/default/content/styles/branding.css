@@ -19,11 +19,12 @@ body {
 
 .centernav {
     background-color: white;
-    min-height: calc(100vh - 8.81rem);
+    min-height: calc(100vh - calc(11.2rem));
     padding-inline: 5vw;
 }
 
 .centernav.fullscreen {
+    min-height: calc(100vh - 8.81rem);
     padding-inline: 0;
 }
 
