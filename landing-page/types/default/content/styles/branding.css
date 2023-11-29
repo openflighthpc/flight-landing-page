@@ -128,12 +128,21 @@ code {
     background-color: var(--alces-grey);
 }
 
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
 .navbar .nav-item .nav-menu-button {
     padding: 0.8rem 2rem 0.5rem 0;
 }
 
 .bordered-nav-item {
     border-right: 1px solid #3E3E3E;
+    margin-right: 2rem;
+}
+
+#flight-account-menu {
     margin-right: 2rem;
 }
 
