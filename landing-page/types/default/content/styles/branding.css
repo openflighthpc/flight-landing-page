@@ -32,14 +32,18 @@ body {
     color: white !important;
 }
 
-.link:hover, .nav-link:hover, .btn-toolbar .btn:hover {
+.link:hover,
+.nav-link:hover,
+.btn-toolbar .btn:hover {
     color: white !important;
     filter: brightness(0.8);
     text-decoration: none;
     cursor: pointer;
 }
 
-.link:visited, .nav-link:visited, .btn-toolbar .btn:visited {
+.link:visited,
+.nav-link:visited,
+.btn-toolbar .btn:visited {
     color: white !important;
 }
 

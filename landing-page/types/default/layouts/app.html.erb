@@ -1,21 +1,20 @@
-<div
-  class="card app-card"
+<a
+  class="app-card card link"
+  href="<%= prefix_url(@item[:path]) %>"
   data-http-opacify
   data-http-add-title="Flight Web Suite requires HTTPS to be enabled"
 >
-  <a class="card-body" href="<%= prefix_url(@item[:path]) %>">
-    <img
-      class="app-icon mr-3"
-      alt=""
-      src="<%= prefix_url('images/user_suite.svg') %>"
-    >
-    <h2 class="card-title">
-      <%= @item[:title] %>
-    </h2>
-    <% if @item[:subtitle] %>
-      <p class="tagline card-subtitle">
-        <%= @item[:subtitle] %>
-      </p>
-    <% end %>
-  </a>
-</div>
+  <img
+    class="app-icon mr-3"
+    alt=""
+    src="<%= prefix_url('images/user_suite.svg') %>"
+  >
+  <h2 class="card-title card-text">
+    <%= @item[:title] %>
+  </h2>
+  <% if @item[:subtitle] %>
+    <p class="tagline card-subtitle card-text">
+      <%= @item[:subtitle] %>
+    </p>
+  <% end %>
+</a>
