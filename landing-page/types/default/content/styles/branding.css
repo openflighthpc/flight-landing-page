@@ -362,22 +362,23 @@ img.branding-apps-dashboard-logo { }
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.unauthenticated .contents {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     max-width: 40rem;
     gap: 2rem;
+    margin-inline: auto;
 }
 
 .unauthenticated .app-card {
     margin-top: 3rem;
 }
 
-.unauthenticated .contents > p {
+.unauthenticated > p {
     padding: 1.25rem;
+}
+
+.page.row footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
 }
 
 
