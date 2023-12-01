@@ -2,24 +2,6 @@
   padding: 0 1.25rem 0.75rem;
 }
 
-.app-card-deck {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: .5rem;
-}
-
-.card-title-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem;
-  cursor: pointer;
-
-  .card-title {
-    margin: 0;
-  }
-}
-
 .config-pack-card {
   text-align: left;
   min-width: 100%;
@@ -42,54 +24,6 @@
 
 .config-pack-card .card-title-container[aria-expanded=true] .config-pack-card-link {
   transform: rotate(45deg);
-}
-
-.app-card-deck .app-card,
-.config-pack-card-deck .config-pack-card {
-
-}
-
-.app-card:hover {
-  background-color: var(--alces-blue) !important;
-  border: solid var(--alces-blue) 1px;
-  transition: background-color 0.5s, border 0.5s, filter 0.5s;
-  filter: none !important;
-}
-
-.app-card:hover img, .app-card:hover i {
-  filter: brightness(0) invert(1);
-}
-
-.app-card:hover .card-text {
-  color: white;
-  text-decoration: none;
-}
-
-.card-text {
-  color: var(--alces-grey);
-}
-
-.app-card {
-  display: grid !important;
-  grid-template-areas:
-    "icon title"
-    "icon subtitle";
-  padding: 1.25rem;
-  text-align: left;
-}
-
-.app-icon {
-  grid-area: icon;
-}
-
-.app-card .card-title {
-  grid-area: title;
-  margin-top: auto;
-}
-
-.app-card .tagline {
-  grid-area: subtitle;
-  padding-right: 1rem;
 }
 
 .app-card p:last-child,

@@ -80,6 +80,10 @@ code {
     background-color: black;
 }
 
+strong {
+    font-weight: 800;
+}
+
 
 /*------------------------------------------------
  * Navbar and brandbar branding
@@ -260,6 +264,72 @@ img.branding-landingpage-dashboard-logo { }
  * App branding
  * ----------------------------------------------- */
 
+.app-card-deck .app-card,
+.config-pack-card-deck .config-pack-card {
+
+}
+
+.app-card.link:hover {
+    background-color: var(--alces-blue) !important;
+    border: solid var(--alces-blue) 1px;
+    transition: background-color 0.5s, border 0.5s, filter 0.5s;
+    filter: none !important;
+}
+
+.app-card.link:hover img, .app-card.link:hover i {
+    filter: brightness(0) invert(1);
+}
+
+.app-card.link:hover .card-text {
+    color: white;
+    text-decoration: none;
+}
+
+.card-text {
+    color: var(--alces-grey);
+}
+
+.app-card {
+    display: grid !important;
+    grid-template-areas:
+    "icon title"
+    "icon subtitle";
+    padding: 1.25rem;
+    text-align: left;
+}
+
+.app-icon {
+    grid-area: icon;
+}
+
+.app-card .card-title {
+    grid-area: title;
+    margin-top: auto;
+}
+
+.app-card .tagline {
+    grid-area: subtitle;
+    padding-right: 1rem;
+}
+
+.app-card-deck {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
+}
+
+.card-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    cursor: pointer;
+}
+
+.card-title-container .card-title {
+    margin: 0;
+}
+
 .toolbar {
     border: none;
     border-radius: 0 !important;
@@ -287,6 +357,28 @@ img.branding-landingpage-dashboard-logo { }
  * ----------------------------------------------- */
 .branding-apps-dashboard-logo-wrapper { }
 img.branding-apps-dashboard-logo { }
+
+.unauthenticated {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.unauthenticated .contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40rem;
+    gap: 2rem;
+}
+
+.unauthenticated .app-card {
+    margin-top: 3rem;
+}
+
+.unauthenticated .contents > p {
+    padding: 1.25rem;
+}
 
 
 /* -----------------------------------------------
