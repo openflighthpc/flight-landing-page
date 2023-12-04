@@ -7,7 +7,7 @@
   <img
     class="app-icon mr-3"
     alt=""
-    src="<%= prefix_url('images/user_suite.svg') %>"
+    src="<%= prefix_url("images/#{@item[:short_title].downcase}.png") %>"
   >
   <h2 class="card-title card-text">
     <%= @item[:title] %>
