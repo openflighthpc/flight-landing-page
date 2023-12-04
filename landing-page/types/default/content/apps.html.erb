@@ -19,7 +19,7 @@
         </a>
       </div>
     </div>
-    <div class="card-deck app-card-deck">
+    <div class="app-card-deck">
       <% app_items.each do |app| %>
         <%= app.compiled_content(snapshot: :pre_default) %>
       <% end %>

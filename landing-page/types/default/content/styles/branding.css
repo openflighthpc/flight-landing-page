@@ -251,8 +251,8 @@ img.branding-landingpage-dashboard-logo { }
     text-align: left;
 }
 
-.tool img, .app-icon {
-    width: 12rem;
+.tool img {
+    height: 12rem;
     margin-right: 2rem;
 }
 
@@ -266,7 +266,6 @@ img.branding-landingpage-dashboard-logo { }
 
 .app-card-deck .app-card,
 .config-pack-card-deck .config-pack-card {
-
 }
 
 .app-card.link:hover {
@@ -294,12 +293,15 @@ img.branding-landingpage-dashboard-logo { }
     grid-template-areas:
     "icon title"
     "icon subtitle";
-    padding: 1.25rem;
+    padding: 3rem 2rem;
     text-align: left;
 }
 
 .app-icon {
     grid-area: icon;
+    height: 8rem;
+    margin-right: 2rem;
+    padding-inline: 1rem;
 }
 
 .app-card .card-title {
@@ -309,13 +311,12 @@ img.branding-landingpage-dashboard-logo { }
 
 .app-card .tagline {
     grid-area: subtitle;
-    padding-right: 1rem;
 }
 
 .app-card-deck {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: .5rem;
+    grid-gap: 1rem;
 }
 
 .card-title-container {
