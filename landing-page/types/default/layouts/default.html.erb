@@ -112,11 +112,12 @@
       </footer>
       <script>
         function myCallback() {
-          console.log("user has changed!");
           if (document.CURRENT_USER) {
-            console.log("user is now " + document.CURRENT_USER['username'])
+            document.getElementById('signed-in-content').style.display = 'grid';
+            document.getElementById('signed-out-message').style.display = 'none';
           } else {
-            console.log('there is no user')
+            document.getElementById('signed-in-content').style.display = 'none';
+            document.getElementById('signed-out-message').style.display = 'block';
           }
         }
 

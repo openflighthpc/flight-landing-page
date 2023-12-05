@@ -1,28 +1,35 @@
 <% unless app_items.empty? %>
   <div class="block">
     <a id="apps"></a>
-    <p class="d-none tagline centered-tagline" data-https-d-block>
-      Select a tool to access your cluster from within your browser.
-    </p>
-    <div class="d-none" data-http-d-block>
-      <p class="tagline centered-tagline">
-        The Flight Web Suite is not currently available as HTTPS has not been
-        enabled for your environment. To learn more about HTTPS and how to enable
-        it click the button below.
+    <div id="signed-in-content">
+      <p class="d-none tagline centered-tagline" data-https-d-block>
+        Select a tool to access your cluster from within your browser.
       </p>
-      <div class="clearfix mb-5">
-        <a
-          class="button link learn-more"
-          href="<%= prefix_url("/enable-https") %>"
-        >
-          LEARN MORE
-        </a>
+      <div class="app-card-deck">
+        <% app_items.each do |app| %>
+          <%= app.compiled_content(snapshot: :pre_default) %>
+        <% end %>
+      </div>
+      <div class="d-none" data-http-d-block>
+        <p class="tagline centered-tagline">
+          The Flight Web Suite is not currently available as HTTPS has not been
+          enabled for your environment. To learn more about HTTPS and how to enable
+          it click the button below.
+        </p>
+        <div class="clearfix mb-5">
+          <a
+            class="button link learn-more"
+            href="<%= prefix_url("/enable-https") %>"
+          >
+            LEARN MORE
+          </a>
+        </div>
       </div>
     </div>
-    <div class="app-card-deck">
-      <% app_items.each do |app| %>
-        <%= app.compiled_content(snapshot: :pre_default) %>
-      <% end %>
+    <div id="signed-out-message">
+      <p class="tagline centered-tagline">
+        You must be logged in to use the Flight Web Suite tools.
+      </p>
     </div>
   </div>
 <% end %>
