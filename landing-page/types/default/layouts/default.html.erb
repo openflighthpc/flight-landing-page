@@ -112,11 +112,16 @@
       </footer>
       <script>
         function myCallback() {
+          const signedInContent = document.getElementsByClassName('signed-in-content');
           if (document.CURRENT_USER) {
-            document.getElementById('signed-in-content').style.display = 'grid';
+            for (let i = 0; i < signedInContent.length; i++) {
+              signedInContent[i].classList.remove('d-none');
+            }
             document.getElementById('signed-out-message').style.display = 'none';
           } else {
-            document.getElementById('signed-in-content').style.display = 'none';
+            for (let i = 0; i < signedInContent.length; i++) {
+              signedInContent[i].classList.add('d-none');
+            }
             document.getElementById('signed-out-message').style.display = 'block';
           }
         }

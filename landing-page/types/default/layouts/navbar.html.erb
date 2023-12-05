@@ -37,7 +37,7 @@
   <div class="collapse navbar-collapse navbar-nav-container" id="navbarNavContainer">
     <ul class="navbar-nav">
       <% unless app_items.empty? %>
-        <li class="nav-item <%= 'bordered-nav-item' unless config_pack_items.empty? %>">
+        <li class="nav-item signed-in-content <%= 'bordered-nav-item' unless config_pack_items.empty? %>">
           <div class="btn-group">
             <% app_items.each do |app| %>
               <a
