@@ -111,6 +111,24 @@
         <%= render '/footer.html.erb' %>
       </footer>
       <script>
+        function myCallback() {
+          console.log("user has changed!");
+          if (document.CURRENT_USER) {
+            console.log("user is now " + document.CURRENT_USER['username'])
+          } else {
+            console.log('there is no user')
+          }
+        }
+
+        function CurrentUserSync({}) {
+          const { currentUser } = React.useContext(FAM.CurrentUserContext);
+          React.useEffect(() => {
+            document.CURRENT_USER = currentUser;
+            myCallback();
+          }, [currentUser] );
+          return null;
+        }
+
         const FAM = FlightAccountMenu;
         const e = React.createElement;
         const menu = e(
@@ -118,10 +136,15 @@
           {},
           null
         );
+        const e2 = React.createElement;
+        const user = e2(
+          CurrentUserSync, {}, null
+        );
         const context = e(
           FAM.CurrentUserProvider,
           {},
-          menu
+          menu,
+          user
         );
         ReactDOM.render(context, document.getElementById('flight-account-menu'));
       </script>
