@@ -111,18 +111,27 @@
         <%= render '/footer.html.erb' %>
       </footer>
       <script>
-        function myCallback() {
+        function updatePageContents() {
+          const signedIn = !!document.CURRENT_USER
           const signedInContent = document.getElementsByClassName('signed-in-content');
-          if (document.CURRENT_USER) {
-            for (let i = 0; i < signedInContent.length; i++) {
-              signedInContent[i].classList.remove('d-none');
+          if (signedInContent !== null) {
+            if (signedIn) {
+              for (let i = 0; i < signedInContent.length; i++) {
+                signedInContent[i].classList.remove('d-none');
+              }
+            } else {
+              for (let i = 0; i < signedInContent.length; i++) {
+                signedInContent[i].classList.add('d-none');
+              }
             }
-            document.getElementById('signed-out-message').style.display = 'none';
-          } else {
-            for (let i = 0; i < signedInContent.length; i++) {
-              signedInContent[i].classList.add('d-none');
+          }
+          const signedOutContent = document.getElementById('signed-out-message');
+          if (signedOutContent !== null) {
+            if (signedIn) {
+              signedOutContent.style.display = 'none';
+            } else {
+              signedOutContent.style.display = 'block';
             }
-            document.getElementById('signed-out-message').style.display = 'block';
           }
         }
 
@@ -130,7 +139,7 @@
           const { currentUser } = React.useContext(FAM.CurrentUserContext);
           React.useEffect(() => {
             document.CURRENT_USER = currentUser;
-            myCallback();
+            updatePageContents();
           }, [currentUser] );
           return null;
         }
