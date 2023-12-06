@@ -413,13 +413,17 @@ img.branding-apps-dashboard-logo { }
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 40rem;
     gap: 2rem;
     margin-inline: auto;
 }
 
-.unauthenticated .app-card {
+.blurb.app-card {
     margin-top: 3rem;
+    margin-inline: auto;
+}
+
+.unauthenticated, .blurb.app-card {
+    max-width: 40rem;
 }
 
 .unauthenticated > p {
