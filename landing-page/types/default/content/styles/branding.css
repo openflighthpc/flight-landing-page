@@ -17,6 +17,10 @@ body {
     text-align: center;
 }
 
+.content {
+    min-height: calc(100vh - calc(11.2rem));
+}
+
 .centernav {
     background-color: white;
     min-height: calc(100vh - calc(11.2rem));
