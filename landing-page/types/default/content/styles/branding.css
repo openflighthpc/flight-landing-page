@@ -409,7 +409,7 @@ img.branding-landingpage-dashboard-logo { }
 .branding-apps-dashboard-logo-wrapper { }
 img.branding-apps-dashboard-logo { }
 
-.unauthenticated {
+.narrow-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -422,11 +422,11 @@ img.branding-apps-dashboard-logo { }
     margin-inline: auto;
 }
 
-.unauthenticated, .blurb.app-card {
+.narrow-container, .blurb.app-card {
     max-width: 40rem;
 }
 
-.unauthenticated > p {
+.narrow-container > p {
     padding: 1.25rem;
 }
 
