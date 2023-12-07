@@ -383,6 +383,7 @@ img.branding-landingpage-dashboard-logo { }
 
 .app-card-deck.desktops {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 3.5rem;
 }
 
 .card-title-container {
