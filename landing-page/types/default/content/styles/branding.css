@@ -25,6 +25,7 @@ body {
     background-color: white;
     min-height: calc(100vh - calc(11.2rem));
     padding-inline: 5vw;
+    margin-inline: auto;
 }
 
 .centernav.fullscreen {
@@ -418,6 +419,19 @@ img.branding-landingpage-dashboard-logo { }
 
 .btn-toolbar .btn:focus {
     box-shadow: none;
+}
+
+.desktop-types-card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.desktop-types-card-deck .card {
+    width: 17.8vw;
+    min-width: 18rem;
+    height: 18rem;
 }
 
 /* -----------------------------------------------
