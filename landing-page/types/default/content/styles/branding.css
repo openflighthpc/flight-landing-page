@@ -373,6 +373,10 @@ img.branding-landingpage-dashboard-logo { }
     grid-gap: 1rem;
 }
 
+.app-card-deck.desktops {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .card-title-container {
     display: flex;
     justify-content: space-between;
