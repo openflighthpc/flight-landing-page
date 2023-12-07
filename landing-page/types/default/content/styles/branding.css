@@ -72,7 +72,7 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-.card {
+.card, .dropdown-menu {
     border-color: var(--sky-blue-grey);
 }
 
@@ -94,6 +94,14 @@ code {
 
 strong {
     font-weight: 800;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    display: none;
 }
 
 
@@ -338,7 +346,7 @@ img.branding-landingpage-dashboard-logo { }
     text-decoration: none;
 }
 
-.card-text {
+.card-text, .dropdown-item {
     color: var(--alces-grey);
 }
 
