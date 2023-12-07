@@ -331,18 +331,18 @@ img.branding-landingpage-dashboard-logo { }
 .config-pack-card-deck .config-pack-card {
 }
 
-.app-card.link:hover {
+.card.link:hover {
     background-color: var(--alces-blue) !important;
     border: solid var(--alces-blue) 1px;
     transition: background-color 0.5s, border 0.5s, filter 0.5s;
     filter: none !important;
 }
 
-.app-card.link:hover img, .app-card.link:hover i {
+.card.link:hover img, .card.link:hover i {
     filter: brightness(0) invert(1);
 }
 
-.app-card.link:hover .card-text {
+.card.link:hover .card-text {
     color: white;
     text-decoration: none;
 }
@@ -431,7 +431,7 @@ img.branding-landingpage-dashboard-logo { }
 .desktop-types-card-deck .card {
     width: 17.8vw;
     min-width: 18rem;
-    height: 18rem;
+    height: 16rem;
 }
 
 /* -----------------------------------------------
