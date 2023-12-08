@@ -65,6 +65,15 @@ body {
     transition: background-color 125ms;
 }
 
+.cancel-button {
+    background-color: white;
+    border: solid var(--alces-blue) 1px;
+}
+
+.cancel-button:hover {
+    color: var(--alces-blue) !important;
+}
+
 h1 {
     margin: 8rem 0;
 }
@@ -78,7 +87,7 @@ h2 {
 }
 
 .blue-text {
-    color: var(--alces-blue);
+    color: var(--alces-blue) !important;
 }
 
 code {
@@ -179,8 +188,12 @@ strong {
 }
 
 .modal-body {
-    padding: 4rem;
+    padding: 2.5rem;
     text-align: center;
+}
+
+.modal-lg .modal-body {
+    padding: 4rem;
 }
 
 .modal-body .header {
