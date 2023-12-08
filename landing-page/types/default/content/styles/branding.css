@@ -396,7 +396,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .app-card-deck.desktops {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
     margin-bottom: 3.5rem;
 }
 
