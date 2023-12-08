@@ -31,6 +31,7 @@ body {
 .centernav.fullscreen {
     min-height: calc(100vh - 8.81rem);
     padding-inline: 0;
+    background-color: transparent;
 }
 
 .link, .nav-link, .btn-toolbar .btn {
