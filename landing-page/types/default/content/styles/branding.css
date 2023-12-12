@@ -475,12 +475,6 @@ img.branding-apps-dashboard-logo { }
     padding: 1.25rem;
 }
 
-.page.row footer {
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-}
-
 
 /* -----------------------------------------------
  * Apps full screen and zen-mode styles
