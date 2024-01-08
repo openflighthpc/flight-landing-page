@@ -57,13 +57,19 @@ body {
     display: inline-block;
     background-color: var(--alces-blue);
     border-radius: 2px;
+    border: none;
     padding: 0.5rem 1.2rem;
     width: fit-content;
     transition: none !important;
 }
 
+.button:focus {
+    outline: none;
+}
+
 .button:hover {
     transition: background-color 125ms;
+    background-color: var(--alces-blue);
 }
 
 .cancel-button {
@@ -355,6 +361,7 @@ img.branding-landingpage-dashboard-logo { }
 .card.link.selected {
     background-color: #6bb0db !important;
     border: solid #6bb0db 1px;
+    cursor: pointer;
 }
 
 .card.link:hover img, .card.link:hover i, .card.link.selected img, .card.link.selected i {
@@ -451,6 +458,16 @@ img.branding-landingpage-dashboard-logo { }
     width: 17.8vw;
     min-width: 18rem;
     height: 16rem;
+}
+
+.form-field {
+    margin-top: 5rem;
+    max-width: 40rem;
+}
+
+.launch-button {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 /* -----------------------------------------------
