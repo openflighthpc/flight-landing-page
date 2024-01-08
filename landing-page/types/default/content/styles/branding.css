@@ -465,6 +465,21 @@ img.branding-landingpage-dashboard-logo { }
     max-width: 40rem;
 }
 
+.form-field input, .form-field select {
+    border: solid 1px var(--sky-blue-grey);
+    border-radius: 0;
+    color: var(--alces-grey);
+    padding: 0.6rem;
+    height: 2.7rem;
+    box-sizing: border-box;
+}
+
+.form-field input:focus, .form-field select:focus {
+    outline: none;
+    box-shadow: none;
+    border: solid 1px var(--alces-blue);
+}
+
 .launch-button {
     margin-top: 5rem;
     margin-bottom: 5rem;
