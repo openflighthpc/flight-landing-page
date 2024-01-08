@@ -345,18 +345,23 @@ img.branding-landingpage-dashboard-logo { }
 .config-pack-card-deck .config-pack-card {
 }
 
-.card.link:hover {
+.card.link:hover, .card.link.selected {
     background-color: var(--alces-blue) !important;
     border: solid var(--alces-blue) 1px;
     transition: background-color 0.5s, border 0.5s, filter 0.5s;
     filter: none !important;
 }
 
-.card.link:hover img, .card.link:hover i {
+.card.link.selected {
+    background-color: #6bb0db !important;
+    border: solid #6bb0db 1px;
+}
+
+.card.link:hover img, .card.link:hover i, .card.link.selected img, .card.link.selected i {
     filter: brightness(0) invert(1);
 }
 
-.card.link:hover .card-text {
+.card.link:hover .card-text, .card.link.selected .card-text {
     color: white;
     text-decoration: none;
 }
