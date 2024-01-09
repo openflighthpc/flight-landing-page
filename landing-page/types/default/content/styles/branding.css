@@ -90,7 +90,7 @@ h2 {
 }
 
 .card, .dropdown-menu {
-    border-color: var(--sky-blue-grey);
+    border-color: var(--border-blue);
 }
 
 .blue-text {
@@ -483,7 +483,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .form-field input, .form-field select {
-    border: solid 1px var(--sky-blue-grey);
+    border: solid 1px var(--border-blue);
     border-radius: 0;
     color: var(--alces-grey);
     padding: 0.6rem;
@@ -550,4 +550,5 @@ body.zen-mode .fullscreen-content {
     --alces-grey: #4e5a66;
     --sky-blue-grey: #DCEEF5;
     --header-grey: #191919;
+    --border-blue: #BDE7F9;
 }
