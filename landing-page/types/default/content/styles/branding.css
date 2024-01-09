@@ -359,8 +359,6 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .card.link.selected {
-    background-color: #6bb0db !important;
-    border: solid #6bb0db 1px;
     cursor: pointer;
 }
 
@@ -458,6 +456,25 @@ img.branding-landingpage-dashboard-logo { }
     width: 17.8vw;
     min-width: 18rem;
     height: 16rem;
+}
+
+.desktop-types-card-deck .card:hover {
+    background-color: white !important;
+    border: solid 1px var(--alces-blue);
+    box-sizing: border-box;
+}
+
+.desktop-types-card-deck .card:hover .card-text {
+    color: var(--alces-grey);
+}
+
+.desktop-types-card-deck .card.selected {
+    background-color: var(--alces-blue) !important;
+}
+
+.desktop-types-card-deck .card.selected .card-text {
+    color: white;
+    text-decoration: none;
 }
 
 .form-field {
