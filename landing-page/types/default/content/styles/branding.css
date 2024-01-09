@@ -501,6 +501,10 @@ img.branding-landingpage-dashboard-logo { }
     margin-bottom: 5rem;
 }
 
+.launch-button.disabled {
+    cursor: not-allowed;
+}
+
 /* -----------------------------------------------
  * Apps dashboard branding
  * ----------------------------------------------- */
