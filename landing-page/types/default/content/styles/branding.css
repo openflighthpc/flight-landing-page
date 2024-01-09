@@ -469,7 +469,8 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .desktop-types-card-deck .card.selected {
-    background-color: var(--alces-blue) !important;
+    background-color: #6bb0db !important;
+    border-color: #6bb0db;
 }
 
 .desktop-types-card-deck .card.selected .card-text {
