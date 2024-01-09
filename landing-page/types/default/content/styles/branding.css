@@ -38,9 +38,7 @@ body {
     color: white !important;
 }
 
-.link:hover,
-.nav-link:hover,
-.btn-toolbar .btn:hover {
+:is(.link, .nav-link, .btn):not(.disabled, .dropdown-item):hover {
     color: white !important;
     filter: brightness(0.8);
     text-decoration: none;
@@ -67,7 +65,7 @@ body {
     outline: none;
 }
 
-.button:hover {
+.button:not(.disabled):hover {
     transition: background-color 125ms;
     background-color: var(--alces-blue);
 }
