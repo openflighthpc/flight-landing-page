@@ -34,6 +34,14 @@ body {
     background-color: transparent;
 }
 
+h1 {
+    margin: 8rem 0;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+}
+
 a:not(.dropdown-item):hover, a:not(.dropdown-item):focus {
     text-decoration: none;
     filter: brightness(0.8);
@@ -60,31 +68,9 @@ a:not(.dropdown-item):hover, a:not(.dropdown-item):focus {
     box-shadow: none !important;
 }
 
-.button:not(.disabled, .cancel-button):hover,
-.button:not(.disabled, .cancel-button):focus {
-    transition: background-color 125ms;
-    background-color: var(--alces-blue);
-}
-
 .cancel-button {
     background-color: white;
     border: solid var(--alces-blue) 1px;
-}
-
-.cancel-button:hover {
-    color: var(--alces-blue) !important;
-}
-
-h1 {
-    margin: 8rem 0;
-}
-
-h2 {
-    margin-bottom: 1.5rem;
-}
-
-.card, .dropdown-menu {
-    border-color: var(--border-blue);
 }
 
 .blue-text {
@@ -93,6 +79,10 @@ h2 {
 
 .white-text {
     color: white !important;
+}
+
+.card, .dropdown-menu {
+    border-color: var(--border-blue);
 }
 
 code {
