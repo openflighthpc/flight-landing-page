@@ -42,12 +42,8 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-a:not(.dropdown-item):hover, a:not(.dropdown-item):focus {
-    text-decoration: none;
-    filter: brightness(0.8);
-}
-
-:where(.link, .nav-link, .btn):not(.disabled, .dropdown-item):hover {
+:is(a.link, .link, .nav-link, .btn):not(.disabled, .dropdown-item):hover,
+a:not(.dropdown-item):focus {
     filter: brightness(0.8);
     text-decoration: none;
     cursor: pointer;
