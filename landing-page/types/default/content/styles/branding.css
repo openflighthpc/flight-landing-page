@@ -101,7 +101,7 @@ strong {
     cursor: pointer;
 }
 
-.dropdown-toggle::after {
+.dropdown-toggle.no-caret::after {
     display: none;
 }
 
