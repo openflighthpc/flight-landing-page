@@ -42,7 +42,7 @@
             <% app_items.each do |app| %>
               <a
                 href="<%= prefix_url(app[:path]) %>"
-                class="nav-link nav-menu-button"
+                class="nav-link nav-menu-button white-text"
               >
                 <span class="title"><%= app[:short_title]&.upcase || app[:title]&.upcase %></span>
               </a>
@@ -53,7 +53,7 @@
       <% unless config_pack_items.empty? %>
         <li class="nav-item">
           <a
-            class="nav-link nav-menu-button"
+            class="nav-link nav-menu-button white-text"
             href="<%= prefix_url("/config-packs") %>"
           >
             CONFIG PACKS

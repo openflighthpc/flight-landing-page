@@ -39,21 +39,10 @@ a:not(.dropdown-item):hover, a:not(.dropdown-item):focus {
     filter: brightness(0.8);
 }
 
-.link, .nav-link, .btn-toolbar .btn {
-    color: white !important;
-}
-
 :where(.link, .nav-link, .btn):not(.disabled, .dropdown-item):hover {
-    color: white !important;
     filter: brightness(0.8);
     text-decoration: none;
     cursor: pointer;
-}
-
-.link:visited,
-.nav-link:visited,
-.btn-toolbar .btn:visited {
-    color: white !important;
 }
 
 .button {
@@ -100,6 +89,10 @@ h2 {
 
 .blue-text {
     color: var(--alces-blue) !important;
+}
+
+.white-text {
+    color: white !important;
 }
 
 code {
