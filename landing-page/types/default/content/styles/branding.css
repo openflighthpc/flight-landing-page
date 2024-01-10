@@ -506,6 +506,12 @@ img.branding-landingpage-dashboard-logo { }
     border: solid 1px var(--alces-blue);
 }
 
+.back-link {
+    position: absolute;
+    left: 2vw;
+    top: 1.5vw;
+}
+
 .launch-button {
     margin-top: 5rem;
     margin-bottom: 5rem;
