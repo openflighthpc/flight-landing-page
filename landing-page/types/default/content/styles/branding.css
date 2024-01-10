@@ -34,11 +34,16 @@ body {
     background-color: transparent;
 }
 
+a:not(.dropdown-item):hover, a:not(.dropdown-item):focus {
+    text-decoration: none;
+    filter: brightness(0.8);
+}
+
 .link, .nav-link, .btn-toolbar .btn {
     color: white !important;
 }
 
-:is(.link, .nav-link, .btn):not(.disabled, .dropdown-item):hover {
+:where(.link, .nav-link, .btn):not(.disabled, .dropdown-item):hover {
     color: white !important;
     filter: brightness(0.8);
     text-decoration: none;
@@ -63,9 +68,10 @@ body {
 
 .button:focus {
     outline: none;
+    box-shadow: none !important;
 }
 
-.button:not(.disabled):hover {
+.button:not(.disabled):hover, .button:not(.disabled):focus {
     transition: background-color 125ms;
     background-color: var(--alces-blue);
 }
@@ -441,6 +447,10 @@ img.branding-landingpage-dashboard-logo { }
 
 .btn-toolbar .btn:focus {
     box-shadow: none;
+}
+
+.btn.btn-secondary:not(.dropdown-item) {
+    background-color: var(--alces-blue) !important;
 }
 
 .desktop-types-card-deck {
