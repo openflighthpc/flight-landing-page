@@ -71,7 +71,8 @@ a:not(.dropdown-item):hover, a:not(.dropdown-item):focus {
     box-shadow: none !important;
 }
 
-.button:not(.disabled):hover, .button:not(.disabled):focus {
+.button:not(.disabled, .cancel-button):hover,
+.button:not(.disabled, .cancel-button):focus {
     transition: background-color 125ms;
     background-color: var(--alces-blue);
 }
