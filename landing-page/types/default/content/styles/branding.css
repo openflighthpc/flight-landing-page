@@ -359,6 +359,10 @@ img.branding-landingpage-dashboard-logo { }
     color: var(--alces-grey);
 }
 
+.dropdown-item {
+    cursor: pointer;
+}
+
 .app-card {
     display: grid !important;
     grid-template-areas:
