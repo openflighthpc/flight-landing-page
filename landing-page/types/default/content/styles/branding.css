@@ -181,6 +181,7 @@ strong {
 .modal-body {
     padding: 2.5rem;
     text-align: center;
+    color: var(--alces-grey);
 }
 
 .modal-lg .modal-body {
@@ -490,16 +491,19 @@ img.branding-landingpage-dashboard-logo { }
     max-width: 40rem;
 }
 
-.form-field input, .form-field select {
+.form-field input, .form-field select, .form-field textarea {
     border: solid 1px var(--border-blue);
     border-radius: 0;
     color: var(--alces-grey);
     padding: 0.6rem;
+}
+
+.form-field input, .form-field select {
     height: 2.7rem;
     box-sizing: border-box;
 }
 
-.form-field input:focus, .form-field select:focus {
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
     outline: none;
     box-shadow: none;
     border: solid 1px var(--alces-blue);
