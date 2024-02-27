@@ -402,34 +402,21 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .app-card {
-    display: grid !important;
-    grid-template-areas:
-    "icon title"
-    "icon subtitle";
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
     padding: 3rem 2rem;
-    text-align: left;
+    text-align: center;
+    width: 20.5rem;
 }
 
 .app-icon {
-    grid-area: icon;
     height: 8rem;
-    margin-right: 2rem;
     padding-inline: 1rem;
 }
 
 .app-card .card-title {
-    grid-area: title;
-    margin-top: auto;
-}
-
-.app-card .tagline {
-    grid-area: subtitle;
-}
-
-.app-card-deck {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    margin-top: 1rem;
 }
 
 .app-card-deck.desktops {
@@ -505,7 +492,7 @@ img.branding-landingpage-dashboard-logo { }
     border-color: var(--border-blue);
 }
 
-.desktop-types-card-deck {
+.desktop-types-card-deck, .app-card-deck {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
