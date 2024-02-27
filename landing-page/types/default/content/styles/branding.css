@@ -338,14 +338,14 @@ img.branding-landingpage-dashboard-logo { }
 
 #tools-container {
     margin: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
     justify-items: center;
 }
 
 .tool {
-    min-width: 10rem;
+    flex: 1 1 20rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
