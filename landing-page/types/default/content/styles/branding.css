@@ -170,6 +170,10 @@ strong {
     padding: 0.8rem 2rem 0.5rem 0;
 }
 
+.navbar .nav-link.active {
+    color: var(--alces-blue) !important;
+}
+
 .bordered-nav-item {
     border-right: 1px solid #3E3E3E;
     margin-right: 2rem;
