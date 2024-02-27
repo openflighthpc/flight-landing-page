@@ -138,6 +138,10 @@ strong {
     margin-right: 2.5rem;
 }
 
+.navbar .dropdown {
+    align-self: center;
+}
+
 .navbar .dropdown-toggle {
     display: flex;
     align-items: center;
@@ -171,11 +175,35 @@ strong {
     margin-right: 2rem;
 }
 
+.navbar #account-menu {
+    padding-inline: 1.5rem;
+}
+
 .App .brandbar {
 }
 
 .App .brandbar .navbar-nav-container {
     margin-left: 2.5rem;
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-nav-container, .App .brandbar .navbar-nav-container {
+        margin-left: 1rem;
+    }
+
+    .navbar-nav .btn-group {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .navbar #account-menu {
+        padding-left: 0;
+    }
+
+    .navbar .top-right {
+        justify-content: space-between;
+    }
 }
 
 .modal-body {

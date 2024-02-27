@@ -32,7 +32,7 @@
     aria-expanded="false"
     aria-label="Toggle navigation"
   >
-    <span class="navbar-toggler-icon link fa-solid fa-bars"></span>
+    <span class="navbar-toggler-icon link white-text fa-solid fa-bars"></span>
   </button>
   <div class="collapse navbar-collapse navbar-nav-container" id="navbarNavContainer">
     <ul class="navbar-nav">
@@ -62,22 +62,24 @@
       <% end %>
     </ul>
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <div id="flight-account-menu"></div>
-      </li>
-      <li class="nav-item">
-        <a
-          href="https://alces-flight.com/"
-          class="link"
-          target="_blank"
-        >
-          <img
-            class="branding-brandbar-logo"
-            alt="Powered by Alces Flight"
-            src="<%= prefix_url("/images/poweredby_white.svg") %>"
+      <div class="d-flex top-right">
+        <li class="nav-item">
+          <div id="flight-account-menu"></div>
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://alces-flight.com/"
+            class="link"
+            target="_blank"
           >
-        </a>
-      </li>
+            <img
+              class="branding-brandbar-logo"
+              alt="Powered by Alces Flight"
+              src="<%= prefix_url("/images/poweredby_white.svg") %>"
+            >
+          </a>
+        </li>
+      </div>
     </ul>
   </div>
 </nav>
