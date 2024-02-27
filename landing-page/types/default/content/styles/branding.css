@@ -153,6 +153,10 @@ strong {
     border-radius: 0;
 }
 
+.navbar .dropdown-item {
+    padding-inline: 0.5rem !important;
+}
+
 .navbar .dropdown-item:hover {
     background-color: var(--alces-grey);
 }
