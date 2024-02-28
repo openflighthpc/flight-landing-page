@@ -12,7 +12,7 @@ body {
 }
 
 #main {
-    background-image: linear-gradient(var(--body-bg-color-1), var(--body-bg-color-2));
+    background-image: linear-gradient(var(--bg-color-1), var(--bg-color-2));
     color: var(--primary-text-color);
     text-align: center;
 }
@@ -22,7 +22,7 @@ body {
 }
 
 .centernav {
-    background-color: white;
+    background-color: var(--body-bg-color);
     min-height: calc(100vh - calc(11.2rem));
     padding-inline: 5vw;
     margin-inline: auto;
@@ -65,7 +65,7 @@ a:not(.dropdown-item):focus {
 }
 
 .cancel-button {
-    background-color: white;
+    background-color: var(--body-bg-color);
     border: solid var(--primary-accent-color) 1px;
 }
 
@@ -74,7 +74,7 @@ a:not(.dropdown-item):focus {
 }
 
 .white-text {
-    color: white !important;
+    color: var(--secondary-text-color) !important;
 }
 
 .card, .dropdown-menu {
@@ -125,7 +125,7 @@ strong {
 
 .navbar {
     background-color: var(--header-bg-color);
-    color: white;
+    color: var(--header-text-color);
     border-bottom: 0.45rem solid var(--primary-accent-color);
 }
 
@@ -149,7 +149,7 @@ strong {
 
 .navbar .dropdown-menu {
     background-color: var(--header-bg-color);
-    color: white;
+    color: var(--header-text-color);
     border-radius: 0;
 }
 
@@ -389,7 +389,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .card.link:hover .card-text, .card.link.selected .card-text {
-    color: white;
+    color: var(--secondary-text-color);
     text-decoration: none;
 }
 
@@ -468,7 +468,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .btn.btn-secondary.cancel-button:not(.dropdown-item) {
-    background-color: white !important;
+    background-color: var(--body-bg-color) !important;
     border-color: var(--primary-accent-color) !important;
 }
 
@@ -507,7 +507,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .desktop-types-card-deck .card:hover {
-    background-color: white !important;
+    background-color: var(--body-bg-color) !important;
     border: solid 1px var(--primary-accent-color);
     box-sizing: border-box;
 }
@@ -522,7 +522,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .desktop-types-card-deck .card.selected .card-text {
-    color: white;
+    color: var(--secondary-text-color);
     text-decoration: none;
 }
 
@@ -631,10 +631,13 @@ body.zen-mode .fullscreen-content {
 
 :root {
     --header-bg-color: var(--default-header-bg-color);
-    --body-bg-color-1: var(--default-body-bg-color-1);
-    --body-bg-color-2: var(--default-body-bg-color-2);
-    --primary-accent-color: var(--default-primary-accent-color);
+    --header-text-color: var(--default-header-text-color);
     --primary-text-color: var(--default-primary-text-color);
+    --secondary-text-color: var(--default-secondary-text-color);
+    --bg-color-1: var(--default-bg-color-1);
+    --bg-color-2: var(--default-bg-color-2);
+    --body-bg-color: var(--default-body-bg-color);
+    --primary-accent-color: var(--default-primary-accent-color);
     --primary-border-color: var(--default-primary-border-color);
 
     --desktop-bg-color-1: var(--default-secondary-accent-color);
@@ -643,10 +646,13 @@ body.zen-mode .fullscreen-content {
 
     /* Defaults */
     --default-header-bg-color: #191919;
-    --default-body-bg-color-1: #DCEEF5;
-    --default-body-bg-color-2: white;
+    --default-bg-color-1: #DCEEF5;
+    --default-bg-color-2: white;
+    --default-body-bg-color: white;
     --default-primary-accent-color: #2693D7;
     --default-secondary-accent-color: #6bb6e5;
     --default-primary-text-color: #4e5a66;
+    --default-secondary-text-color: white;
+    --default-header-text-color: white;
     --default-primary-border-color: #BDE7F9;
 }
