@@ -401,7 +401,7 @@ img.branding-landingpage-dashboard-logo { }
     cursor: pointer;
 }
 
-.app-card {
+.app-card-deck .app-card {
     display: flex !important;
     flex-direction: column;
     align-items: center;
@@ -579,8 +579,28 @@ img.branding-apps-dashboard-logo { }
 }
 
 .blurb.app-card {
+    display: grid !important;
+    grid-template-areas:
+    "icon title"
+    "icon subtitle";
+    padding: 3rem 2rem;
+    text-align: left;
     margin-top: 3rem;
     margin-inline: auto;
+}
+
+.blurb.app-card .app-icon {
+    grid-area: icon;
+    margin-right: 2rem;
+}
+
+.blurb.app-card .card-title {
+    grid-area: title;
+    margin-top: auto;
+}
+
+.blurb.app-card .tagline {
+    grid-area: subtitle;
 }
 
 .narrow-container, .blurb.app-card {
