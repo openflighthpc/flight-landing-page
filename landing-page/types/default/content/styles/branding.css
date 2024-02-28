@@ -12,8 +12,8 @@ body {
 }
 
 #main {
-    background-image: linear-gradient(var(--sky-blue-grey), white);
-    color: var(--alces-grey);
+    background-image: linear-gradient(var(--body-bg-color-1), var(--body-bg-color-2));
+    color: var(--primary-text-color);
     text-align: center;
 }
 
@@ -51,7 +51,7 @@ a:not(.dropdown-item):focus {
 
 .button {
     display: inline-block;
-    background-color: var(--alces-blue);
+    background-color: var(--primary-accent-color);
     border-radius: 2px;
     border: none;
     padding: 0.5rem 1.2rem;
@@ -66,11 +66,11 @@ a:not(.dropdown-item):focus {
 
 .cancel-button {
     background-color: white;
-    border: solid var(--alces-blue) 1px;
+    border: solid var(--primary-accent-color) 1px;
 }
 
 .blue-text {
-    color: var(--alces-blue) !important;
+    color: var(--primary-accent-color) !important;
 }
 
 .white-text {
@@ -78,7 +78,7 @@ a:not(.dropdown-item):focus {
 }
 
 .card, .dropdown-menu {
-    border-color: var(--border-blue);
+    border-color: var(--primary-border-color);
 }
 
 code {
@@ -124,9 +124,9 @@ strong {
 }
 
 .navbar {
-    background-color: var(--header-grey);
+    background-color: var(--header-bg-color);
     color: white;
-    border-bottom: 0.45rem solid var(--alces-blue);
+    border-bottom: 0.45rem solid var(--primary-accent-color);
 }
 
 .branding-brandbar-logo {
@@ -148,7 +148,7 @@ strong {
 }
 
 .navbar .dropdown-menu {
-    background-color: var(--header-grey);
+    background-color: var(--header-bg-color);
     color: white;
     border-radius: 0;
 }
@@ -158,7 +158,7 @@ strong {
 }
 
 .navbar .dropdown-item:hover {
-    background-color: var(--alces-grey);
+    background-color: var(--primary-text-color);
 }
 
 .nav-item {
@@ -171,7 +171,7 @@ strong {
 }
 
 .navbar .nav-link.active {
-    color: var(--alces-blue) !important;
+    color: var(--primary-accent-color) !important;
 }
 
 .bordered-nav-item {
@@ -217,7 +217,7 @@ strong {
 .modal-body {
     padding: 2.5rem;
     text-align: center;
-    color: var(--alces-grey);
+    color: var(--primary-text-color);
 }
 
 .modal-lg .modal-body {
@@ -280,7 +280,7 @@ footer {
 
 footer .fa {
     font-size: 1.4rem;
-    color: var(--alces-blue);
+    color: var(--primary-accent-color);
     display: inline-block;
     margin-top: 0.4rem;
     margin-left: 1.5rem;
@@ -374,8 +374,8 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .card.link:hover, .card.link.selected {
-    background-color: var(--alces-blue) !important;
-    border: solid var(--alces-blue) 1px;
+    background-color: var(--primary-accent-color) !important;
+    border: solid var(--primary-accent-color) 1px;
     transition: background-color 0.5s, border 0.5s, filter 0.5s;
     filter: none !important;
 }
@@ -394,7 +394,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .card-text, .dropdown-item {
-    color: var(--alces-grey);
+    color: var(--primary-text-color);
 }
 
 .dropdown-item {
@@ -442,7 +442,7 @@ img.branding-landingpage-dashboard-logo { }
     border-radius: 0 !important;
     padding-top: 0;
     padding-bottom: 0.45rem;
-    background-color: var(--alces-blue);
+    background-color: var(--primary-accent-color);
     text-align: start;
 }
 
@@ -464,16 +464,16 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .btn.btn-secondary:not(.dropdown-item) {
-    background-color: var(--alces-blue) !important;
+    background-color: var(--primary-accent-color) !important;
 }
 
 .btn.btn-secondary.cancel-button:not(.dropdown-item) {
     background-color: white !important;
-    border-color: var(--alces-blue) !important;
+    border-color: var(--primary-accent-color) !important;
 }
 
 .bg-session {
-    background-image: linear-gradient(#6bb6e5, var(--border-blue));
+    background-image: linear-gradient(var(--desktop-bg-color-1), var(--desktop-bg-color-2));
 }
 
 .blurred {
@@ -490,7 +490,7 @@ img.branding-landingpage-dashboard-logo { }
 .popover {
     padding: 1rem;
     text-align: center;
-    border-color: var(--border-blue);
+    border-color: var(--primary-border-color);
 }
 
 .desktop-types-card-deck, .app-card-deck {
@@ -508,17 +508,17 @@ img.branding-landingpage-dashboard-logo { }
 
 .desktop-types-card-deck .card:hover {
     background-color: white !important;
-    border: solid 1px var(--alces-blue);
+    border: solid 1px var(--primary-accent-color);
     box-sizing: border-box;
 }
 
 .desktop-types-card-deck .card:hover .card-text {
-    color: var(--alces-grey);
+    color: var(--primary-text-color);
 }
 
 .desktop-types-card-deck .card.selected {
-    background-color: #6bb0db !important;
-    border-color: #6bb0db;
+    background-color: var(--desktop-selected-color) !important;
+    border-color: var(--desktop-selected-color);
 }
 
 .desktop-types-card-deck .card.selected .card-text {
@@ -532,9 +532,9 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .form-field input, .form-field select, .form-field textarea {
-    border: solid 1px var(--border-blue);
+    border: solid 1px var(--primary-border-color);
     border-radius: 0;
-    color: var(--alces-grey);
+    color: var(--primary-text-color);
     padding: 0.6rem;
 }
 
@@ -546,7 +546,7 @@ img.branding-landingpage-dashboard-logo { }
 .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
     outline: none;
     box-shadow: none;
-    border: solid 1px var(--alces-blue);
+    border: solid 1px var(--primary-accent-color);
 }
 
 .back-link {
@@ -627,10 +627,26 @@ body.zen-mode .fullscreen-content {
     height: calc( 100vh - 3.3rem );
 }
 
+
+
 :root {
-    --alces-blue: #2693D7;
-    --alces-grey: #4e5a66;
-    --sky-blue-grey: #DCEEF5;
-    --header-grey: #191919;
-    --border-blue: #BDE7F9;
+    --header-bg-color: var(--default-header-bg-color);
+    --body-bg-color-1: var(--default-body-bg-color-1);
+    --body-bg-color-2: var(--default-body-bg-color-2);
+    --primary-accent-color: var(--default-primary-accent-color);
+    --primary-text-color: var(--default-primary-text-color);
+    --primary-border-color: var(--default-primary-border-color);
+
+    --desktop-bg-color-1: var(--default-secondary-accent-color);
+    --desktop-bg-color-2: var(--default-primary-border-color);
+    --desktop-selected-color: var(--default-secondary-accent-color);
+
+    /* Defaults */
+    --default-header-bg-color: #191919;
+    --default-body-bg-color-1: #DCEEF5;
+    --default-body-bg-color-2: white;
+    --default-primary-accent-color: #2693D7;
+    --default-secondary-accent-color: #6bb6e5;
+    --default-primary-text-color: #4e5a66;
+    --default-primary-border-color: #BDE7F9;
 }
