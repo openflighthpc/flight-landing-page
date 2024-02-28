@@ -420,6 +420,7 @@ img.branding-landingpage-dashboard-logo { }
 }
 
 .app-card-deck.desktops {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
     margin-bottom: 3.5rem;
 }
