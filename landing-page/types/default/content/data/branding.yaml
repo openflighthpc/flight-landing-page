@@ -10,34 +10,10 @@
 #   # name is made and if that doesn't work we fallback to "openflightHPC".
 #   title: ""
 
-# copyright:
-#   # Year and name to use for copyright disclaimer
-#   #
-#   # If not given, the current year and 'openflightHPC' are used instead.
-#   year: ""
-#   text: ""
-
 # brandbar:
 #   # Optional text for the brandbar, for both the landing page and the webapps.
 #   # Defaults to an empty string if not provided.
 #   # text: "sub-brand"
-# 
-#   # Optional configuration for the brandbar "home" link.
-#   home_link:
-#     # Text for the brandbar link back to the main landing page, for both the
-#     # landing page and the webapps.
-#     #
-#     # If not given, the environment name, organisation name or "Home" will be
-#     # used instead.
-#     text: ""
-# 
-#   # Optional configuration for the brandbar apps/websuite link.
-#   apps_link:
-#     # Text for the brandbar link to the websuite apps for the both the landing
-#     # page and the webapps.
-#     #
-#     # If not given, "Web Suite" will be used instead.
-#     text: ""
 # 
 #   # Optional logo for the brandbar, for both the landing page and the webapps.
 #   # Defaults to the OpenflightHPC logo if not provided.
@@ -54,30 +30,3 @@
 #   # Optional text for the sign-in form modal. If not given, text appropriate
 #   # to OpenflightHPC will be used.
 #   text: ""
-
-# landingpage:
-#   dashboard:
-#     # Optional logo for the landing page environment page (aka dashboard).
-#     # Defaults to no logo if not provided.
-#     logo:
-#       url: ""
-#       alt: ""
-#       # Additional class names for the IMG tag.  Bootstrap classes can be used
-#       # here.
-#       classNames: ""
-#
-#     # Optional text below the landing page logo and environment name.
-#     # Defaults to "
-#     powered_by:
-#       text: ""
-
-# apps:
-#   dashboard:
-#     # Optional logo for the webapp dashboards.
-#     # Defaults to the OpenflightHPC logo if not provided.
-#     logo:
-#       url: ""
-#       alt: ""
-#       # Additional class names for the IMG tag.  Bootstrap classes can be used
-#       # here.
-#       classNames: ""
