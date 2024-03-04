@@ -101,6 +101,7 @@ a:not(.dropdown-item):focus {
 .cancel-button {
     background-color: var(--body-bg-color);
     border: solid var(--primary-accent-color) 1px;
+    box-sizing: border-box;
 }
 
 .blue-text {
@@ -482,11 +483,12 @@ img.branding-landingpage-dashboard-logo { }
 
 .btn-toolbar {
     height: 2.4rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
-.btn-toolbar .button {
-    font-size: 0.9rem;
+.btn-toolbar .button, .modal-footer .button {
+    font-size: 1rem;
+    border: solid var(--primary-accent-color) 1px;
 }
 
 .btn-toolbar, .btn-toolbar .btn-group {
