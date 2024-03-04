@@ -663,11 +663,9 @@ img.branding-apps-dashboard-logo { }
 }
 
 .wrapping-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
     gap: 1rem;
-}
-
-.wrapping-columns > * {
-    flex-basis: 100%;
 }
 
 /* -----------------------------------------------
