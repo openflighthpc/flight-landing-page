@@ -77,7 +77,7 @@ h2 {
 }
 
 :is(a.link, .link, .nav-link, .btn):not(.disabled, .dropdown-item):hover,
-a:not(.dropdown-item):focus {
+a:not(.dropdown-item, .app-card):focus {
     filter: brightness(0.8);
     text-decoration: none;
     cursor: pointer;
