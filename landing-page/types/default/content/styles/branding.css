@@ -651,6 +651,16 @@ img.branding-apps-dashboard-logo { }
     padding: 1.25rem;
 }
 
+/* -----------------------------------------------
+ * Flight Job styling
+ * ----------------------------------------------- */
+.scripts-table-row .table {
+    flex-grow: 2;
+}
+
+.scripts-table-row .notes {
+    min-width: 24rem;
+}
 
 /* -----------------------------------------------
  * Apps full screen and zen-mode styles
