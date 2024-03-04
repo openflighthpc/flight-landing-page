@@ -662,6 +662,14 @@ img.branding-apps-dashboard-logo { }
     min-width: 24rem;
 }
 
+.wrapping-columns {
+    gap: 1rem;
+}
+
+.wrapping-columns > * {
+    flex-basis: 100%;
+}
+
 /* -----------------------------------------------
  * Apps full screen and zen-mode styles
  * ----------------------------------------------- */
