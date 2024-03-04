@@ -585,6 +585,10 @@ img.branding-landingpage-dashboard-logo { }
     border: solid 1px var(--primary-accent-color);
 }
 
+.form-check {
+    padding: 0;
+}
+
 .back-link {
     position: absolute;
     left: 2vw;
