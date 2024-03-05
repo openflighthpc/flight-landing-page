@@ -11,6 +11,7 @@
     --bg-color-2: var(--default-bg-color-2);
     --body-bg-color: var(--default-body-bg-color);
     --primary-accent-color: var(--default-primary-accent-color);
+    --secondary-accent-color: var(--default-secondary-accent-color);
     --primary-border-color: var(--default-primary-border-color);
 
     /* Flight Desktop only */
@@ -77,7 +78,7 @@ h2 {
 }
 
 :is(a.link, .link, .nav-link, .btn):not(.disabled, .dropdown-item):hover,
-a:not(.dropdown-item, .app-card):focus {
+a:not(.dropdown-item, .card):focus {
     filter: brightness(0.8);
     text-decoration: none;
     cursor: pointer;
@@ -404,10 +405,6 @@ img.branding-landingpage-dashboard-logo { }
  * App branding
  * ----------------------------------------------- */
 
-.app-card-deck .app-card,
-.config-pack-card-deck .config-pack-card {
-}
-
 .card.link:hover, .card.link.selected {
     background-color: var(--primary-accent-color) !important;
     border: solid var(--primary-accent-color) 1px;
@@ -440,9 +437,9 @@ img.branding-landingpage-dashboard-logo { }
     display: flex !important;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 2rem;
     text-align: center;
     width: 20.5rem;
+    padding: 3rem 2rem;
 }
 
 .app-icon {
@@ -458,6 +455,25 @@ img.branding-landingpage-dashboard-logo { }
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
     margin-bottom: 3.5rem;
+}
+
+.app-card-deck .useful-link {
+    display: grid;
+    grid-template-columns: 7rem auto;
+    column-gap: 1rem;
+    width: 28rem;
+    min-height: 11rem;
+    align-items: center;
+    padding: 2rem 1.5rem;
+}
+
+.app-card-deck .useful-link i {
+    font-size: 5rem;
+    color: var(--primary-accent-color);
+}
+
+.app-card-deck .useful-link .text {
+    text-align: left;
 }
 
 .card-title-container {

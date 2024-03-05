@@ -1,14 +1,24 @@
-<li>
-  <a
-    class="mx-1 d-flex justify-content-between align-items-center"
-    href="<%= prefix_url(@item[:href]) %>"
-    <% if @item[:tooltip] %>
-      title="<%= @item[:tooltip] %>"
-    <% end %>
+<a
+  class="card link useful-link"
+  href="<%= prefix_url(@item[:href]) %>"
+  target="_blank"
+  <% if @item[:tooltip] %>
+  title="<%= @item[:tooltip] %>"
+  <% end %>
+>
+  <i class="fa fa-solid fa-<%= @item[:icon] || 'external-link' %>"></i>
+  <div class="text">
+    <h4
+      class="card-title card-text"
     >
-    <span><%= @item[:text] %></span>
-    <% if @item[:external] %>
-      <span class="fa fa-external-link"></span>
+      <%= @item[:title] %>
+    </h4>
+    <% if @item[:text] %>
+      <p
+        class="card-subtitle card-text"
+      >
+        <%= @item[:text] %>
+      </p>
     <% end %>
-  </a>
-</li>
+  </div>
+</a>

@@ -1,11 +1,16 @@
 links:
- - text: Documentation
+ - title: Documentation
    tooltip: OpenflightHPC documentation
    href: https://openflighthpc.org/docs/
-   external: true
- # - text: An external link
+   text: The OpenFlight documentation contains step-by-step guides to the Flight Web Suite tools.
+   icon: book
+ - title: Our Github repo
+   text: Find source code for all our open source HPC tools in the OpenFlightHPC Github repository.
+   tooltip: OpenflightHPC Github repository
+   href: https://github.com/openflighthpc
+   icon: github
+ # - title: An external link
+ #   text: A description of the linked page
  #   href: http://example.com
- #   external: true
  # - text: An internal link
  #   href: /some/path
- #   external: false

@@ -83,6 +83,10 @@ def links
     .select { |i| i[:kind] == 'link' }
 end
 
+def links_item
+  items['/links.*']
+end
+
 def sidebar
   items['/sidebar.*']
 end

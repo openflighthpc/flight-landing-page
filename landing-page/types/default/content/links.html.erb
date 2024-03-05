@@ -1,0 +1,8 @@
+<% unless links.empty? %>
+  <h2>Useful links</h2>
+  <div class="app-card-deck">
+  <% links.each do |link| %>
+    <%= link.compiled_content(snapshot: :pre_default) %>
+  <% end %>
+  </div>
+<% end %>
