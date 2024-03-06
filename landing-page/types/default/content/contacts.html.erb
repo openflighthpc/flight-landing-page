@@ -1,0 +1,10 @@
+<% unless contacts.empty? %>
+  <div class="block">
+    <h2>Contacts</h2>
+    <div class="app-card-deck">
+      <% contacts.each do |contact| %>
+        <%= contact.compiled_content(snapshot: :pre_default) %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

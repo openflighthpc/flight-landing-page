@@ -69,6 +69,10 @@ def contacts
     .select { |i| i[:kind] == 'contact' }
 end
 
+def contacts_item
+  items['/contacts.*']
+end
+
 def raw_links
   l = items['/data/links.yaml']
   if l.nil?
