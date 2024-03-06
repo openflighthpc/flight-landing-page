@@ -5,7 +5,7 @@ custom branding depends on your use case.  Below you will find instructions
 for a number of different branding use cases along with instructions for
 compiling the landing page after changes have been made.
 
-## Add environment or organisation name to the sidebar
+## Add environment or organisation name
 
 If you wish to change the environment or organisation name you can
 do so by editing the `environment.yaml` file.
@@ -17,11 +17,37 @@ cp -a default/content/data/environment.yaml overridden/content/data/
 $EDITOR overridden/content/data/environment.yaml
 ```
 
-## Customise logos and brandbar text
+## Customise navigation bar and landing page content
 
-If you wish to adjust the logo used in the brandbar; or if you wish to 
-change the "home" link in the brandbar you can do so by editing the 
-`branding.yaml` file.
+### Useful links
+
+The optional 'Useful links' section on the landing page can be populated with
+links that are suited to your users by editing the `links.yaml` file.
+
+```sh
+cd /opt/flight/opt/www/landing-page
+mkdir overridden/content/data/
+cp -a default/content/data/links.yaml overridden/content/data/
+$EDITOR overridden/content/data/links.yaml
+```
+
+### Contact information
+
+The optional 'Contacts' section on the landing page can be populated with
+contact information by editing the `contacts.yaml` file.
+
+```sh
+cd /opt/flight/opt/www/landing-page
+mkdir overridden/content/data/
+cp -a default/content/data/contacts.yaml overridden/content/data/
+$EDITOR overridden/content/data/contacts.yaml
+```
+
+### Other customisation options
+
+Flight Web Suite supports several more options for customising the navigation bar 
+and landing page content in the `branding.yaml` file. See the comments in the file
+for details on how to make the desired changes.
 
 ```sh
 cd /opt/flight/opt/www/landing-page
@@ -29,12 +55,6 @@ mkdir overridden/content/data/
 cp -a default/content/data/branding.yaml overridden/content/data/
 $EDITOR overridden/content/data/branding.yaml
 ```
-
-The `branding.yaml` file is well documented.  It should be straight forward to
-make the desired changes.
-
-Once the desired changes have been made the landing page needs to be
-recompiled.  See below for instructions on how to do so.
 
 ## Change the CSS to apply a custom theme
 
