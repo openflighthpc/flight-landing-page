@@ -30,3 +30,11 @@
 #   # Optional text for the sign-in form modal. If not given, text appropriate
 #   # to OpenflightHPC will be used.
 #   text: ""
+
+# landingpage:
+#   # Optional image for the landing page blurb. Defaults to an Openflight
+#   # graphic if not provided.
+#   blurb:
+#     logo:
+#       url: ""
+#       alt: ""
