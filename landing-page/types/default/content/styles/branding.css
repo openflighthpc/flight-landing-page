@@ -231,8 +231,8 @@ strong {
 }
 
 @media screen and (max-width: 991px) {
-    .navbar-nav-container, .App .brandbar .navbar-nav-container {
-        margin-left: 1rem;
+    .navbar-nav:first-child, .App .brandbar .navbar-nav:first-child {
+        padding-left: 1rem;
     }
 
     .navbar-nav .btn-group {
@@ -247,6 +247,13 @@ strong {
 
     .navbar .top-right {
         justify-content: space-between;
+        border-top: 1px solid #3E3E3E;
+        padding-top: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .bordered-nav-item {
+        border-right: none;
     }
 }
 
