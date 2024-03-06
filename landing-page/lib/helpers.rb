@@ -116,6 +116,10 @@ def app_items
     }
 end
 
+def blurb
+  items['/blurb.*']
+end
+
 def config_packs_item
   items['/config-packs.*']
 end
