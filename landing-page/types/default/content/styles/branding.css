@@ -372,7 +372,7 @@ img.branding-landingpage-dashboard-logo { }
     margin-inline: auto;
 }
 
-.blurb {
+.landing-blurb {
     display: flex;
     align-items: center;
     gap: 4vw;
@@ -380,7 +380,7 @@ img.branding-landingpage-dashboard-logo { }
     text-align: start;
 }
 
-.blurb img {
+.landing-blurb img {
     max-height: 23rem;
 }
 
