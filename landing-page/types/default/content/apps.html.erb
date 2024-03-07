@@ -1,5 +1,9 @@
-<% unless app_items.empty? %>
-  <div class="block">
+<div class="block">
+  <% if app_items.empty? %>
+    <p class="tagline centered-tagline">
+      You don't currently have any Flight Web Suite apps installed.
+    </p>
+  <% else %>
     <a id="apps"></a>
     <div class="signed-in-content">
       <p class="d-none tagline centered-tagline" data-https-d-block>
@@ -31,5 +35,5 @@
         You must be logged in to use the Flight Web Suite tools.
       </p>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
