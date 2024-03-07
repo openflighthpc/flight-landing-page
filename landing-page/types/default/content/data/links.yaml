@@ -9,8 +9,8 @@ links:
    tooltip: OpenflightHPC Github repository
    href: https://github.com/openflighthpc
    icon: github
- # - title: An external link
- #   text: A description of the linked page
- #   href: http://example.com
- # - text: An internal link
- #   href: /some/path
+# - title: An external link
+#   text: A description of the linked page
+#   href: http://example.com
+# - text: An internal link
+#   href: /some/path

@@ -1,7 +1,7 @@
 # optional: A list of contacts for the environment.
 contacts:
-  - name: A Contact
-    role: HPC administrator
-    email: a.contact@example.com
-  - name: A Nother Contact
-    email: a.nother.contact@example.com
+#  - name: A Contact
+#    role: HPC administrator
+#    email: a.contact@example.com
+#  - name: A Nother Contact
+#    email: a.nother.contact@example.com
