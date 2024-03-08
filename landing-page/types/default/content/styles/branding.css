@@ -240,6 +240,10 @@ strong {
         padding-left: 1rem;
     }
 
+    .App .brandbar .navbar-nav-container {
+        margin-left: 0;
+    }
+
     .navbar-nav .btn-group {
         display: block;
         margin-top: 1rem;
@@ -247,7 +251,7 @@ strong {
     }
 
     .navbar #account-menu {
-        padding-left: 0;
+        padding-left: 1rem;
     }
 
     .navbar .top-right {
@@ -255,6 +259,10 @@ strong {
         border-top: 1px solid #3E3E3E;
         padding-top: 0.5rem;
         margin-top: 1rem;
+    }
+
+    .top-right-logo {
+        padding-right: 1rem;
     }
 
     .bordered-nav-item {
