@@ -166,6 +166,11 @@ strong {
 }
 
 .branding-brandbar-logo {
+    height: 3.7rem;
+    padding: 0.4rem;
+}
+
+.top-right-logo {
     height: 3.9rem;
     padding: 0.3rem;
 }
