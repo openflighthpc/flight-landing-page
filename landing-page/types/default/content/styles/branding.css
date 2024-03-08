@@ -232,7 +232,7 @@ strong {
 }
 
 .App .brandbar .navbar-nav-container {
-    margin-left: 2.5rem;
+    margin-left: 2vw;
 }
 
 @media screen and (max-width: 991px) {
