@@ -94,6 +94,12 @@ a:not(.dropdown-item, .card):focus {
     transition: none !important;
 }
 
+.button span {
+    display: flex;
+    align-items: center;
+    padding-top: 0.2rem; /* hack to center flight job button text */
+}
+
 .button:focus {
     outline: none;
     box-shadow: none !important;
@@ -578,8 +584,7 @@ img.branding-landingpage-dashboard-logo { }
     font-size: 1.4rem;
 }
 
-.btn-toolbar .button, .modal-footer .button {
-    font-size: 1rem;
+.cancel-button:not(.dropdown-item) ~ .button {
     border: solid var(--primary-accent-color) 1px;
 }
 
