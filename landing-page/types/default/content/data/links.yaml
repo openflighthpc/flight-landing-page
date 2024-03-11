@@ -1,7 +1,7 @@
 links:
  - title: Documentation
    tooltip: OpenflightHPC documentation
-   href: https://openflighthpc.org/docs/
+   href: https://www.openflighthpc.org/latest/docs/
    text: The OpenFlight documentation contains step-by-step guides to the Flight Web Suite tools.
    icon: book
  - title: Our Github repo
