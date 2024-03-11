@@ -91,10 +91,6 @@ def links_item
   items['/links.*']
 end
 
-def sidebar
-  items['/sidebar.*']
-end
-
 # Return the item listing all installed apps.
 #
 # This is a single item which includes all of the installed apps.
