@@ -31,6 +31,9 @@ cp -a default/content/data/links.yaml overridden/content/data/
 $EDITOR overridden/content/data/links.yaml
 ```
 
+Your link can be given a custom icon using the `icon` property. Provide the name of 
+any icon that is available for free with Font Awesome version 6.5.1.
+
 ### Contact information
 
 The optional 'Contacts' section on the landing page can be populated with
