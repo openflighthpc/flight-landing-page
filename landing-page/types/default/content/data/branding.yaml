@@ -1,0 +1,40 @@
+# Optional branding for the landing page AND flight webapps.
+
+# document:
+#   # Optional document title.
+#   #
+#   # The title set here is used if the page being displayed has not been
+#   # configured with a document title.
+#   #
+#   # If not given, an attempt to construct one based on the environemnt's
+#   # name is made and if that doesn't work we fallback to "openflightHPC".
+#   title: ""
+
+# brandbar:
+#   # Optional text for the brandbar, for both the landing page and the webapps.
+#   # Defaults to an empty string if not provided.
+#   # text: "sub-brand"
+# 
+#   # Optional logo for the brandbar, for both the landing page and the webapps.
+#   # Defaults to the OpenflightHPC logo if not provided.
+#   logo:
+#     # An absolute URL can be used to load remote images.  Or a relative URL
+#     # to load an image included in the landing page.
+#     url: ""
+#     alt: ""
+#     # Additional class names for the IMG tag.  Bootstrap classes can be used
+#     # here.
+#     classNames: ""
+
+# signInModal:
+#   # Optional text for the sign-in form modal. If not given, text appropriate
+#   # to OpenflightHPC will be used.
+#   text: ""
+
+# landingpage:
+#   # Optional image for the landing page blurb. Defaults to an Openflight
+#   # graphic if not provided.
+#   blurb:
+#     logo:
+#       url: ""
+#       alt: ""

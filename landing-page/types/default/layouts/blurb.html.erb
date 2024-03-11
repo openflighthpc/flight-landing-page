@@ -1,0 +1,9 @@
+<div class="block landing-blurb">
+  <div>
+    <%= yield %>
+  </div>
+  <img
+    src="<%= prefix_url(branding('landingpage.blurb.logo.url') || 'images/OF_home.png') %>"
+    alt="<%= branding('landingpage.blurb.logo.alt') || '' %>"
+  >
+</div>

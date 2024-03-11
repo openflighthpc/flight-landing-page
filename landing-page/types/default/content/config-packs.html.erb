@@ -1,0 +1,15 @@
+<% unless config_pack_items.empty? %>
+  <div class="config-pack-section">
+    <h2>Config Packs</h2>
+    <a id="config-packs"></a>
+    <p class="tagline centered-tagline">
+      Your machine may need configuration before you can gain cluster access.
+      The following config packs are available for you to download.
+    </p>
+    <div class="card-deck config-pack-card-deck">
+      <% config_pack_items.each do |config| %>
+        <%= config.compiled_content(snapshot: :pre_default) %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

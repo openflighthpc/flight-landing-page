@@ -69,6 +69,10 @@ def contacts
     .select { |i| i[:kind] == 'contact' }
 end
 
+def contacts_item
+  items['/contacts.*']
+end
+
 def raw_links
   l = items['/data/links.yaml']
   if l.nil?
@@ -83,8 +87,8 @@ def links
     .select { |i| i[:kind] == 'link' }
 end
 
-def sidebar
-  items['/sidebar.*']
+def links_item
+  items['/links.*']
 end
 
 # Return the item listing all installed apps.
@@ -112,6 +116,10 @@ def app_items
     }
 end
 
+def blurb
+  items['/blurb.*']
+end
+
 def config_packs_item
   items['/config-packs.*']
 end
@@ -130,8 +138,8 @@ def config_pack_items
   end
 end
 
-def blurb
-  items['/blurb.*']
+def tools_item
+  items['/tools.*']
 end
 
 def enable_https

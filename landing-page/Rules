@@ -14,8 +14,6 @@ preprocess do
     items.create('', link.merge(kind: 'link'), "/links/#{idx}")
   end
 
-  items.create("<%= render '/sidebar.html.erb' %>", {}, "/sidebar.html.erb")
-
   # layouts.each do |l|
   #   ::STDERR.puts "=== l: #{(l).inspect rescue $!.message}"
   #   ::STDERR.puts "  = l.attributes: #{(l.attributes).inspect rescue $!.message}"
@@ -127,11 +125,6 @@ compile '/config-packs/*', rep: :data do
   end
   filter :attributes_to_content, item: item
   filter :metadata_to_json
-  write nil
-end
-
-compile '/sidebar.html' do
-  layout '/sidebar.*'
   write nil
 end
 

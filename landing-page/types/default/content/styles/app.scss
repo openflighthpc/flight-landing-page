@@ -1,0 +1,40 @@
+.config-pack-card {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem !important;
+}
+
+.config-pack-section {
+  margin: 4rem 0;
+}
+
+.config-pack-card-link {
+  color: var(--alces-blue);
+  transition: transform 0.25s;
+}
+
+.config-pack-card-link:hover {
+  text-decoration: none;
+}
+
+.config-pack-card .card-title-container[aria-expanded=true] .config-pack-card-link {
+  transform: rotate(45deg);
+}
+
+// Styles to disable web suite over HTTP.
+.http-strike-disabled,
+.http-strike-disabled:hover {
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+.http-bootstrap-disabled { }
+.http-opacified {
+  opacity: 0.5;
+}
+.code-block {
+    background: #343a40; /* bg-dark */
+    color: #f8f9fa; /* text-light */
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
