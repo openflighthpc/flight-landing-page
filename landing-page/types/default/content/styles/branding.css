@@ -231,7 +231,7 @@ strong {
 }
 
 .navbar #account-menu {
-    padding-inline: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .App .brandbar {
@@ -239,6 +239,36 @@ strong {
 
 .App .brandbar .navbar-nav-container {
     margin-left: 2vw;
+}
+
+@media screen and (max-width: 1270px) and (min-width: 992px) {
+    .navbar, .navbar-nav-container {
+        font-size: 0.9rem;
+    }
+
+    .branding-brandbar-text-wrapper {
+        margin-right: 1rem;
+    }
+
+    .branding-brandbar-logo, .top-right-logo {
+        height: 3rem;
+    }
+
+    .navbar .nav-item .nav-menu-button {
+        padding-right: 1.5rem;
+    }
+
+    .bordered-nav-item {
+        margin-right: 1.5rem;
+    }
+
+    #account-menu img {
+        max-width: 2rem;
+    }
+
+    .content {
+        min-height: calc(100vh - calc(10.4rem));
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -776,6 +806,13 @@ img.branding-apps-dashboard-logo { }
 .App .fullscreen-content {
     /* Subtract header and toolbar height */
     height: calc(100vh - 8.81rem);
+}
+
+@media screen and (max-width: 1270px) and (min-width: 992px) {
+    .App .fullscreen-content {
+        /* Subtract header and toolbar height */
+        height: calc(100vh - 7.91rem);
+    }
 }
 
 html:fullscreen .fullscreen-content,
