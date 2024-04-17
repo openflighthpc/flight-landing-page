@@ -1,0 +1,822 @@
+/*------------------------------------------------
+ * Colours
+ * ----------------------------------------------- */
+
+:root {
+    --navbar-bg-color: var(--default-navbar-bg-color);
+    --navbar-text-color: var(--default-navbar-text-color);
+    --primary-text-color: var(--default-primary-text-color);
+    --secondary-text-color: var(--default-secondary-text-color);
+    --bg-color-1: var(--default-bg-color-1);
+    --bg-color-2: var(--default-bg-color-2);
+    --body-bg-color: var(--default-body-bg-color);
+    --primary-accent-color: var(--default-primary-accent-color);
+    --secondary-accent-color: var(--default-secondary-accent-color);
+    --primary-border-color: var(--default-primary-border-color);
+
+    /* Flight Desktop only */
+    --desktop-bg-color-1: var(--default-secondary-accent-color);
+    --desktop-bg-color-2: var(--default-primary-border-color);
+    --desktop-selected-color: var(--default-secondary-accent-color);
+
+    /* Defaults */
+    --default-navbar-bg-color: #191919;
+    --default-bg-color-1: #DCEEF5;
+    --default-bg-color-2: white;
+    --default-body-bg-color: white;
+    --default-primary-accent-color: #2693D7;
+    --default-secondary-accent-color: #6bb6e5;
+    --default-primary-text-color: #4e5a66;
+    --default-secondary-text-color: white;
+    --default-navbar-text-color: white;
+    --default-primary-border-color: #BDE7F9;
+}
+
+
+/*------------------------------------------------
+ * Generic branding
+ * ----------------------------------------------- */
+
+body {
+    font-family: Lexend,-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+
+.row {
+    margin: 0;
+    justify-content: center;
+}
+
+#main {
+    background-image: linear-gradient(var(--bg-color-1), var(--bg-color-2));
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+.content {
+    min-height: calc(100vh - calc(11.2rem));
+}
+
+.centernav {
+    background-color: var(--body-bg-color);
+    min-height: calc(100vh - calc(11.2rem));
+    padding-inline: 5vw;
+    margin-inline: auto;
+}
+
+.centernav.fullscreen {
+    min-height: calc(100vh - 8.81rem);
+    padding-inline: 0;
+    background-color: transparent;
+}
+
+h1 {
+    margin: 8rem 0;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+:is(a.link, .link, .nav-link, .btn):not(.disabled, .dropdown-item):hover,
+a:not(.dropdown-item, .card):focus {
+    filter: brightness(0.8);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-accent-color);
+    border-radius: 2px;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    width: fit-content;
+    transition: none !important;
+}
+
+.button span {
+    display: flex;
+    align-items: center;
+    padding-top: 0.2rem; /* hack to center flight job button text */
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: none !important;
+}
+
+.cancel-button {
+    background-color: var(--body-bg-color);
+    border: solid var(--primary-accent-color) 1px;
+    box-sizing: border-box;
+}
+
+.blue-text {
+    color: var(--primary-accent-color) !important;
+}
+
+.white-text {
+    color: var(--secondary-text-color) !important;
+}
+
+.card, .dropdown-menu {
+    border-color: var(--primary-border-color);
+}
+
+code {
+    color: rgba(123,112,199,255);
+}
+
+.small-text {
+    font-size: 0.75rem;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+strong {
+    font-weight: 800;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-toggle.no-caret::after {
+    display: none;
+}
+
+
+/*------------------------------------------------
+ * Navbar and brandbar branding
+ * ----------------------------------------------- */
+
+/* Useful classes */
+.navbar { }
+.navbar .navbar-nav .nav-link { }
+.navbar-brand { }
+.branding-brandbar-wrapper { }
+.branding-brandbar-text-wrapper { }
+.branding-brandbar-text { }
+.branding-brandbar-logo img { }
+
+.navbar.brandbar .navbar-nav-container {
+    justify-content: space-between;
+}
+
+.navbar {
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    border-bottom: 0.45rem solid var(--primary-accent-color);
+}
+
+.branding-brandbar-logo {
+    height: 3.9rem;
+    padding: 0.5rem;
+}
+
+.top-right-logo {
+    height: 3.9rem;
+    padding: 0.3rem;
+}
+
+.branding-brandbar-text-wrapper {
+    margin-right: 2.5rem;
+}
+
+.navbar .dropdown {
+    align-self: center;
+}
+
+.navbar .dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .dropdown-menu {
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-text-color);
+    border-radius: 0;
+}
+
+.navbar .dropdown-item {
+    padding-inline: 0.5rem !important;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: var(--primary-text-color);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-item .nav-menu-button {
+    padding: 0.8rem 2rem 0.5rem 0;
+}
+
+.navbar .nav-link.active {
+    color: var(--primary-accent-color) !important;
+}
+
+.bordered-nav-item {
+    border-right: 1px solid #3E3E3E;
+    margin-right: 2rem;
+}
+
+#flight-account-menu {
+    margin-right: 2rem;
+}
+
+.navbar #account-menu {
+    padding-right: 1.5rem;
+}
+
+.App .brandbar {
+}
+
+.App .brandbar .navbar-nav-container {
+    margin-left: 2vw;
+}
+
+@media screen and (max-width: 1270px) and (min-width: 992px) {
+    .navbar, .navbar-nav-container {
+        font-size: 0.9rem;
+    }
+
+    .branding-brandbar-text-wrapper {
+        margin-right: 1rem;
+    }
+
+    .branding-brandbar-logo, .top-right-logo {
+        height: 3rem;
+    }
+
+    .navbar .nav-item .nav-menu-button {
+        padding-right: 1.5rem;
+    }
+
+    .bordered-nav-item {
+        margin-right: 1.5rem;
+    }
+
+    #account-menu img {
+        max-width: 2rem;
+    }
+
+    .content {
+        min-height: calc(100vh - calc(10.4rem));
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-nav:first-child, .App .brandbar .navbar-nav:first-child {
+        padding-left: 1rem;
+    }
+
+    .App .brandbar .navbar-nav-container {
+        margin-left: 0;
+    }
+
+    .navbar-nav .btn-group {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .navbar #account-menu {
+        padding-left: 1rem;
+    }
+
+    .navbar .top-right {
+        justify-content: space-between;
+        border-top: 1px solid #3E3E3E;
+        padding-top: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .top-right-logo {
+        padding-right: 1rem;
+    }
+
+    .bordered-nav-item {
+        border-right: none;
+    }
+}
+
+.modal-body {
+    padding: 2.5rem;
+    text-align: center;
+    color: var(--primary-text-color);
+}
+
+.modal-lg .modal-body {
+    padding: 4rem;
+}
+
+.modal-body .header {
+    display: grid;
+    grid-template-columns: 2rem auto 2rem;
+    grid-template-areas: 'blank title close';
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.modal-body h2 {
+    margin-inline: auto;
+    margin-bottom: 0;
+    grid-area: title;
+}
+
+.modal-body .close-button {
+    grid-area: close;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-body .header, .modal-body .small-text {
+    margin-bottom: 3rem;
+}
+
+.login-form-input {
+    display: grid;
+    grid-template-columns: 6rem auto;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.login-form-input label {
+    text-align: start;
+    margin: 0;
+}
+
+.modal-body .button {
+    margin-top: 1rem;
+}
+
+/* -----------------------------------------------
+ * Footer
+ * ----------------------------------------------- */
+
+footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer .fa, .contacts .fa {
+    font-size: 1.4rem;
+    color: var(--primary-accent-color);
+    display: inline-block;
+    margin-top: 0.4rem;
+    margin-left: 1.5rem;
+}
+
+#footer-logo {
+    height: 3.2rem;
+    margin: 1rem 0;
+}
+
+.cloud {
+    width: 35vw;
+    min-width: 17rem;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    display: inline-block;
+    pointer-events: none;
+}
+
+#cloud-l {
+    left: 0;
+}
+
+#cloud-r {
+    right: 0;
+}
+
+/* -----------------------------------------------
+ * Logo
+ * ----------------------------------------------- */
+img.logo {
+    display: block;
+    max-height: 150px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------------------------------
+ * Landing page dashboard branding
+ * ----------------------------------------------- */
+.branding-landingpage-dashboard-logo-wrapper { }
+img.branding-landingpage-dashboard-logo { }
+
+.tagline {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.centered-tagline {
+    max-width: 40rem;
+    margin-inline: auto;
+}
+
+.landing-blurb {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    justify-content: space-between;
+    text-align: start;
+}
+
+.landing-blurb img {
+    max-height: 23rem;
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: 2rem auto;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    padding: 2rem 4rem;
+    max-width: 26rem;
+    margin-inline: auto;
+}
+
+.contacts .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    min-height: 3rem;
+}
+
+#tools-container {
+    margin: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
+    justify-items: center;
+}
+
+.tool {
+    flex: 1 1 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tool-row {
+    display: flex;
+    text-align: left;
+}
+
+.tool img {
+    height: 12rem;
+    margin-right: 2rem;
+}
+
+.block {
+    margin: 8rem 0;
+}
+
+/* -----------------------------------------------
+ * App branding
+ * ----------------------------------------------- */
+
+.card.link:hover, .card.link.selected {
+    background-color: var(--primary-accent-color) !important;
+    border: solid var(--primary-accent-color) 1px;
+    transition: background-color 0.5s, border 0.5s, filter 0.5s;
+    filter: none !important;
+}
+
+.card.link.selected {
+    cursor: pointer;
+}
+
+.card.link:hover img, .card.link:hover i, .card.link.selected img, .card.link.selected i {
+    filter: brightness(0) invert(1);
+}
+
+.card.link:hover .card-text, .card.link.selected .card-text {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+}
+
+.card-text, .dropdown-item {
+    color: var(--primary-text-color);
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+.app-card-deck:not(.four-app-deck) .app-card {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 20.5rem;
+    padding: 3rem 2rem;
+}
+
+.app-card-deck.four-app-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 1rem;
+}
+
+.app-card-deck.four-app-deck .app-card {
+    grid-template-rows: auto 1fr;
+    width: 100%;
+    padding: 2rem 2rem;
+}
+
+.app-card-deck.four-app-deck .app-icon {
+    grid-area: icon;
+    align-self: center;
+}
+
+.app-card-deck.four-app-deck .card-title {
+    grid-area: title;
+    height: fit-content;
+}
+
+.app-card-deck.four-app-deck .card-subtitle {
+    grid-area: subtitle;
+}
+
+.app-icon {
+    height: 8rem;
+    padding-inline: 1rem;
+}
+
+.app-card .card-title {
+    margin-top: 1rem;
+}
+
+.app-card-deck.desktops {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    margin-bottom: 3.5rem;
+}
+
+.app-card-deck .useful-link {
+    display: grid;
+    grid-template-columns: 7rem auto;
+    column-gap: 1rem;
+    width: 28rem;
+    min-height: 11rem;
+    align-items: center;
+    padding: 2rem 1.5rem;
+}
+
+.app-card-deck .useful-link i {
+    font-size: 5rem;
+    color: var(--primary-accent-color);
+}
+
+.app-card-deck .useful-link .text {
+    text-align: left;
+}
+
+.card-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    cursor: pointer;
+}
+
+.card-title-container .card-title {
+    margin: 0;
+}
+
+.toolbar {
+    border: none;
+    border-radius: 0 !important;
+    padding-top: 0;
+    padding-bottom: 0.45rem;
+    background-color: var(--primary-accent-color);
+    text-align: start;
+}
+
+.btn-toolbar {
+    height: 2.4rem;
+    font-size: 1.4rem;
+}
+
+.cancel-button:not(.dropdown-item) ~ .button {
+    border: solid var(--primary-accent-color) 1px;
+}
+
+.btn-toolbar, .btn-toolbar .btn-group {
+    align-items: center;
+}
+
+.btn-toolbar .btn:focus {
+    box-shadow: none;
+}
+
+.btn.btn-secondary:not(.dropdown-item) {
+    background-color: var(--primary-accent-color) !important;
+}
+
+.btn.btn-secondary.cancel-button:not(.dropdown-item) {
+    background-color: var(--body-bg-color) !important;
+    border-color: var(--primary-accent-color) !important;
+}
+
+.bg-session {
+    background-image: linear-gradient(var(--desktop-bg-color-1), var(--desktop-bg-color-2));
+}
+
+.blurred {
+    filter: blur(2px);
+    transform: scale(1.01);
+    margin: -2px -4px -4px -2px;
+}
+
+.blurred-container {
+    overflow: hidden;
+    width: fit-content;
+}
+
+.popover {
+    padding: 1rem;
+    text-align: center;
+    border-color: var(--primary-border-color);
+}
+
+.desktop-types-card-deck, .app-card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.desktop-types-card-deck .card {
+    width: 14vw;
+    min-width: 18rem;
+    height: 12rem;
+}
+
+.desktop-types-card-deck .card:hover {
+    background-color: var(--body-bg-color) !important;
+    border: solid 1px var(--primary-accent-color);
+    box-sizing: border-box;
+}
+
+.desktop-types-card-deck .card:hover .card-text {
+    color: var(--primary-text-color);
+}
+
+.desktop-types-card-deck .card.selected {
+    background-color: var(--desktop-selected-color) !important;
+    border-color: var(--desktop-selected-color);
+}
+
+.desktop-types-card-deck .card.selected .card-text {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+}
+
+.form-field {
+    margin-top: 5rem;
+    max-width: 40rem;
+}
+
+.form-field input, .form-field select, #session-geometry, .form-field textarea {
+    border: solid 1px var(--primary-border-color);
+    border-radius: 0;
+    color: var(--primary-text-color);
+    padding: 0.6rem;
+}
+
+.form-field input, .form-field select, #session-geometry {
+    height: 2.7rem;
+    box-sizing: border-box;
+}
+
+.form-field input:focus, .form-field select:focus, #session-geometry:focus, .form-field textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: solid 1px var(--primary-accent-color);
+}
+
+.form-check {
+    padding: 0;
+}
+
+.back-link {
+    position: absolute;
+    left: 2vw;
+    top: 1.5vw;
+}
+
+.submit-button {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.submit-button.disabled {
+    cursor: not-allowed;
+}
+
+/* -----------------------------------------------
+ * Apps dashboard branding
+ * ----------------------------------------------- */
+.branding-apps-dashboard-logo-wrapper { }
+img.branding-apps-dashboard-logo { }
+
+.narrow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-inline: auto;
+}
+
+.blurb.app-card, .app-card-deck.four-app-deck .app-card {
+    display: grid !important;
+    grid-template-areas:
+    "icon title"
+    "icon subtitle";
+    column-gap: 1rem;
+    text-align: start;
+}
+
+.blurb.app-card {
+    margin-top: 3rem;
+    margin-inline: auto;
+    padding: 3rem 2rem;
+}
+
+.blurb.app-card .app-icon {
+    grid-area: icon;
+    margin-right: 2rem;
+}
+
+.blurb.app-card .card-title {
+    grid-area: title;
+    margin-top: auto;
+}
+
+.blurb.app-card .tagline {
+    grid-area: subtitle;
+}
+
+.narrow-container, .blurb.app-card {
+    max-width: 40rem;
+}
+
+.narrow-container > p {
+    padding: 1.25rem;
+}
+
+/* -----------------------------------------------
+ * Flight Job styling
+ * ----------------------------------------------- */
+.scripts-table-row .table {
+    flex-grow: 2;
+}
+
+.scripts-table-row .notes {
+    min-width: 24rem;
+}
+
+.wrapping-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    gap: 1rem;
+}
+
+/* -----------------------------------------------
+ * Apps full screen and zen-mode styles
+ * ----------------------------------------------- */
+
+.App .fullscreen-content {
+    /* Subtract header and toolbar height */
+    height: calc(100vh - 8.81rem);
+}
+
+@media screen and (max-width: 1270px) and (min-width: 992px) {
+    .App .fullscreen-content {
+        /* Subtract header and toolbar height */
+        height: calc(100vh - 7.91rem);
+    }
+}
+
+html:fullscreen .fullscreen-content,
+body.zen-mode .fullscreen-content {
+    /* Subtract toolbar height */
+    height: calc( 100vh - 3.3rem );
+}

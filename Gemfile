@@ -13,7 +13,9 @@ gem 'nanoc'
 group :nanoc do
   gem 'guard-nanoc'
   gem 'kramdown'
+  gem 'sassc'
   gem 'sass'
+  gem 'adsf'
 end
 
 group :development do

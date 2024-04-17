@@ -1,0 +1,13 @@
+<a
+  class="d-flex align-items-center link"
+  href="mailto:<%= @item[:email] %>"
+  title="<%= @item[:email] %>"
+>
+  <span class="fa fa-envelope m-0"></span>
+</a>
+<div class="info">
+  <div><%= @item[:name] %></div>
+  <% if @item[:role] %>
+    <div class="text-muted"><%= @item[:role] %></div>
+  <% end %>
+</div>

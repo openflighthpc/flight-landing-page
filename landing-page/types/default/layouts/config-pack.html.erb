@@ -1,0 +1,58 @@
+<% content_id = @item.identifier.components.last.gsub('.', '-') + "-config-pack-content" %>
+<div
+  class="card config-pack-card"
+>
+  <div class="card-title-container"
+       data-toggle="collapse"
+       href="#<%= content_id %>"
+       aria-expanded="false"
+       aria-controls="collapseExample"
+  >
+    <h4 class="card-title">
+      <%= @item[:title] %>
+    </h4>
+    <i
+      class="fa-solid fa-plus config-pack-card-link"
+    ></i>
+  </div>
+  <div id="<%= content_id %>" class="collapse">
+    <div class="card-body d-flex flex-column">
+      <% if @item[:subtitle] %>
+        <p class="card-subtitle tagline text-muted mt-2">
+          <%= @item[:subtitle] %>
+        </p>
+      <% end %>
+      <%= yield %>
+      <% unless @item[:downloads].nil? %>
+        <div class="mt-4">
+          <h6 class='card-subtitle tagline mb-3'>
+            Downloads
+          </h6>
+          <div class="list-group">
+            <%
+              @item[:downloads].each do |parts|
+                file_name = parts[:file_name]
+                raise "Each downloads entry requires a 'file_name'" unless file_name
+                text = parts.fetch(:display_name, file_name)
+                package_name = File.basename(@item.identifier, '.*')
+                # XXX: Consider making the /downloads prefix configurable
+                link = File.join('/downloads', 'config-packs', package_name, file_name)
+            %>
+            <span class="list-group-item list-group-item-action">
+              <i class="fa fa-<%= parts.fetch(:fa_icon, 'file-o') %> mr-1"></i>
+              <a
+                href="<%= link %>"
+                rel="noopener"
+                data-http-strike-disable
+                data-http-add-title="Config packs require HTTPS to be enabled"
+              >
+                <%= text %>
+              </a>
+            </span>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
