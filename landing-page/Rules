@@ -14,6 +14,11 @@ preprocess do
     items.create('', link.merge(kind: 'link'), "/links/#{idx}")
   end
 
+  # Ensure apps is the last of the items to be pre-processed
+  apps_item = @items.find {|i| i.identifier == '/apps.html.erb'}
+  @items.delete_if { |i| i == apps_item }
+  @items.create(apps_item.raw_content, apps_item.attributes, apps_item.identifier)
+
   # layouts.each do |l|
   #   ::STDERR.puts "=== l: #{(l).inspect rescue $!.message}"
   #   ::STDERR.puts "  = l.attributes: #{(l.attributes).inspect rescue $!.message}"
