@@ -569,6 +569,18 @@ img.branding-landingpage-dashboard-logo { }
     margin-bottom: 3.5rem;
 }
 
+.desktop-header {
+    display: grid;
+    grid-template-columns: auto min-content;
+    margin: 1rem 1rem 0.5rem;
+}
+
+.app-card-deck.desktops h5 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .app-card-deck .useful-link {
     display: grid;
     grid-template-columns: 7rem auto;
