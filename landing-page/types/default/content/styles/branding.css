@@ -665,8 +665,9 @@ img.branding-landingpage-dashboard-logo { }
 
 .desktop-types-card-deck .card {
     width: 14vw;
-    min-width: 18rem;
-    height: 12rem;
+    min-width: 19rem;
+    min-height: 13rem;
+    height: 100%;
 }
 
 .desktop-types-card-deck .card:hover {
