@@ -2,8 +2,7 @@
 
 The Flight Web Suite is a collection of web applications that provide 
 users with easy and intuitive ways to interact with their research 
-environment. It comprises Flight Console, Flight Desktop, Flight Files 
-and Flight Job.
+environment. It comprises Flight Console, Flight Desktop and Flight Files.
 
 The Web Suite utilises the Flight Solo software environment. 
 This is designed to help researchers and scientists run their own 
